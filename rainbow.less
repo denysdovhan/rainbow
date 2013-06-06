@@ -262,11 +262,28 @@ h2 small { font-size: @baseFontSize * 1.25;}
 h3 small { font-size: @baseFontSize; }
 h4 small { font-size: @baseFontSize; }
 
+h1, h2, h3, h4, h5, h6,
+p, div, address, pre, em, 
+small, strong, cite, abbr {
+	&.red 			{ color: @red;}
+	&.cyan 			{ color: @cyan;}
+	&.blue 			{ color: @blue;}
+	&.darkblue 		{ color: @darkblue;}
+	&.lightblue 	{ color: @lightblue;}
+	&.purple 		{ color: @purple;}
+	&.yellow 		{ color: @yellow;}
+	&.lime 			{ color: @lime;}
+	&.magenta 		{ color: @magenta;}
+	&.green 		{ color: @green;}
+	&.olive 		{ color: @olive;}
+	&.silver 		{ color: @silver;}
+	&.orange 		{ color: @orange;}
+	&.brown 		{ color: @brown;}
+	&.maroon 		{ color: @maroon;}
+}
 
-
-// =============================================
 // 					Lists
-// =============================================
+// --------------------------------------------
 
 ul, ol {
   padding: 0;
