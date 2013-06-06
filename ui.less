@@ -1,0 +1,172 @@
+// Import fonts
+@import "fonts.less";
+// Import normalize.css
+@import "normalize.css";
+// Immport LESS Elements mixims
+@import "lessmix.less";
+
+/*
+==========================================================
+						Variables
+==========================================================
+*/
+@btnBackground: 					rgba(240, 240, 240, 0.7);
+@btnBackgroundHighlight: 			lighten(@btnBackground, 20%);
+
+@btnBlueBackground: 				#28F;
+@btnBlueBackgroundHighlight:		darken(@btnBlueBackground, 20%);
+
+@baseFontSize: 			17px;
+
+@fontSizeLarge:         @baseFontSize * 1.25;
+@fontSizeSmall:         @baseFontSize * 0.85;
+@fontSizeMini:          @baseFontSize * 0.75;
+
+@paddingLarge:          11px 19px; // 44px
+@paddingSmall:          2px 10px;  // 26px
+@paddingMini:           0 6px;   // 22px
+
+@baseLineHeight: 		23px;
+
+@baseBorderRadius: 		4px;
+@borderRadiusLarge:     6px;
+@borderRadiusSmall:     3px;
+@borderRadiusMini: 		@borderRadiusSmall;
+
+/*
+=======================================
+ 				Buttons
+ ======================================
+*/
+
+
+// 			Base Buttons Style
+// -------------------------------------
+.btn {
+	display: inline-block;
+	padding: 4px 12px;
+	margin-bottom: 0px;
+	font-size: @baseFontSize;
+	line-height: @baseLineHeight;
+	text-align: center;
+	vertical-align: middle;
+	cursor: pointer;
+	.rounded(@baseBorderRadius);
+	background-color: @btnBackground;
+	border: 0;
+	*border: 0;
+	color: ;
+	font-family: "Calibri Regular";
+	.user-select(none);
+
+	&:hover,
+	&:focus{
+		 // Hover and Focus state
+		text-decoration: none;
+		background-color: @btnBackgroundHighlight;
+		background-repeat: repeat-x;
+		.transition-all(0.3s,ease-out) 
+	}
+
+	&:active,
+	&.active {
+		 // Active state
+		.inner-shadow(0, 2px, 2px);
+		.transition-all(0.1s,linear);
+	}
+	
+	&.disabled,
+	&[disabled] {
+		 // Disabled state 
+		cursor: default;
+		color: #2A2A2A;
+		.opacity(0.5);
+		background-image: none;
+		.box-shadow(none);
+	}
+}
+
+// 			Buttons Sizes
+// ---------------------------------
+
+// 	Large
+.btn.large {
+	padding: @paddingLarge;
+	font-size: @fontSizeLarge;
+	.rounded(@borderRadiusLarge);
+}
+
+// 	Small
+.btn.small {
+	padding: @paddingSmall;
+	font-size: @fontSizeSmall;
+	.rounded(@borderRadiusSmall);
+}
+
+// 	Mini
+.btn.mini {
+	padding: @paddingMini;
+	font-size: @fontSizeMini;
+	.rounded(@borderRadiusMini);
+}
+
+
+// 			Block Button
+// -------------------------------
+.btn.block {
+	display: block;
+	width: 100%;
+	padding-left: 0;
+	padding-right: 0;
+	.box-sizing(border-box);
+}
+
+// 	Vertically spaces out multiple block button
+.btn.block + .btn.block {
+	margin-top: 5px;
+}
+
+// Specificity overrides
+input[type="Blue"],
+input[type="reset"],
+input[type="button"] {
+  &.btn.block {
+    width: 100%;
+  }
+}
+
+// 		Alternative Buttons
+// ------------------------------
+
+// Volume buttons mixins
+.volume(@startColor, @stopColor) {
+	&.volume {
+		.v-gradient( @startColor, @stopColor);
+		background-color: @stopColor;
+		.transition-all(0.1,linear);
+		.inner-shadow(0, -1px, 2px, 0.5);
+		&:hover,
+		 :focus {
+		 	text-decoration: none;
+			background-position: 0 -15px;
+		}
+
+		&.active,
+		&:active {
+			background-image: none;
+			cursor: default;
+			outline: 0;
+			.inner-shadow(0, 3px, 2px);
+		}
+	}
+}
+
+
+.btn.blue {
+	color: #fff;
+	background-color: @btnBlueBackground;
+
+	.volume(@btnBlueBackground, @btnBlueBackgroundHighlight);
+}
+
+
