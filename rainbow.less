@@ -46,9 +46,19 @@
 @textColor:					@grayDark;
 @LinkColor:					#28F;
 
+@codeLightBackgroundColor: 		darken(@bodyBackgroundColor, 5%);
+@codeLightColor: 				lighten(@textColor, 10%);
+@codeDarkBackgroundColor: 		@grayDarker;
+@codeDarkColor: 				@grayLighter;
+@codeBorderColor: 				lighten(@grayLight, 20%);
+
+
+
 
 @baseFontFamily:  		Arial, "Helvetica Neue", Helvetica, sans-serif;
+@monoFontFamily: 		Monaco, "Courier New", Menlo, Consolas, monospace;
 @baseFontSize: 			14px;
+@codeFontSize: 			@baseFontSize - 2px;
 @baseLineHeight: 		20px;
 
 @headingsFontFamily: 	inherit;
@@ -356,9 +366,9 @@ blockquote {
 	font-style: italic;
 	position: relative;
 	padding: 0 0 0 @baseLineHeight/2;
-	margin: 0 0 @baseLineHeight 3.5em;
+	margin: 0 0 @baseLineHeight 40px;
 	border-left: 5px solid @grayLight;
-	
+
 	p {
 		margin: @baseLineHeight/2 0 0 0;
 		line-height: @baseLineHeight;
@@ -381,18 +391,127 @@ blockquote {
 	&:before {
 		position: absolute;
 		top: -30px;
-		left: -50px;
+		left: -45px;
 		content: '\201E';
 		color: @grayLight;
-		font-size: 7em;
+		font-size: 90px;
 		font-family: serif;
+	}
+
+	// Float right
+	&.right {
+		float: right;
+		border-left: 0;
+		border-right: 5px solid @grayLight;
+		padding-left: 0;
+		padding-right: @baseLineHeight/2;
+		margin-left: 0;
+		margin-right: 40px;
+
+		p,small {
+			text-align: right;
+		}
+		small {
+      		&:before {
+        		content: '';
+     		}
+      		&:after {
+        		content: '\00A0 \2014';
+      		}
+		}
+
+		&:before {
+			content: '';	
+		}
+		&:after {
+			position: absolute;
+			top: -30px;
+			right: -55px;
+			content: '\201E';
+			color: @grayLight;
+			font-size: 90px;
+			font-family: serif;
+		}		
 	}
 }
 
 // Codes
-code, pre, samp {
-
+code, pre, var, samp, kbd {
+	font-family: @monoFontFamily;
+	font-size: @codeFontSize;
+	padding: 0;	
+	color: @codeLightColor;
+	background-color: @codeLightBackgroundColor;
+	border: 1px solid @codeBorderColor;
+	.rounded(@smallBorderRadius);
 }
 
+code {
+	padding: 3px;
+	white-space: nowrap;
+	.outer-shadow(0, 1px, 2px, 0.3);
+}
 
+pre {
+	display: block;
+	line-height: @baseLineHeight;
+	padding: @baseLineHeight/2;
+	margin: 0 0 @baseLineHeight/2;
+	word-break: break-all;
+	word-wrap: break-word;
+	white-space: pre;
+	white-space: pre-wrap;
+	.rounded(@baseBorderRadius);
+	.outer-shadow(0, 1px, 2px, 0.3);
+
+	code {
+		color: inherit;
+		white-space: pre;
+		white-space: pre-wrap;
+		background-color: transparent;
+
+	}
+
+	&.scrollable {
+		max-height: 400px;
+		overflow-y: scroll;
+	}
+}
+
+samp {
+	display: block;
+	line-height: @baseLineHeight;
+	padding: @baseLineHeight/2;
+	margin: 0 0 @baseLineHeight/2;
+	color: @codeDarkColor;
+	background-color: @codeDarkBackgroundColor;
+	word-break: break-all;
+	word-wrap: break-word;
+	white-space: pre;
+	white-space: pre-wrap;
+	.rounded(@baseBorderRadius);
+
+	code {
+		color: inherit;
+		white-space: pre;
+		white-space: pre-wrap;
+		background-color: transparent;
+
+	}
+
+	&.scrollable {
+		max-height: 400px;
+		overflow-y: scroll;
+	}
+}
+
+ins {
+	color: @green;
+}
+
+del {
+	color: @red;
+}
+
+// Tables
 
