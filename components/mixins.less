@@ -119,21 +119,6 @@
             box-shadow: @shadow;
 }
 
-// Outer shadow
-.outer-shadow(@x: 0, @y: 1px, @blur: 2px, @alpha: 0.1) {
-    -webkit-box-shadow: @x @y @blur rgba(0, 0, 0, @alpha);
-       -moz-box-shadow: @x @y @blur rgba(0, 0, 0, @alpha);
-            box-shadow: @x @y @blur rgba(0, 0, 0, @alpha);
-}
-
-// Inner shadow
-.inner-shadow(@x: 0, @y: 1px, @blur: 2px, @alpha: 0.4) {
-    -webkit-box-shadow: inset @x @y @blur rgba(0, 0, 0, @alpha);
-       -moz-box-shadow: inset @x @y @blur rgba(0, 0, 0, @alpha);
-            box-shadow: inset @x @y @blur rgba(0, 0, 0, @alpha);
-}
-
-
 //      Transition Tools
 // ====================================
 
@@ -151,21 +136,6 @@
        -moz-transition: all @duration @delay;
          -o-transition: all @duration @delay;
             transition: all @duration @delay;
-}
-
-// Transition duration
-.transition-duration(@transition-duration) {
-    -webkit-transition-duration: @transition-duration;
-       -moz-transition-duration: @transition-duration;
-         -o-transition-duration: @transition-duration;
-            transition-duration: @transition-duration;
-}
-// Transition delay
-.transition-delay(@transition-delay) {
-    -webkit-transition-delay: @transition-delay;
-       -moz-transition-delay: @transition-delay;
-         -o-transition-delay: @transition-delay;
-            transition-delay: @transition-delay;
 }
 
 
@@ -291,4 +261,18 @@
 // Reset filers for IE
 .reset-filter() {
   filter: e(%("progid:DXImageTransform.Microsoft.gradient(enabled = false)"));
+}
+
+.volumeInput(@color: @lightblue) {
+    &.volume {
+    background-color: @inputBackground;
+    border: 1px solid @inputBorder;
+    .box-shadow(inset 0 1px 3px @inputBorder);
+
+    &:focus {
+      background-color: @white;
+      border: 1px solid @color;
+      .box-shadow(~"0 0 5px @{color}, 0 0 5px @{color}");
+    }
+  }
 }

@@ -41,6 +41,20 @@
 @green:				#080;
 @olive:				#880;
 
+// Backgrounds color
+@redBackground:				lighten(@red, 45%);
+@blueBackground:			lighten(@blue, 45%);
+@purpleBackground:			lighten(@purple, 65%);
+@yellowBackground:			lighten(@yellow, 40%);
+@greenBackground:			lighten(@green, 65%);
+
+// Tables colors
+@tableBackground: 			transparent;
+@tableBackgroundAccent: 	#F9F9F9;
+@tableBackgroundHover: 		#F0F0EE;
+@tableBorderColor: 			#CECECE;
+
+
 // 			Base
 @bodyBackgroundColor: 		@white;
 @textColor:					@grayDark;
@@ -59,7 +73,9 @@
 @monoFontFamily: 		Monaco, "Courier New", Menlo, Consolas, monospace;
 @baseFontSize: 			14px;
 @codeFontSize: 			@baseFontSize - 2px;
+
 @baseLineHeight: 		20px;
+@halfLineHeight: 		@baseLineHeight/2;
 
 @headingsFontFamily: 	inherit;
 @headingsFontWeight: 	bold;
@@ -76,6 +92,21 @@
 @largeBorderRadius:		6px;
 @smallBorderRadius: 	3px;
 @miniBorderRadius:		@smallBorderRadius;
+
+// 				Forms
+// ------------------------------
+
+// Inputs
+@inputBackground: 				fadeout(darken(@white, 5%), 25%);
+@inputDisabledBackground: 		#DFDFDF;
+@inputBorder: 					#ccc;
+@placeholderText: 				@grayLight;
+
+@inputHeight: 					@baseLineHeight + 14px;
+@inputBorderRadius: 			@baseBorderRadius;
+
+
+
 
 // 					  Grid
 // ---------------------------------------------
@@ -212,7 +243,7 @@ img {
 		padding: 4px;
 		background-color: @white;
 		border: 1px solid @grayLight;
-		.outer-shadow(0, 1px, 3px, 0.2);
+		.box-shadow(0 1px 3px rgba(0, 0, 0, 0.2));
 	}
 	&.rounded {
 		.rounded(@baseBorderRadius);
@@ -227,7 +258,7 @@ img {
 // =============================================
 
 p {
-	margin-bottom: @baseLineHeight / 2;
+	margin-bottom: @halfLineHeight;
 }
 
 small 	{ font-size: 85%;}
@@ -246,7 +277,7 @@ h1, h2, h3, h4, h5, h6 {
 	font-family: @headingsFontFamily;
 	font-weight: @headingsFontWeight;
 	line-height: @baseLineHeight;
-	margin: (@baseLineHeight / 2) 0;
+	margin: (@halfLineHeight) 0;
 	color: @headingsColor;
 
 	small {
@@ -296,7 +327,7 @@ small, strong, cite, abbr {
 // 	Lists
 ul, ol {
   padding: 0;
-  margin-bottom: @baseLineHeight / 2;
+  margin-bottom: @halfLineHeight;
   margin-left: 28px;
 }
 ul ul,
@@ -326,7 +357,7 @@ dt {
   font-weight: bold;
 }
 dd {
-  margin-left: @baseLineHeight / 2;
+  margin-left: @halfLineHeight;
 
   &:before {
 		color: @grayLight;
@@ -338,7 +369,7 @@ dd {
 // Horizontal roles
 hr {
 	border: 0;
-	margin: @baseLineHeight @baseLineHeight / 2;
+	margin: @baseLineHeight @halfLineHeight;
 	border-top: 1px solid @grayDark;
 	border-bottom: 1px solid @grayLighter;
 }
@@ -365,12 +396,12 @@ q {
 blockquote {
 	font-style: italic;
 	position: relative;
-	padding: 0 0 0 @baseLineHeight/2;
+	padding: 0 0 0 @halfLineHeight;
 	margin: 0 0 @baseLineHeight 40px;
 	border-left: 5px solid @grayLight;
 
 	p {
-		margin: @baseLineHeight/2 0 0 0;
+		margin: @halfLineHeight 0 0 0;
 		line-height: @baseLineHeight;
 
 		&:first-child {
@@ -404,7 +435,7 @@ blockquote {
 		border-left: 0;
 		border-right: 5px solid @grayLight;
 		padding-left: 0;
-		padding-right: @baseLineHeight/2;
+		padding-right: @halfLineHeight;
 		margin-left: 0;
 		margin-right: 40px;
 
@@ -449,20 +480,20 @@ code, pre, var, samp, kbd {
 code {
 	padding: 3px;
 	white-space: nowrap;
-	.outer-shadow(0, 1px, 2px, 0.3);
+	.box-shadow(0 1px 2px rgba(0, 0, 0,0.3));
 }
 
 pre {
 	display: block;
 	line-height: @baseLineHeight;
-	padding: @baseLineHeight/2;
-	margin: 0 0 @baseLineHeight/2;
+	padding: @halfLineHeight;
+	margin: 0 0 @halfLineHeight;
 	word-break: break-all;
 	word-wrap: break-word;
 	white-space: pre;
 	white-space: pre-wrap;
 	.rounded(@baseBorderRadius);
-	.outer-shadow(0, 1px, 2px, 0.3);
+	.box-shadow(0 1px 2px rgba(0, 0, 0, 0.3));
 
 	code {
 		color: inherit;
@@ -481,8 +512,8 @@ pre {
 samp {
 	display: block;
 	line-height: @baseLineHeight;
-	padding: @baseLineHeight/2;
-	margin: 0 0 @baseLineHeight/2;
+	padding: @halfLineHeight;
+	margin: 0 0 @halfLineHeight;
 	color: @codeDarkColor;
 	background-color: @codeDarkBackgroundColor;
 	word-break: break-all;
@@ -514,4 +545,315 @@ del {
 }
 
 // Tables
+
+table {
+	max-width: 100%;
+	background-color: ;
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+caption {
+	font-size: @h4FontSize;
+	font-weight: bold;
+	text-align: center;
+	margin: 0 0 @halfLineHeight 0;
+}
+
+.table {
+	width: 100%;
+	margin-bottom: @baseLineHeight;
+	background-color: @tableBackground;
+
+	th, td {
+		padding: 8px;
+		line-height: @baseLineHeight;
+		text-align: left;
+		vertical-align: top;
+		border-top: 1px solid @tableBorderColor;
+	}
+	th {
+		font-weight: bold;
+	}
+	thead th {
+		vertical-align: bottom;
+		background-color: @tableBackgroundHover;
+	}
+	
+	// Remove top border
+	caption + thead tr:first-child th,
+	caption + thead tr:first-child td,
+	thead:first-child tr:first-child th,
+	thead:first-child tr:first-child td {
+	    border-top: 0;
+	}
+
+	tbody tr {
+		&.red > td 			{ background-color: @redBackground;}
+		&.blue > td 		{ background-color: @blueBackground;}
+		&.purple > td 		{ background-color: @purpleBackground;}
+		&.yellow > td 		{ background-color: @yellowBackground;}
+		&.green > td 		{ background-color: @greenBackground;}
+	}
+
+	&.bordered {
+		border-collapse: separate; // Done so we can round those corners!
+  		*border-collapse: collapse; // IE7 can't round corners anyway
+  		border: 1px solid @tableBorderColor;
+  		border-left: 0;
+  		.rounded(@baseBorderRadius);
+
+  		th,td {
+  			border-left: 1px solid @tableBorderColor;
+  		}
+	}
+
+	&.striped {
+		tbody tr:nth-child(even) {
+			background-color: @tableBackgroundAccent;
+		}
+	}
+
+	&.hover {
+		tbody tr:hover {
+			th, td {
+				background-color: @tableBackgroundHover;
+			}
+
+			&.red:hover > td 		{ background-color: darken(@redBackground, 5%);}
+			&.blue:hover > td 		{ background-color: darken(@blueBackground, 5%);}
+			&.purple:hover > td 	{ background-color: darken(@purpleBackground, 5%);}
+			&.yellow:hover > td 	{ background-color: darken(@yellowBackground, 15%);}
+			&.green:hover > td 		{ background-color: darken(@greenBackground, 10%);}
+		}
+	}
+	
+	&.compact {
+		th,td {
+			padding: 2px;
+		}
+	}
+}
+
+// Forms
+
+form {
+	margin: 0 0 @baseLineHeight 0;
+}
+
+fieldset {
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+
+legend {
+	font-size: @h4FontSize;
+	line-height: @baseLineHeight;
+	display: block;
+	width: 100%;
+	padding: 0;
+	margin: 0 0 @baseLineHeight 0;
+	color: @grayDark;
+	border-bottom: 2px solid @grayLighter;
+
+	small {
+		font-size: @baseFontSize * 0.75;
+		color: @grayLight;
+	}
+}
+
+label {
+	display: block;
+	margin-bottom: 5px;
+}
+
+label, button, input,
+textarea, select {
+	font-family: @baseFontFamily;
+	font-size: @baseFontSize;
+	font-weight: normal;
+	line-height: @baseLineHeight;
+}
+
+textarea,
+input {
+	width: 200px;
+}
+
+textarea {
+	height: auto;
+}
+
+label {
+	display: block;
+	margin-bottom: 5px;
+}
+
+input[type="file"],
+input[type="image"],
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+input[type="radio"],
+input[type="checkbox"] {
+  width: auto;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="search"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="number"],
+input[type="url"],
+input[type="tel"],
+input[type="color"],
+textarea, select {
+	.inline-block();
+	height: @baseLineHeight;
+	padding: 6px;
+	margin-bottom: @halfLineHeight;
+	color: @gray;
+	background-color: @inputBackground;
+	border: 1px solid lighten(@inputBorder, 10%);
+	vertical-align: middle;
+	.rounded(@inputBorderRadius);
+	.transition(~"box-shadow linear 0.2s, background-color ease-in-out 0.5s");
+	.volumeInput();
+
+	&:focus {
+		background-color: darken(@inputBackground, 7.5%);
+		outline: 0;
+		border-bottom: 1px solid @inputBackground;
+		.box-shadow(0 3px 0 @lightblue);
+	}
+
+	&.red {
+		.volumeInput(@red);
+		&:focus { .box-shadow(0 3px 0 @red);}
+	}
+	&.cyan {
+		.volumeInput(@cyan);
+		&:focus { .box-shadow(0 3px 0 @cyan);}
+	}
+	&.blue {
+		.volumeInput(@blue);
+		&:focus { .box-shadow(0 3px 0 @blue);}
+	}
+	&.purple {
+		.volumeInput(@purple);
+		&:focus { .box-shadow(0 3px 0 @purple);}
+	}
+	&.yellow {
+		.volumeInput(@yellow);
+		&:focus { .box-shadow(0 3px 0 @yellow);}
+	}
+	&.green {
+		.volumeInput(@green);
+		&:focus { .box-shadow(0 3px 0 @green);}
+	}
+	&.orange {
+		.volumeInput(@orange);
+		&:focus { .box-shadow(0 3px 0 @orange);}
+	}
+}
+
+input {
+	.spanX (@index: @gridColumns) when (@index > 0) {
+    	&.span@{index} {
+			width: @index * 30px;
+    	}
+    	.spanX(@index - 1);
+    }
+	.spanX();
+}
+
+select {
+  width: 200px;
+  border: 1px solid lighten(@inputBorder, 10%);
+  background-color: @inputBackground;
+
+  &:focus {
+  	background-color: @inputBackground;
+  	outline: 0;
+  }
+}
+
+select[multiple],
+select[size] {
+  height: auto;
+}
+
+select,
+input[type="file"] {
+  height: @inputHeight;
+  *margin-top: 4px;
+  line-height: @inputHeight;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  margin: -2px 0 0;
+  *margin-top: 0;
+  margin-top: 1px \9;
+  line-height: normal;
+}
+
+input,
+textarea {
+  &:-moz-placeholder {
+    color: @placeholderText;
+  }
+  &:-ms-input-placeholder {
+    color: @placeholderText;
+  }
+  &::-webkit-input-placeholder {
+    color: @placeholderText;
+  }
+}
+
+.radio,
+.checkbox {
+	min-height: @baseLineHeight;
+	padding-left: -20px;
+
+	input[type="checkbox"]
+	input[type="radio"], {
+		float: left;
+		margin-left: -20px;
+	}
+
+	&.inline {
+		.inline-block();
+		padding-top: 5px;
+		margin-bottom: 0;
+		vertical-align: middle;
+	}
+}
+.radio.inline + .radio.inline,
+.checkbox.inline + .checkbox.inline {
+  margin-left: 10px;
+}
+
+input[disabled],
+select[disabled],
+textarea[disabled],
+input[readonly],
+select[readonly],
+textarea[readonly] {
+  cursor: not-allowed;
+  background-color: @inputDisabledBackground;
+}
+input[type="radio"][disabled],
+input[type="checkbox"][disabled],
+input[type="radio"][readonly],
+input[type="checkbox"][readonly] {
+  background-color: transparent;
+}
 
