@@ -100,7 +100,7 @@
 @inputBackground: 				fadeout(darken(@white, 5%), 25%);
 @inputDisabledBackground: 		#DFDFDF;
 @formActionBackground: 			#F8F8F8;
-@inputBorder: 					#ccc;
+@inputBorder: 					#D9D9D9;
 @placeholderText: 				@grayLight;
 
 @inputHeight: 					@baseLineHeight + 14px;
@@ -247,10 +247,10 @@ img {
 		.box-shadow(0 1px 3px rgba(0, 0, 0, 0.2));
 	}
 	&.rounded {
-		.rounded(@baseBorderRadius);
+		.border-radius(@baseBorderRadius);
 	}
 	&.circle {
-		.rounded(50%);
+		.border-radius(50%);
 	}
 }
 
@@ -475,7 +475,7 @@ code, pre, var, samp, kbd {
 	color: @codeLightColor;
 	background-color: @codeLightBackgroundColor;
 	border: 1px solid @codeBorderColor;
-	.rounded(@smallBorderRadius);
+	.border-radius(@smallBorderRadius);
 }
 
 code {
@@ -493,7 +493,7 @@ pre {
 	word-wrap: break-word;
 	white-space: pre;
 	white-space: pre-wrap;
-	.rounded(@baseBorderRadius);
+	.border-radius(@baseBorderRadius);
 	.box-shadow(0 1px 2px rgba(0, 0, 0, 0.3));
 
 	code {
@@ -521,7 +521,7 @@ samp {
 	word-wrap: break-word;
 	white-space: pre;
 	white-space: pre-wrap;
-	.rounded(@baseBorderRadius);
+	.border-radius(@baseBorderRadius);
 
 	code {
 		color: inherit;
@@ -602,7 +602,7 @@ caption {
   		*border-collapse: collapse; // IE7 can't round corners anyway
   		border: 1px solid @tableBorderColor;
   		border-left: 0;
-  		.rounded(@baseBorderRadius);
+  		.border-radius(@baseBorderRadius);
 
   		th,td {
   			border-left: 1px solid @tableBorderColor;
@@ -722,9 +722,9 @@ textarea, select {
 	margin-bottom: @halfLineHeight;
 	color: @gray;
 	background-color: @inputBackground;
-	border: 1px solid lighten(@inputBorder, 10%);
+	border: 1px solid @inputBorder;
 	vertical-align: middle;
-	.rounded(@inputBorderRadius);
+	.border-radius(@inputBorderRadius);
 	.transition(~"box-shadow linear 0.2s, background-color ease-in-out 0.5s");
 	.volumeInput();
 
@@ -774,7 +774,7 @@ textarea {
 
 select {
   width: 200px;
-  border: 1px solid lighten(@inputBorder, 10%);
+  border: 1px solid @inputBorder;
   background-color: @inputBackground;
 
   &:focus {
@@ -867,7 +867,7 @@ form .action {
 	padding: @baseLineHeight 20px;
 	margin: @baseLineHeight 0;
 	background-color: @formActionBackground;
-	border-top: 1px solid lighten(@inputBorder, 5%);
+	border-top: 1px solid @inputBorder;
 }
 
 form .help {
@@ -895,7 +895,7 @@ form .help {
 		margin-bottom: 0;
 		*margin-left: 0;
 		vertical-align: top;
-		.border-radius(0, @inputBorderRadius, @inputBorderRadius, 0);
+		.border-radius(0 @inputBorderRadius @inputBorderRadius 0);
 		&:focus {
 			z-index: 2;
 		}
@@ -913,47 +913,80 @@ form .help {
 		height: @baseLineHeight;
 		padding: 6px;
         text-shadow: 0 1px 0 @white;
-        border: 1px solid lighten(@inputBorder, 10%);
+        border: 1px solid @inputBorder;
 	}
 
 	.add-on, .btn {
 		margin-left: -1px;
-		.rounded(0);
+		.border-radius(0);
 	}
 }
 
 .prepend {
 	.add-on:first-child,
 	.btn:first-child {
-		.border-radius(@inputBorderRadius, 0, 0, @inputBorderRadius);
+		.border-radius(@inputBorderRadius 0 0 @inputBorderRadius);
 	}
 }
 
 .append {
 	input, select {
-		.border-radius(@inputBorderRadius, 0, 0, @inputBorderRadius);
+		.border-radius(@inputBorderRadius 0 0 @inputBorderRadius);
 		+ .btn:last-child {
-			.border-radius(0, @inputBorderRadius, @inputBorderRadius, 0);
+			.border-radius(0 @inputBorderRadius @inputBorderRadius 0);
 		}
 	}
 	.add-on:last-child,
 	.btn:last-child {
-		.border-radius(0, @inputBorderRadius, @inputBorderRadius, 0);
+		.border-radius(0 @inputBorderRadius @inputBorderRadius 0);
 	}
 }
 
 .append.prepend {
 	input, select {
-		.rounded(0);
+		.border-radius(0);
 	}
 	.add-on:first-child,
 	.btn:first-child {
 		margin-right: -1px;
-		.border-radius(@inputBorderRadius, 0, 0, @inputBorderRadius);
+		.border-radius(@inputBorderRadius 0 0 @inputBorderRadius);
 	}
 	.add-on:last-child,
 	.btn:last-child {
 		margin-left: -1px;
-		.border-radius(0, @inputBorderRadius, @inputBorderRadius, 0);
+		.border-radius(0 @inputBorderRadius @inputBorderRadius 0);
+	}
+}
+
+form.inline,
+form.horizontal {
+	input,
+	select,
+	textarea,
+	.help.inline,
+	.append,
+	.preppend {
+		.inline-block();
+		margin-bottom: 0;
+		vertical-align: middle;
+	}
+}
+
+form.inline {
+	.btn-group, label {
+		.inline-block();
+	}
+	.append, .prepend {
+		margin-bottom: 0;
+	}
+	.radio, .checkbox {
+		margin-bottom: 0;
+		padding-left: 0;
+		vertical-align: middle;
+		
+		input[type="checkbox"],
+		input[type="radio"] {
+			margin-left: 3px;
+		}
 	}
 }
