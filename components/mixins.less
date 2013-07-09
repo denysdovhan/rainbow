@@ -81,31 +81,11 @@
 //        Border Radius Tools
 // ==============================================
 
-// Rounded 
-.rounded(@radius) {
+// Borner radius
+.border-radius(@radius) {
     -webkit-border-radius: @radius;
        -moz-border-radius: @radius;
             border-radius: @radius;
-}
-
-// Borner radius
-.border-radius(@topLeft: 0, @topRight: 0, @bottomRight: 0, @bottomLeft: 0) {
-    // Top Left
-    -webkit-border-top-left-radius: @topLeft;    
-        -moz-border-radius-topleft: @topLeft;   
-            border-top-left-radius: @topLeft;
-    // Top Right
-    -webkit-border-top-right-radius: @topRight;
-        -moz-border-radius-topright: @topRight;
-            border-top-right-radius: @topRight;
-    // Bottom Right
-    -webkit-border-bottom-right-radius: @bottomRight;
-        -moz-border-radius-bottomright: @bottomRight;
-            border-bottom-right-radius: @bottomRight;
-    // Bottom Left
-    -webkit-border-bottom-left-radius: @bottomLeft;
-        -moz-border-radius-bottomleft: @bottomLeft;
-            border-bottom-left-radius: @bottomLeft;
 }
 
 
@@ -266,8 +246,8 @@
 .volumeInput(@color: @lightblue) {
     &.volume {
     background-color: @inputBackground;
-    border: 1px solid @inputBorder;
-    .box-shadow(inset 0 1px 3px @inputBorder);
+    border: 1px solid darken(@inputBorder, 5%);
+    .box-shadow(inset 0 1px 3px darken(@inputBorder, 5%));
 
     &:focus {
       background-color: @white;
