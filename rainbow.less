@@ -106,6 +106,8 @@
 @inputHeight: 					@baseLineHeight + 14px;
 @inputBorderRadius: 			@baseBorderRadius;
 
+@horizontalComponentOffset: 	150px;
+
 
 
 
@@ -988,5 +990,47 @@ form.inline {
 		input[type="radio"] {
 			margin-left: 3px;
 		}
+	}
+}
+
+form.horizontal {
+	.control-row {
+		.clearfix();
+		margin-bottom: @baseLineHeight;
+
+		label {
+			text-align: right;
+			float: left;
+			width: @horizontalComponentOffset - 20;
+			padding-top: 5px;
+		}
+
+		.controls {
+			*display: inline-block;
+			*padding-left: 20px;
+			margin-left: @horizontalComponentOffset;
+			*margin-left: 0;
+			&:first-child {
+				*padding-left: @horizontalComponentOffset;
+			}
+		}
+	}
+
+	input,
+	select,
+	textarea,
+	.prepend,
+	.append {
+		+ .help {
+			margin-top: @halfLineHeight;
+		}
+	}
+
+	.action {
+		padding-left: @horizontalComponentOffset;
+	}
+
+	.help {
+		margin-bottom: 0;
 	}
 }
