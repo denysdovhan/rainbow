@@ -97,7 +97,7 @@
 // ------------------------------
 
 // Inputs
-@inputBackground: 				fadeout(darken(@white, 5%), 25%);
+@inputBackground: 				darken(@white, 5%);
 @inputDisabledBackground: 		#DFDFDF;
 @formActionBackground: 			#F8F8F8;
 @inputBorder: 					#D9D9D9;
@@ -107,6 +107,11 @@
 @inputBorderRadius: 			@baseBorderRadius;
 
 @horizontalComponentOffset: 	150px;
+
+// Buttons
+@btnBackground: 				darken(@white, 5%);
+@btnBackgroundHighlight: 		darken(@btnBackground, 10%);
+@btnBorder: 					#CCC;
 
 
 
@@ -1031,6 +1036,52 @@ form.horizontal {
 	}
 
 	.help {
-		margin-bottom: 0;
+		margin-bottom: 0;;
 	}
+}
+
+// 		Buttons
+// ===================
+
+.btn {
+	.inline-block();
+	font-size: @baseFontSize;
+	line-height: @baseLineHeight;
+	text-align: center;
+	vertical-align: middle;
+	cursor: pointer;
+	padding: 4px 12px;
+	margin-bottom: 0;
+	border: 1px solid @btnBorder;
+	*border: 0;
+	background-color: @btnBackground;
+	.border-radius(@baseBorderRadius);
+	.user-select(none);
+	.volumeButton();
+	
+	&:hover,
+	&:focus {
+		text-decoration: none;
+		background-color: lighten(@btnBackgroundHighlight, 5%);
+		.box-shadow(0 1px 3px darken(@btnBorder, 10%));
+		.transition(~"box-shadow linear 0.2s, background-color linear 0.5s");
+	}
+
+	&:active,
+	&.active {
+		background-color: @btnBackgroundHighlight;
+		outline: 0;
+		.box-shadow(inset 0 2px 2px darken(@btnBorder, 10%));
+		.transition(box-shadow linear 0.2s);
+	}
+
+	&.disabled,
+	&[disabled] {
+		.opacity(70);
+		cursor: default;
+		background-color: @btnBackground;
+		.box-shadow(none);
+	}
+	
+	
 }
