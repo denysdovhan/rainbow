@@ -259,7 +259,27 @@
   }
 }
 
-.volumeButton(@startColor: @btnBackground, @endColor: @btnBackgroundHighlight) {
+.buttonBackground(@colorBackground, @colorBackgroundHighlight, @textColor: @white, @textShadow: 0 -1px 0 fadeout(@white, 75%)) {
+    background-color: @colorBackground;
+    *background-color: @colorBackground;
+    color: @textColor;
+
+    &:hover,
+    &:focus {
+      background-color: lighten(@colorBackgroundHighlight, 7%);
+    }
+    &:active,
+    &.active {
+      background-color: @colorBackgroundHighlight;
+    }
+    &.disabled,
+    &[disabled] {
+      background-color: @colorBackground;
+    } 
+}
+
+
+.volumeButton(@startColor, @endColor) {
   &.volume {
     #gradient > .vertical(@startColor, @endColor);
     background-color: @endColor;
@@ -274,5 +294,14 @@
       .transition(background-position linear 0.2s);
     }
 
+    &:active,
+    &.active {
+      background-image: none; 
+    }
+
+    &.disabled,
+    &[disabled] {
+      background-image: none;
+    }
   }
 }

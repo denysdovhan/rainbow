@@ -1054,15 +1054,14 @@ form.horizontal {
 	margin-bottom: 0;
 	border: 1px solid @btnBorder;
 	*border: 0;
-	background-color: @btnBackground;
+	.buttonBackground(@btnBackground, @btnBackgroundHighlight, @grayDark, 0 1px 0 fadeout(@black, 75%));
 	.border-radius(@baseBorderRadius);
 	.user-select(none);
-	.volumeButton();
+	.volumeButton(@btnBackground, @btnBackgroundHighlight);
 	
 	&:hover,
 	&:focus {
 		text-decoration: none;
-		background-color: lighten(@btnBackgroundHighlight, 7%);
 		background-repeat: repeat-x;
 		.box-shadow(0 1px 3px darken(@btnBorder, 10%));
 		.transition(~"box-shadow linear 0.2s, background-color linear 0.5s");
@@ -1070,7 +1069,6 @@ form.horizontal {
 
 	&:active,
 	&.active {
-		background-color: @btnBackgroundHighlight;
 		outline: 0;
 		.box-shadow(inset 0 2px 2px darken(@btnBorder, 10%));
 		.transition(box-shadow linear 0.2s);
@@ -1078,9 +1076,8 @@ form.horizontal {
 
 	&.disabled,
 	&[disabled] {
-		.opacity(70);
+		.opacity(0.75);
 		cursor: default;
-		background-color: @btnBackground;
 		.box-shadow(none);
 	}
 	
