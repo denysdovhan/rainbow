@@ -328,7 +328,7 @@ body {
 // =============================================
 
 img {
-	&.border {
+	&.bordered {
 		padding: 4px;
 		background-color: @white;
 		border: 1px solid @grayLight;
@@ -2137,3 +2137,19 @@ form.horizontal {
 	}
 }
 
+// 			Media Elements 
+// ===================================
+
+.media-grid {
+	.clearfix();
+	margin-left: -@gridGutterWidth;
+	list-style: none;
+
+	> li {
+		float: left;
+		margin-bottom: @baseLineHeight;
+		margin-left: @gridGutterWidth;
+	}
+	
+
+}
