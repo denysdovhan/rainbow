@@ -2161,6 +2161,22 @@ form.horizontal {
 				margin-right: auto;
 				margin-left: auto;
 			}
+
+			> .caption {
+				padding: 10px;
+				color: @gray;
+			}
+		}
+
+		a.thumbnail:hover,
+		a.thumbnail:focus {
+			border-color: @linkColor;
+			.box-shadow(0 1px 5px fadeout(@linkColor, 30%));
+			.transition(all linear 0.5s);
 		}
 	}
+}
+
+.row.fluid .thumbnails {
+	margin-left: 0;	
 }
