@@ -2137,3 +2137,30 @@ form.horizontal {
 	}
 }
 
+.media-grid {
+	.clearfix();
+	list-style: none;
+	margin-left: -@gridGutterWidth;
+
+	> li {
+		float: left;
+		margin-left: @baseLineHeight;
+		margin-bottom: @gridGutterWidth;
+
+		.thumbnail {
+			line-height: @baseLineHeight;
+			display: block;
+			padding: 3px;
+			border: 1px solid @grayLighter;
+			.border-radius(@baseBorderRadius);
+			.box-shadow(0 1px 3px fadeout(@black, 80%));
+
+			> img {
+				display: block;
+				max-width: 100%;
+				margin-right: auto;
+				margin-left: auto;
+			}
+		}
+	}
+}
