@@ -328,7 +328,7 @@ body {
 // =============================================
 
 img {
-	&.bordered {
+	&.border {
 		padding: 4px;
 		background-color: @white;
 		border: 1px solid @grayLight;
@@ -355,12 +355,19 @@ strong 	{ font-weight: bold;}
 em 		{ font-style: italic;}
 cite 	{ font-style: normal;}
 
-.headline {
+.lead {
 	font-size: @baseFontSize * 1.5;
 	font-weight: 200;
 	line-height: @baseLineHeight * 1.5;
 	margin-bottom: @baseLineHeight;
 }
+
+.headline {
+	margin: @baseLineHeight 0 @halfLineHeight;
+	padding-bottom: @halfLineHeight;
+	border-bottom: 2px solid @grayLighter;
+}
+
 
 h1, h2, h3, h4, h5, h6 {
 	font-family: @headingsFontFamily;
@@ -2137,19 +2144,3 @@ form.horizontal {
 	}
 }
 
-// 			Media Elements 
-// ===================================
-
-.media-grid {
-	.clearfix();
-	margin-left: -@gridGutterWidth;
-	list-style: none;
-
-	> li {
-		float: left;
-		margin-bottom: @baseLineHeight;
-		margin-left: @gridGutterWidth;
-	}
-	
-
-}

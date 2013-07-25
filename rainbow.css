@@ -428,11 +428,16 @@ em {
 cite {
   font-style: normal;
 }
-.headline {
+.lead {
   font-size: 21px;
   font-weight: 200;
   line-height: 30px;
   margin-bottom: 20px;
+}
+.headline {
+  margin: 20px 0 10px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #eeeeee;
 }
 h1,
 h2,
@@ -1145,6 +1150,30 @@ caption {
 .table.compact th,
 .table.compact td {
   padding: 2px;
+}
+.banner {
+  font-size: 17.5px;
+  font-weight: 400;
+  line-height: 30px;
+  margin-bottom: 30px;
+  padding: 50px;
+  color: inherit;
+  background-color: #eeeeee;
+}
+.banner > h1 {
+  font-size: 60px;
+  line-height: 1;
+  letter-spacing: -2px;
+  margin-bottom: 0;
+  color: inherit;
+}
+.banner li {
+  line-height: 30px;
+}
+.banner.rounded {
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
 }
 form {
   margin: 0 0 20px 0;
