@@ -25,28 +25,43 @@
 @white:             #fff;
 
 // 	   Accent colors
-@red:				#F00;
-@cyan:				#0FF;
-@blue:				#00F;
-@darkblue:			#00A;
-@lightblue:			#ADE;
-@purple:			#808;
-@yellow:			#FF0;
-@lime:				#0F0;
-@magenta:			#F0F;
+@red:				#F22; //*
+@cyan:				#0DD; //
+@blue:				#28F; //
+@darkblue:			#07D; //
+@lightblue:			#8DE; //
+@purple:			#C0C; //
+@yellow:			#fC0; //
+@lime:				#4F6; //
+@pink:				#F7F; //
 @silver:			#CCC;
-@orange:			#FA0;
-@brown:				#A22;
-@maroon:			#800;
-@green:				#080;
-@olive:				#880;
+@orange:			#FA3; //
+@brown:				#B52; //
+@maroon:			#C00; //
+@green:				#4a4; //
+@olive:				#BA0;
 
 // Backgrounds color
-@redBackground:				lighten(@red, 45%);
-@blueBackground:			lighten(@blue, 45%);
-@purpleBackground:			lighten(@purple, 65%);
+@redBackground:				lighten(@red, 35%);
+@blueBackground:			lighten(@blue, 35%);
+@purpleBackground:			lighten(@purple, 50%);
 @yellowBackground:			lighten(@yellow, 40%);
-@greenBackground:			lighten(@green, 65%);
+@greenBackground:			lighten(@green, 40%);
+
+// Border colors
+@redBorder: 				darken(@redBackground, 10%);
+@blueBorder: 				darken(@blueBackground, 10%);
+@purpleBorder: 				darken(@purpleBackground, 10%);
+@yellowBorder: 				darken(@yellowBackground, 10%);
+@greenBorder: 				darken(@greenBackground, 10%);
+
+// Text colors
+@redText: 					darken(spin(@red, -15), 5%);
+@blueText: 					darken(spin(@blue, -15), 15%);
+@purpleText: 				darken(spin(@purple, -15), 5%);
+@yellowText: 				darken(spin(@yellow, -15), 5%);
+@greenText: 				darken(spin(@green, -15), 5%);
+
 
 // Tables colors
 @tableBackground: 			transparent;
@@ -54,11 +69,11 @@
 @tableBackgroundHover: 		#F0F0EE;
 @tableBorderColor: 			#CECECE;
 
-
 // 			Base
-@bodyBackgroundColor: 		@white;
-@textColor:					@grayDark;
-@LinkColor:					#28F;
+@bodyBackgroundColor: 			@white;
+@textColor:						@grayDark;
+@linkColor:						#28F;
+@linkColorHover: 				darken(@linkColor, 10%);
 
 @codeLightBackgroundColor: 		darken(@bodyBackgroundColor, 5%);
 @codeLightColor: 				lighten(@textColor, 10%);
@@ -71,8 +86,21 @@
 
 @baseFontFamily:  		Arial, "Helvetica Neue", Helvetica, sans-serif;
 @monoFontFamily: 		Monaco, "Courier New", Menlo, Consolas, monospace;
+
 @baseFontSize: 			14px;
+
+@fontSizeLarge: 		@baseFontSize * 1.25;
+@fontSizeSmall: 		@baseFontSize * 0.85;
+@fontSizeMini: 			@baseFontSize * 0.75;
 @codeFontSize: 			@baseFontSize - 2px;
+
+@paddingLarge: 				11px 19px;
+@paddingSmall: 				2px 10px;
+@paddingMini: 				0 6px;
+
+@paddingInputLarge: 		11px 10px;
+@paddingInputSmall: 		@paddingSmall;
+@paddingInputMini: 			@paddingMini;
 
 @baseLineHeight: 		20px;
 @halfLineHeight: 		@baseLineHeight/2;
@@ -109,12 +137,60 @@
 @horizontalComponentOffset: 	150px;
 
 // Buttons
-@btnBackground: 				darken(@white, 5%);
-@btnBackgroundHighlight: 		darken(@btnBackground, 10%);
-@btnBorder: 					#CCC;
+@btnBackground: 					darken(@white, 5%);
+@btnBackgroundHighlight: 			darken(@btnBackground, 10%);
+@btnBorder: 						#CCC;
+
+@btnRedBackground: 					#F95959;
+@btnRedBackgroundHighlight: 		#A51B1B;
+
+@btnCyanBackground: 				@cyan;
+@btnCyanBackgroundHighlight: 		darken(@btnCyanBackground, 15%);
+
+@btnBlueBackground: 				@blue;
+@btnBlueBackgroundHighlight: 		darken(@btnBlueBackground, 20%);
+
+@btnDarkblueBackground: 			@darkblue;
+@btnDarkblueBackgroundHighlight: 	darken(@btnDarkblueBackground, 20%);
+
+@btnLightblueBackground: 			#38C4DC;
+@btnLightblueBackgroundHighlight: 	darken(@btnLightblueBackground, 20%);
+
+@btnPurpleBackground: 				@purple;
+@btnPurpleBackgroundHighlight: 		darken(@btnPurpleBackground, 15%);
+
+@btnYellowBackground: 				@yellow;
+@btnYellowBackgroundHighlight: 		darken(@btnYellowBackground, 15%);
+
+@btnLimeBackground: 				#35EA59;
+@btnLimeBackgroundHighlight: 		darken(@btnLimeBackground, 20%);
+
+@btnPinkBackground: 				@pink;
+@btnPinkBackgroundHighlight: 		darken(@btnPinkBackground, 30%);
+
+@btnOrangeBackground: 				@orange;
+@btnOrangeBackgroundHighlight: 		darken(@btnOrangeBackground, 20%);
+
+@btnBrownBackground: 				@brown;
+@btnBrownBackgroundHighlight: 		darken(@btnBrownBackground, 15%);
+
+@btnMaroonBackground: 				@maroon;
+@btnMaroonBackgroundHighlight: 		darken(@btnMaroonBackground, 15%);
+
+@btnGreenBackground: 				lighten(@green, 5%);
+@btnGreenBackgroundHighlight: 		darken(@btnGreenBackground, 15%);
+
+@btnOliveBackground: 				@olive;
+@btnOliveBackgroundHighlight: 		darken(@btnOliveBackground, 15%);
+
+@btnBlackBackground: 				lighten(@black, 25%);
+@btnBlackBackgroundHighlight: 		darken(@btnBlackBackground, 15%);
 
 
-
+// 					Navbar 
+// ---------------------------------------------
+@navbarHeight: 			40px;
+@zIndexNavbar: 			1000;
 
 // 					  Grid
 // ---------------------------------------------
@@ -140,12 +216,13 @@ body {
 	background-color: @bodyBackgroundColor;
 
 	a {
-		color: @LinkColor;
+		cursor: pointer;
+		color: @linkColor;
 		text-decoration: none;
 
 		&:hover,
 		&:focus {
-			color: darken(@LinkColor, 5%);	
+			color: @linkColorHover;	
 			text-decoration: underline;
 		}
 	}
@@ -158,7 +235,7 @@ body {
 	&.purple 		{ .linkColor(@purple);}
 	&.yellow 		{ .linkColor(@yellow);}
 	&.lime 			{ .linkColor(@lime);}
-	&.magenta 		{ .linkColor(@magenta);}
+	&.pink 			{ .linkColor(@pink);}
 	&.green 		{ .linkColor(@green);}
 	&.olive 		{ .linkColor(@olive);}
 	&.silver 		{ .linkColor(@silver);}
@@ -206,7 +283,6 @@ body {
 	}
 		
 	.span (@columns: 1) {
-		background-color: #777;	
      	width: (@gridColumnWidth * @columns) + (@gridGutterWidth * (@columns - 1));
     }
 
@@ -270,7 +346,7 @@ p {
 }
 
 small 	{ font-size: 85%;}
-strong 	{font-weight: bold;}
+strong 	{ font-weight: bold;}
 em 		{ font-style: italic;}
 cite 	{ font-style: normal;}
 
@@ -322,7 +398,7 @@ small, strong, cite, abbr {
 	&.purple 		{ color: @purple;}
 	&.yellow 		{ color: @yellow;}
 	&.lime 			{ color: @lime;}
-	&.magenta 		{ color: @magenta;}
+	&.pink 			{ color: @pink;}
 	&.green 		{ color: @green;}
 	&.olive 		{ color: @olive;}
 	&.silver 		{ color: @silver;}
@@ -488,7 +564,6 @@ code, pre, var, samp, kbd {
 code {
 	padding: 3px;
 	white-space: nowrap;
-	.box-shadow(0 1px 2px rgba(0, 0, 0,0.3));
 }
 
 pre {
@@ -501,7 +576,7 @@ pre {
 	white-space: pre;
 	white-space: pre-wrap;
 	.border-radius(@baseBorderRadius);
-	.box-shadow(0 1px 2px rgba(0, 0, 0, 0.3));
+	.box-shadow(inset 0 1px 2px rgba(0, 0, 0, 0.3));
 
 	code {
 		color: inherit;
@@ -552,8 +627,79 @@ del {
 	color: @red;
 }
 
-// Tables
+// 			Banges
+// ===============================
+.label,
+.bange {
+	.inline-block();
+	font-size: @fontSizeMini;
+	font-weight: bold;
+	line-height: @baseLineHeight * 0.75;
+	vertical-align: baseline;
+	white-space: nowrap;
+	text-shadow: 0 1px 0 @grayDark;
+	color: @white;
+	background-color: @grayLight;
+	.box-shadow(inset 0 1px 0 @grayDark);
 
+	&:empty {
+		display: none;
+	}
+
+	&.red 			{ background-color: @red;}
+	&.cyan 			{ background-color: @cyan;}
+	&.blue 			{ background-color: @blue;}
+	&.darkblue 		{ background-color: @darkblue;}
+	&.lightblue 	{ background-color: @lightblue;}
+	&.purple 		{ background-color: @purple;}
+	&.yellow 		{ background-color: @yellow;}
+	&.lime 			{ background-color: @lime;}
+	&.pink 			{ background-color: @pink;}
+	&.green 		{ background-color: @green;}
+	&.olive 		{ background-color: @olive;}
+	&.orange 		{ background-color: @orange;}
+	&.brown 		{ background-color: @brown;}
+	&.maroon 		{ background-color: @maroon;}
+	&.black 		{ background-color: @gray;}
+}
+
+.label {
+	padding: 2px 5px;
+	.border-radius(@baseBorderRadius);
+}
+.bange {
+	padding: 2px 10px;
+	.border-radius(@baseBorderRadius);
+}
+
+a.label:hover,
+a.label:focus,
+a.bange:hover,
+a.bange:focus {
+	text-decoration: none;
+	cursor: pointer;
+	color: @white;
+}
+
+.btn {
+	.labal,
+	.bange {
+		position: relative;
+		top: -1px;
+	}
+
+	&.mini {
+		.label,
+		.bange {
+			top: 0;
+			padding-top: 0;
+			padding-bottom: 0; 
+		}
+	}
+}
+
+// 			Tables
+// ===============================
 table {
 	max-width: 100%;
 	background-color: ;
@@ -643,8 +789,10 @@ caption {
 	}
 }
 
-// Forms
 
+
+//				 Forms
+// ==================================
 form {
 	margin: 0 0 @baseLineHeight 0;
 }
@@ -725,7 +873,7 @@ input[type="color"],
 textarea, select {
 	.inline-block();
 	height: @baseLineHeight;
-	padding: 6px;
+	padding: 5px;
 	margin-bottom: @halfLineHeight;
 	color: @gray;
 	background-color: @inputBackground;
@@ -736,10 +884,30 @@ textarea, select {
 	.volumeInput();
 
 	&:focus {
-		background-color: darken(@inputBackground, 7.5%);
+		background-color: lighten(@inputBackground, 2.5%);
 		outline: 0;
-		border-bottom: 1px solid @inputBackground;
 		.box-shadow(0 3px 0 @lightblue);
+	}
+
+	// Mini
+	&.mini {
+		font-size: @fontSizeMini;
+		padding: @paddingInputMini;
+		.border-radius(@miniBorderRadius);
+	}
+
+	// Small
+	&.small {
+		font-size: @fontSizeSmall;
+		padding: @paddingInputSmall;
+		.border-radius(@smallBorderRadius);
+	}
+
+	// Large
+	&.large {
+		font-size: @fontSizeLarge;
+		padding: @paddingInputLarge;
+		.border-radius(@largeBorderRadius);
 	}
 
 	&.red {
@@ -869,7 +1037,7 @@ input[type="checkbox"][readonly] {
 	}
 }
 
-form .action {
+form > .action {
 	.clearfix();
 	padding: @baseLineHeight 20px;
 	margin: @baseLineHeight 0;
@@ -877,7 +1045,7 @@ form .action {
 	border-top: 1px solid @inputBorder;
 }
 
-form .help {
+form > .help {
 	display: block;
 	margin-bottom: @halfLineHeight;
 	color: lighten(@textColor, 10%);
@@ -914,12 +1082,12 @@ form .help {
 		font-weight: normal;
 		line-height: @baseLineHeight;
 		text-align: center;
+        text-shadow: 0 1px 0 @white;
 		background-color: @inputBackground;
 		min-width: 16px;
 		width: auto;
 		height: @baseLineHeight;
-		padding: 6px;
-        text-shadow: 0 1px 0 @white;
+		padding: 5px;
         border: 1px solid @inputBorder;
 	}
 
@@ -1043,6 +1211,7 @@ form.horizontal {
 // 		Buttons
 // ===================
 
+// Base Style
 .btn {
 	.inline-block();
 	font-size: @baseFontSize;
@@ -1050,11 +1219,11 @@ form.horizontal {
 	text-align: center;
 	vertical-align: middle;
 	cursor: pointer;
-	padding: 4px 12px;
+	padding: 5px 12px;
 	margin-bottom: 0;
-	border: 1px solid @btnBorder;
+	border: 1px solid;
 	*border: 0;
-	.buttonBackground(@btnBackground, @btnBackgroundHighlight, @grayDark, 0 1px 0 fadeout(@black, 75%));
+	.buttonBackground(@btnBackground, @btnBackgroundHighlight, @grayDark, 0 1px 1px fadeout(@white, 50%));
 	.border-radius(@baseBorderRadius);
 	.user-select(none);
 	.volumeButton(@btnBackground, @btnBackgroundHighlight);
@@ -1063,23 +1232,876 @@ form.horizontal {
 	&:focus {
 		text-decoration: none;
 		background-repeat: repeat-x;
-		.box-shadow(0 1px 3px darken(@btnBorder, 10%));
 		.transition(~"box-shadow linear 0.2s, background-color linear 0.5s");
 	}
 
 	&:active,
 	&.active {
 		outline: 0;
-		.box-shadow(inset 0 2px 2px darken(@btnBorder, 10%));
-		.transition(box-shadow linear 0.2s);
+		.transition(~"box-shadow linear 0.2s, background-image linear 0.5s");
 	}
 
 	&.disabled,
 	&[disabled] {
 		.opacity(0.75);
 		cursor: default;
-		.box-shadow(none);
+	}
+}
+
+// Button Sizes 
+.btn {
+	// Mini
+	&.mini {
+		font-size: @fontSizeMini;
+		padding: @paddingMini;
+		.border-radius(@miniBorderRadius);
+	}
+
+	// Small
+	&.small {
+		font-size: @fontSizeSmall;
+		padding: @paddingSmall;
+		.border-radius(@smallBorderRadius);
+	}
+
+	// Large
+	&.large {
+		font-size: @fontSizeLarge;
+		padding: @paddingLarge;
+		.border-radius(@largeBorderRadius);
+	}
+
+	// Block Button
+	&.block {
+		display: block;
+		width: 100%;
+		padding-left: 0;
+		padding-right: 0;
+		.box-sizing(border-box);
+		+ .block {
+			margin-top: 5px;
+		}
+	}
+	input[type="submit"],
+	input[type="reset"],
+	input[type="button"] {
+		&.block {
+			width: 100%;
+		}
 	}
 	
-	
+	// Grid System
+	.spanX (@index: @gridColumns) when (@index > 0) {
+    	&.span@{index} {
+			width: ((@gridColumnWidth) * @index) + (@gridGutterWidth * (@index - 1) + 16);
+			.box-sizing(border-box);
+    	}
+    	.spanX(@index - 1);
+    }
+	.spanX();
 }
+
+.btn {
+	&.red {
+		.buttonBackground(@btnRedBackground, @btnRedBackgroundHighlight);
+		.volumeButton(@btnRedBackground, @btnRedBackgroundHighlight);
+	}
+	&.cyan {
+		.buttonBackground(@btnCyanBackground, @btnCyanBackgroundHighlight);
+		.volumeButton(@btnCyanBackground, @btnCyanBackgroundHighlight);
+	}
+	&.blue {
+		.buttonBackground(@btnBlueBackground, @btnBlueBackgroundHighlight);
+		.volumeButton(@btnBlueBackground, @btnBlueBackgroundHighlight);
+	}
+	&.darkblue {
+		.buttonBackground(@btnDarkblueBackground, @btnDarkblueBackgroundHighlight);
+		.volumeButton(@btnDarkblueBackground, @btnDarkblueBackgroundHighlight);
+	}
+	&.lightblue {
+		.buttonBackground(@btnLightblueBackground, @btnLightblueBackgroundHighlight);
+		.volumeButton(@btnLightblueBackground, @btnLightblueBackgroundHighlight);
+	}
+	&.purple {
+		.buttonBackground(@btnPurpleBackground, @btnPurpleBackgroundHighlight);
+		.volumeButton(@btnPurpleBackground, @btnPurpleBackgroundHighlight);
+	}
+	&.yellow {
+		.buttonBackground(@btnYellowBackground, @btnYellowBackgroundHighlight);
+		.volumeButton(@btnYellowBackground, @btnYellowBackgroundHighlight);
+	}
+	&.lime {
+		.buttonBackground(@btnLimeBackground, @btnLimeBackgroundHighlight);
+		.volumeButton(@btnLimeBackground, @btnLimeBackgroundHighlight);
+	}
+	&.pink {
+		.buttonBackground(@btnPinkBackground, @btnPinkBackgroundHighlight);
+		.volumeButton(@btnPinkBackground, @btnPinkBackgroundHighlight);
+	}
+	&.green {
+		.buttonBackground(@btnGreenBackground, @btnGreenBackgroundHighlight);
+		.volumeButton(@btnGreenBackground, @btnGreenBackgroundHighlight);
+	}
+	&.olive {
+		.buttonBackground(@btnOliveBackground, @btnOliveBackgroundHighlight);
+		.volumeButton(@btnOliveBackground, @btnOliveBackgroundHighlight);
+	}
+	&.orange {
+		.buttonBackground(@btnOrangeBackground, @btnOrangeBackgroundHighlight);
+		.volumeButton(@btnOrangeBackground, @btnOrangeBackgroundHighlight);
+	}
+	&.brown {
+		.buttonBackground(@btnBrownBackground, @btnBrownBackgroundHighlight);
+		.volumeButton(@btnBrownBackground, @btnBrownBackgroundHighlight);
+	}
+	&.maroon {
+		.buttonBackground(@btnMaroonBackground, @btnMaroonBackgroundHighlight);
+		.volumeButton(@btnMaroonBackground, @btnMaroonBackgroundHighlight);
+	}
+	&.black {
+		.buttonBackground(@btnBlackBackground, @btnBlackBackgroundHighlight);
+		.volumeButton(@btnBlackBackground, @btnBlackBackgroundHighlight);
+	}
+
+	&.link { 
+		border-color: transparent;
+		color: @linkColor;
+		background-color: transparent;
+		cursor: pointer;
+		.border-radius(0);
+
+		&:hover,
+		&:focus {
+			text-decoration: underline;
+			color: @linkColorHover;
+			.box-shadow(none);
+		}
+		&:active,
+		&[disabled] {
+			background-color: transparent;
+			background-image: none;
+			.box-shadow(none);	
+		}
+		&[disabled]:hover,
+		&[disabled]:focus {
+			text-decoration: none;
+			color: @grayDark;
+		}
+	}
+}
+
+// Buttons Groups
+.btn-group {
+	position: relative;
+	.inline-block();
+	font-size: 0;
+	vertical-align: middle;
+	white-space: nowrap;
+
+	.btn {
+		position: relative;
+		font-size: @baseFontSize;
+		.border-radius(0);
+
+		+ .btn {
+			margin-left: -1px;
+		}
+
+		&.mini 		{ font-size: @fontSizeMini; }
+		&.small 	{ font-size: @fontSizeSmall;}
+		&.large 	{ font-size: @fontSizeLarge;}
+
+		&:first-child {
+			margin-left: 0;
+			.border-radius(@baseBorderRadius 0 0 @baseBorderRadius);
+		}
+		&:last-child {
+			.border-radius(0 @baseBorderRadius @baseBorderRadius 0);
+		}
+		&.mini:first-child {
+			margin-left: 0;
+			.border-radius(@miniBorderRadius 0 0 @miniBorderRadius);
+		}
+		&.mini:last-child {
+			.border-radius(0 @miniBorderRadius @miniBorderRadius 0);
+		}
+		&.small:first-child {
+			margin-left: 0;
+			.border-radius(@smallBorderRadius 0 0 @smallBorderRadius);
+		}
+		&.small:last-child {
+			.border-radius(0 @smallBorderRadius @smallBorderRadius 0);
+		}
+		&.large:first-child {
+			margin-left: 0;
+			.border-radius(@largeBorderRadius 0 0 @largeBorderRadius);
+		}
+		&.large:last-child {
+			.border-radius(0 @largeBorderRadius @largeBorderRadius 0);
+		}
+	}
+	
+	&.vertical {
+		.inline-block();
+
+		.btn {
+			display: block;
+			float: none;
+			max-width: 100%;
+			.border-radius(0);
+
+			+ .btn {
+				margin-left: 0;
+				margin-top: -1px;
+			}
+
+			&:first-child {
+				.border-radius(@baseBorderRadius @baseBorderRadius 0 0);
+			}
+			&:last-child {
+				.border-radius(0 0 @baseBorderRadius @baseBorderRadius);
+			}
+			&.mini:first-child {
+				.border-radius(@miniBorderRadius @miniBorderRadius 0 0);
+			}
+			&.mini:last-child {
+				.border-radius(0 0 @miniBorderRadius @miniBorderRadius);
+			}
+			&.small:first-child {
+				.border-radius(@smallBorderRadius @smallBorderRadius 0 0);
+			}
+			&.small:last-child {
+				.border-radius(0 0 @smallBorderRadius @smallBorderRadius);
+			}
+			&.large:first-child {
+				.border-radius(@largeBorderRadius @largeBorderRadius 0 0);
+			}
+			&.large:last-child {
+				.border-radius(0 0 @largeBorderRadius @largeBorderRadius);
+			}
+		}
+	}
+
+	+ .btn-group {
+		margin-left: 5px;
+	}
+}
+
+// Alerts
+// ------------
+.alert {
+	position: relative;
+	padding: 8px 30px 8px 15px;
+	margin-bottom: @baseLineHeight;
+	color: @yellowText;
+	background-color: @yellowBackground;
+	border: 1px solid @yellowBorder;
+	.border-radius(@baseBorderRadius);
+	
+	h1,h2,h3,h4,h5,h6 {
+		margin: @halfLineHeight 0 0;
+	}
+	p {
+		margin-bottom: 0;
+		+ p {
+			margin-top: 5px;
+		}
+	}
+	.close {
+		position: absolute;
+		font-size: @fontSizeLarge;
+		font-weight: bold;
+		right: 10px;
+		top: 5px;
+		cursor: pointer;
+		.user-select(none);
+	}
+
+	// Alternative colors
+	&.red {
+		background-color: @redBackground;
+		border-color: @redBorder;
+		color: @redText;
+	}
+	&.blue {
+		background-color: @blueBackground;
+		border-color: @blueBorder;
+		color: @blueText;
+	}
+	&.green {
+		background-color: @greenBackground;
+		border-color: @greenBorder;
+		color: @greenText;
+	}	
+}
+
+// 	Navigation
+// -----------------
+
+.nav {
+	margin: 0 0 @baseLineHeight;
+	list-style: none;
+
+	li > a {
+		display: block;
+		cursor: pointer;
+		.user-select(none);
+
+		&:hover,
+		&:focus {
+			text-decoration: none;
+			background-color: @grayLighter;
+			.transition(background-color linear 0.2s);
+		}		
+		
+		img { max-width: none;}
+	}
+
+	// Disabled State
+	.disabled > a {
+		color: @grayLight !important;
+
+		&:hover,
+		&:focus {
+			text-decoration: none ;
+			cursor: default;
+			background-color: transparent;
+		}
+	}
+
+
+	.right {
+		float: right;
+	}
+	
+	// NAVIGATION SIDEBAR
+	&.sidebar,
+	&.list {
+		padding-left: 15px;
+		padding-right: 15px;
+		margin-bottom: 0;
+		
+		// Navigations Header
+		.header {
+			font-size: @baseFontSize;
+			font-weight: bold;
+			text-shadow: 0 1px 0 fadeout(@white, 50%);
+			text-transform: uppercase;
+			line-height: @baseLineHeight;
+			display: block;
+			padding: 5px 15px;
+			color: @grayLight;
+		}
+		li + .header {
+			margin-top: @halfLineHeight;
+		}
+
+		.header,
+		li > a {
+			margin-left: -15px;
+			margin-right: -15px;
+			padding: 5px 15px;
+		}
+
+		.active a,
+		.active a:hover,
+		.active a:focus {
+			color: @white;
+			background-color: @linkColor;
+		}
+
+		.divider {
+			overflow: hidden;
+			*width: 100%;
+			height: 1px;
+			margin: @halfLineHeight - 1px 1px;
+			*margin: -5px 0 5px;
+			background-color: darken(@grayLighter, 15%);
+			border-bottom: 1px solid @grayLighter;
+		}
+
+		// Alternative Colors
+		&.red {
+			.navSidebarColor(@red);
+		}
+		&.purple {
+			.navSidebarColor(@purple);
+		}
+		&.yellow {
+			.navSidebarColor(@yellow);
+		}
+		&.green {
+			.navSidebarColor(@green);
+		}
+		&.black {
+			.navSidebarColor(@black);
+		}
+	}
+	
+	// NAVIGATIONS TABS & TABLETS
+	// ==========================
+	
+	// Base Style
+	&.pills,
+	&.tabs {
+		.clearfix();
+
+		li {
+			float: left;
+
+			a {
+				padding: 10px 15px;
+				margin-right: 2px;
+				line-height: 14px;
+			}
+
+			&.active > a, 
+			&.active > a:hover, 
+			&.active > a:focus {
+				cursor: default;
+				color: @white;
+				background-color: @linkColor;
+				.box-shadow(inset 0 1px 2px darken(@linkColor, 20%));	
+			} 
+		}
+
+		// Alternative Colors
+		&.red {
+			.navPillsTabsColor(@red);
+		}
+		&.purple {
+			.navPillsTabsColor(@purple);
+		}
+		&.yellow {
+			.navPillsTabsColor(@yellow);
+		}
+		&.green {
+			.navPillsTabsColor(@green);
+		}
+		&.black {
+			.navPillsTabsColor(@grayDark);
+		}
+	}
+
+	// Pills
+	&.pills > li {
+		a {
+			margin-top: 2px;
+			margin-bottom: 2px;
+			.border-radius(@baseBorderRadius);
+		}
+	}
+
+	// Tabs
+	&.tabs {
+		border-bottom: 1px solid @linkColor;
+
+		li > a {
+			.border-radius(@baseBorderRadius @baseBorderRadius 0 0);			
+		}
+
+		// Alternative Position
+		
+		// Bottom
+		&.below {
+			border-top: 1px solid @linkColor;
+			border-bottom: 0;
+
+			li {
+				margin-bottom: 0;
+
+				a {
+					.border-radius(0 0 @baseBorderRadius @baseBorderRadius);
+				}
+			}
+		}
+
+		// Left
+		&.left {
+			float: left;
+			margin-right: 19px;
+			border-bottom: 0;
+			border-right: 1px solid @linkColor;
+
+			> li {
+				float: none;
+				> a {
+					min-width: 100px;
+					margin-right: 0;
+					margin-bottom: 3px;
+					.border-radius(@baseBorderRadius 0 0 @baseBorderRadius);
+				}
+			}
+		}
+
+		// Right
+		&.right {
+			float: right;
+			margin-left: 19px; 
+			border-bottom: 0;
+			border-left: 1px solid @linkColor;
+
+			> li {
+				float: none;
+				> a {
+					min-width: 100px;
+					margin-left: 0;
+					margin-bottom: 3px; 
+					.border-radius(0 @baseBorderRadius @baseBorderRadius 0);
+				}
+			}
+		}
+	}
+
+	// NAVIGATION STACKED
+	// ==================
+	&.stacked {
+		li {
+			float: none;
+
+			a {
+				margin-right: 0;
+			}
+		}
+		
+		&.pills > li {
+			a {
+				margin-bottom: 3px;
+			}
+			&:first-child > a {
+				margin-bottom: 1px;
+			}
+		}
+
+		&.tabs{
+			border: 0;
+
+			li {
+				a {
+					margin-bottom: -1px;
+					border: 1px solid @grayLighter;
+					.border-radius(0);
+
+					&:hover,
+					&:focus {
+						z-index: 2;
+					}
+				}
+
+				&:first-child > a {
+					.border-radius(@baseBorderRadius @baseBorderRadius 0 0);
+				}
+				&:last-child > a {
+					.border-radius(0 0 @baseBorderRadius @baseBorderRadius);					
+				}
+			}
+		}
+	}
+}
+	
+.navbar {
+	position: relative;
+	z-index: 2;
+	overflow: visible;
+	line-height: @navbarHeight;
+	height: @navbarHeight;
+	margin-bottom: @baseLineHeight;
+	.navbarBackground(@btnBackground, @btnBackgroundHighlight, #777, #777);
+	.border-radius(@baseBorderRadius);
+	
+	> .container {
+		.clearfix();
+		.center();
+     	width: (@gridColumnWidth * @gridColumns) + (@gridGutterWidth * (@gridColumns - 1));
+		line-height: @navbarHeight;
+		height: @navbarHeight;
+	}
+
+	.brand {
+		font-size: @fontSizeLarge;
+		font-weight: 400;
+		line-height: @navbarHeight;
+		display: block;
+		float: left;
+		padding: 0 20px;
+		cursor: pointer;
+
+		&:hover,
+		&:focus {
+			text-decoration: none;
+		}
+	}
+
+	.divider {
+		height: @navbarHeight;
+		margin: 0 10px;
+	}
+
+	// Navigation
+	.nav {
+		position: relative;
+		left: 0;
+		display: block;
+		float: left;
+
+		> li {
+			margin: 0 3px; 
+			float: left;
+			> a {
+				font-weight: bold;
+				line-height: @navbarHeight;
+				text-decoration: none;
+				float: none;
+				padding: 0 10px;
+			}
+
+			&.active > a,
+			&.active > a:hover,
+			&.active > a:focus {
+				text-decoration: none;
+			}
+		}
+	}
+
+	form {
+		.clearfix();
+		.inline-block();
+		margin-bottom: 0;
+
+		input,
+		select,
+		.btn {
+			.inline-block();
+			margin-bottom: 0;
+		}
+
+		input[type="checkbox"],
+		input[type="image"],
+		input[type="radio"] {
+			margin-top: 3px;
+		}
+
+		.prepend input,
+		.append input {
+			margin-top: 0;
+		}
+	}
+
+	&.fixed-bottom,
+	&.fixed-top {
+		position: fixed;
+		right: 0;
+		left: 0;
+		z-index: @zIndexNavbar;
+		margin-bottom: 0;
+		padding-left: 0;
+		padding-right: 0;
+	}
+	
+	&.fixed-top {
+		top: 0;
+		border-width: 0 0 1px;
+	}
+	&.fixed-bottom {
+		bottom: 0;
+		border-width: 1px 0 0;
+	}
+	&.fixed-bottom,
+	&.fixed-top,
+	&.static {
+		.border-radius(0);
+	}
+
+	// Alternative Colors
+	&.red {
+		.navbarBackground(@btnRedBackground, @btnRedBackgroundHighlight);
+	}
+	&.cyan {
+		.navbarBackground(@btnCyanBackground, @btnCyanBackgroundHighlight);
+	}
+	&.blue {
+		.navbarBackground(@btnBlueBackground, @btnBlueBackgroundHighlight);
+	}
+	&.darkblue {
+		.navbarBackground(@btnDarkblueBackground, @btnDarkblueBackgroundHighlight);
+	}
+	&.lightblue {
+		.navbarBackground(@btnLightblueBackground, @btnLightblueBackgroundHighlight);
+	}
+	&.purple {
+		.navbarBackground(@btnPurpleBackground, @btnPurpleBackgroundHighlight);
+	}
+	&.yellow {
+		.navbarBackground(@btnYellowBackground, @btnYellowBackgroundHighlight);
+	}
+	&.lime {
+		.navbarBackground(@btnLimeBackground, @btnLimeBackgroundHighlight);
+	}
+	&.pink {
+		.navbarBackground(@btnPinkBackground, @btnPinkBackgroundHighlight);
+	}
+	&.green {
+		.navbarBackground(@btnGreenBackground, @btnGreenBackgroundHighlight);
+	}
+	&.olive {
+		.navbarBackground(@btnOliveBackground, @btnOliveBackgroundHighlight);
+	}
+	&.orange {
+		.navbarBackground(@btnOrangeBackground, @btnOrangeBackgroundHighlight);
+	}
+	&.brown {
+		.navbarBackground(@btnBrownBackground, @btnBrownBackgroundHighlight);
+	}
+	&.maroon {
+		.navbarBackground(@btnMaroonBackground, @btnMaroonBackgroundHighlight);
+	}
+	&.black {
+		.navbarBackground(@btnBlackBackground, @btnBlackBackgroundHighlight);
+	}
+}
+
+
+// 		Breadcrumbs
+// ===========================
+.breadcrumbs {
+	margin: 0 0 @baseLineHeight;
+	padding: 8px 15px;
+	list-style: none;
+	background-color: fadeout(@grayLighter, 30%);
+	.border-radius(@baseBorderRadius);
+
+	> li {
+		.inline-block();
+		text-shadow: 0 1px 0 @white;
+
+		&:before {
+			content: "/";
+			margin: 5px;
+			color: @grayLight;
+		}
+		&:first-child {
+			margin-left: 0;
+
+			&:before {
+				display: none;
+			}
+		}
+
+		&.active {
+			cursor: default;
+			color: @grayLight;
+		}
+
+		a {
+			text-decoration: none;
+
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+
+	&.red > li > a {
+		color: @redText;
+	}
+	&.purple > li > a {
+		color: @purpleText;
+	}	
+	&.yellow > li > a {
+		color: @yellowText;
+	}
+	&.green > li > a {
+		color: @greenText;
+	}
+	&.black > li > a {
+		color: @grayDark;
+	}	
+}
+
+// 				Pagination
+// ============================================
+
+.pagination {
+	margin: @halfLineHeight 0;
+
+	ul {
+		.inline-block();
+		margin-left: 0;
+		margin-bottom: 0;
+		.border-radius(@baseBorderRadius);
+
+		> li {
+			display: inline;
+
+			> span,
+			> a {
+				text-decoration: none;
+				text-shadow: 0 -1px 0 #DDD;
+				float: left;
+				padding: 5px 10px;
+				line-height: @baseLineHeight;
+				background-color: transparent;
+				border: 1px solid #DDD;
+				border-right-width: 0; 
+			}
+			&:first-child > span,
+			&:first-child > a {
+				.border-radius(@baseBorderRadius 0 0 @baseBorderRadius);
+			}
+			&:last-child > span,
+			&:last-child > a {
+				border-right-width: 1px;
+				.border-radius(0 @baseBorderRadius @baseBorderRadius 0);
+			}
+
+            &.disabled > span,
+			&.disabled > a,
+			&.disabled > a:hover,
+			&.disabled > a:focus,
+			&.active > span,
+			&.active > a {
+				cursor: default;
+				color: @grayLight;
+				background-color: transparent;
+			}
+
+			&.active > span,
+			&.active > a,
+			> a:hover,
+			> a:focus {
+				background-color: @grayLighter;
+				.transition(background-color linear 0.2s);
+			}
+		}
+	}
+
+	&.center {
+		text-align: center;
+	}
+	&.right {
+		text-align: right;
+	}
+
+	// Alternative Colors
+	&.red ul > li > span,
+	&.red ul > li > a {
+		color: @redText;
+	}
+	&.purple ul > li > span,
+	&.purple ul > li > a {
+		color: @purpleText;
+	}
+	&.yellow ul > li > span,
+	&.yellow ul > li > a {
+		color: @yellowText;
+	}
+	&.green ul > li > span,
+	&.green ul > li > a {
+		color: @greenText;
+	}
+	&.black ul > li > span,
+	&.black ul > li > a {
+		color: @grayDark;
+	}
+}
+
