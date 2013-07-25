@@ -2158,7 +2158,7 @@ form.horizontal {
 		.thumbnail {
 			line-height: @baseLineHeight;
 			display: block;
-			padding: 3px;
+			padding: 5px;
 			border: 1px solid @grayLighter;
 			.border-radius(@baseBorderRadius);
 			.box-shadow(0 1px 3px fadeout(@black, 80%));
@@ -2171,8 +2171,13 @@ form.horizontal {
 			}
 
 			> .caption {
-				padding: 10px;
+				margin: @halfLineHeight 0;
+				padding: 0 8px;
 				color: @gray;
+			}
+
+			> p {
+				padding: 0 8px;
 			}
 		}
 
