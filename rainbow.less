@@ -286,42 +286,42 @@ body {
 			margin-left: 0;
 		}
 	}
-		
-	.span (@columns: 1) {
-     	width: (@gridColumnWidth * @columns) + (@gridGutterWidth * (@columns - 1));
-    }
-
-    .spanX (@index: @gridColumns) when (@index > 0) {
-    	.span@{index} {.span(@index);}
-    	.spanX(@index - 1);
-    }
-	.spanX();
-	
-    &.fluid {
-    	.clearfix();
-    	width: 100%;
-		float: left;
-		[class^='span'] {
-			margin-left: @fluidGridGutterWidth;
-        	*margin-left: @fluidGridGutterWidth - (.5 / @gridWidth * 100 * 1%);
-
-        	&:first-child {
-        		margin-left: 0;
-        	}
-		}
-		
-		.span (@columns: 1) {
-			width: (@fluidGridColumnWidth * @columns) + (@fluidGridGutterWidth * (@columns - 1));
-      		*width: (@fluidGridColumnWidth * @columns) + (@fluidGridGutterWidth * (@columns - 1)) - (.5 / @gridWidth * 100 * 1%);
-		}
-
-		.spanX (@index: @gridColumns) when (@index > 0) {
-    		.span@{index} {.span(@index);}
-    		.spanX(@index - 1);
-   		 }
-		.spanX();	
-    }
 }
+
+.span (@columns: 1) {
+	width: (@gridColumnWidth * @columns) + (@gridGutterWidth * (@columns - 1));
+}
+
+.spanX (@index: @gridColumns) when (@index > 0) {
+   	.span@{index} {.span(@index);}
+   	.spanX(@index - 1);
+}
+.spanX();
+
+.row.fluid {
+   	.clearfix();
+   	width: 100%;
+	float: left;
+	[class^='span'] {
+		margin-left: @fluidGridGutterWidth;
+      	*margin-left: @fluidGridGutterWidth - (.5 / @gridWidth * 100 * 1%);
+        	&:first-child {
+       		margin-left: 0;
+       	}
+	}
+	
+	.span (@columns: 1) {
+		width: (@fluidGridColumnWidth * @columns) + (@fluidGridGutterWidth * (@columns - 1));
+    	*width: (@fluidGridColumnWidth * @columns) + (@fluidGridGutterWidth * (@columns - 1)) - (.5 / @gridWidth * 100 * 1%);
+	}
+
+	.spanX (@index: @gridColumns) when (@index > 0) {
+   		.span@{index} {.span(@index);}
+   		.spanX(@index - 1);
+  		 }
+	.spanX();	
+}
+
 
 // =============================================
 // 					 Images
@@ -979,7 +979,8 @@ input, select,
 textarea {
 	.spanX (@index: @gridColumns) when (@index > 0) {
     	&.span@{index} {
-			width: ((@gridColumnWidth) * @index) + (@gridGutterWidth * (@index - 1) + 2);
+			width: ((@gridColumnWidth) * @index) + (@gridGutterWidth * (@index - 1) + 4);
+			margin-left: 0;
     	}
     	.spanX(@index - 1);
     }
