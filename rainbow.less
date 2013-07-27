@@ -2199,9 +2199,40 @@ form.horizontal {
 	margin-left: 0;	
 }
 
-// Medialist
-.media-list {
+// Media
+.media,
+.media-body {
 	overflow: hidden;
 	*overflow: visible;
 	zoom: 1;
+}
+
+.media {
+	margin-top: 15px;
+
+	.media {
+		margin-top: 15px	
+	}
+
+	.caption {
+		margin: 0 0 5px;
+	}
+
+	&-object {
+		display: block;
+		float: left;
+	}
+
+	&-body {
+		padding: 0 10px;
+	}
+
+	&-list {
+		list-style: none;
+		margin-left: 0;
+	}
+
+	&:first-child {
+		margin-top: 0;
+	}
 }
