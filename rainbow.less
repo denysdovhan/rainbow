@@ -1589,6 +1589,7 @@ form.horizontal {
 		&:hover,
 		&:focus {
 			text-decoration: none;
+			color: @linkColor;
 			background-color: @grayLighter;
 			.transition(background-color linear 0.2s);
 		}		
@@ -2075,7 +2076,7 @@ form.horizontal {
 			> span,
 			> a {
 				text-decoration: none;
-				text-shadow: 0 -1px 0 #DDD;
+				text-shadow: 0 -1px 0 @grayLighter;
 				float: left;
 				padding: 5px 10px;
 				line-height: @baseLineHeight;
