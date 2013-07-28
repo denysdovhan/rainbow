@@ -385,3 +385,11 @@
     }
   }
 }
+
+.thumbnailColor(@color: @linkColor) {
+  > li > a.thumbnail:hover,
+  > li > a.thumbnail:focus {
+    border-color: @color;
+    .box-shadow(0 1px 5px fadeout(@color, 30%));
+  }
+}

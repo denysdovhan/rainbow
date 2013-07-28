@@ -2168,6 +2168,7 @@ form.horizontal {
 			border: 1px solid @grayLighter;
 			.border-radius(@baseBorderRadius);
 			.box-shadow(0 1px 3px fadeout(@black, 80%));
+			.transition(all linear 0.5s);
 
 			img {
 				display: block;
@@ -2206,6 +2207,12 @@ form.horizontal {
 			.transition(all linear 0.5s);
 		}
 	}
+
+	&.red 		{ .thumbnailColor(@red);}
+	&.purple 	{ .thumbnailColor(@purple);}
+	&.yellow 	{ .thumbnailColor(@yellow);}
+	&.green 	{ .thumbnailColor(@green);}
+	&.black 	{ .thumbnailColor(@grayDark);}
 }
 
 .row.fluid .thumbnails {
