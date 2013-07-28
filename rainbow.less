@@ -243,7 +243,6 @@ body {
 	&.pink 			{ .linkColor(@pink);}
 	&.green 		{ .linkColor(@green);}
 	&.olive 		{ .linkColor(@olive);}
-	&.silver 		{ .linkColor(@silver);}
 	&.orange 		{ .linkColor(@orange);}
 	&.brown 		{ .linkColor(@brown);}
 	&.maroon 		{ .linkColor(@maroon);}
@@ -1537,6 +1536,7 @@ form.horizontal {
 	background-color: @yellowBackground;
 	border: 1px solid @yellowBorder;
 	.border-radius(@baseBorderRadius);
+	.opacity(0.8);
 	
 	h1,h2,h3,h4,h5,h6 {
 		margin: @halfLineHeight 0 0;
@@ -1585,6 +1585,7 @@ form.horizontal {
 	li > a {
 		display: block;
 		cursor: pointer;
+		color: @linkColor;
 		.user-select(none);
 
 		&:hover,
