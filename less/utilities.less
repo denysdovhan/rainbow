@@ -1,0 +1,39 @@
+// ===========================================================
+//		 					UTILITIES
+// ===========================================================
+
+.right {
+	float: right;
+}
+
+.left {
+	float: left;
+}
+
+.hide {
+	display: none;
+}
+
+.show {
+	display: block;
+}
+
+.fade {
+	.opacity(0);
+	.transition(opacity .2s linear);
+
+	&.in {
+		.opacity(1);
+	}
+}
+
+.colapse {
+	position: relative;
+	overflow: hidden;
+	height: 0;
+	.transition(height .5s ease);
+
+	&.in {
+		height: auto;
+	}
+}

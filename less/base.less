@@ -1,0 +1,49 @@
+// =============================================
+// 					  Base
+// =============================================
+
+body {
+	font-family: @baseFontFamily;
+	font-size: @baseFontSize;
+	line-height: @baseLineHeight;
+	color: @textColor;
+	margin: 0;
+	background-color: @bodyBackgroundColor;
+
+	a {
+		cursor: pointer;
+		color: @linkColor;
+		text-decoration: none;
+
+		&:hover,
+		&:focus {
+			color: @linkColorHover;	
+			text-decoration: underline;
+		}
+	}
+
+	&.red 			{ .linkColor(@red);}
+	&.cyan 			{ .linkColor(@cyan);}
+	&.blue 			{ .linkColor(@blue);}
+	&.darkblue 		{ .linkColor(@darkblue);}
+	&.lightblue 	{ .linkColor(@lightblue);}
+	&.purple 		{ .linkColor(@purple);}
+	&.yellow 		{ .linkColor(@yellow);}
+	&.lime 			{ .linkColor(@lime);}
+	&.pink 			{ .linkColor(@pink);}
+	&.green 		{ .linkColor(@green);}
+	&.olive 		{ .linkColor(@olive);}
+	&.orange 		{ .linkColor(@orange);}
+	&.brown 		{ .linkColor(@brown);}
+	&.maroon 		{ .linkColor(@maroon);}
+}
+
+.container {
+	.clearfix();
+	.center();
+}
+
+.fluid-container {
+	.clearfix();
+	padding: 0 @gridGutterWidth;
+}

@@ -1,0 +1,87 @@
+// ==========================================================
+// 						PAGINATION
+// ==========================================================
+
+.pagination {
+	margin: @halfLineHeight 0;
+
+	ul {
+		.inline-block();
+		margin-left: 0;
+		margin-bottom: 0;
+		.border-radius(@baseBorderRadius);
+
+		> li {
+			display: inline;
+
+			> span,
+			> a {
+				text-decoration: none;
+				text-shadow: 0 -1px 0 @grayLighter;
+				float: left;
+				padding: 5px 10px;
+				line-height: @baseLineHeight;
+				background-color: transparent;
+				border: 1px solid #DDD;
+				border-right-width: 0; 
+			}
+			&:first-child > span,
+			&:first-child > a {
+				.border-radius(@baseBorderRadius 0 0 @baseBorderRadius);
+			}
+			&:last-child > span,
+			&:last-child > a {
+				border-right-width: 1px;
+				.border-radius(0 @baseBorderRadius @baseBorderRadius 0);
+			}
+
+            &.disabled > span,
+			&.disabled > a,
+			&.disabled > a:hover,
+			&.disabled > a:focus,
+			&.active > span,
+			&.active > a {
+				cursor: default;
+				color: @grayLight;
+				background-color: transparent;
+			}
+
+			&.active > span,
+			&.active > a,
+			> a:hover,
+			> a:focus {
+				background-color: @grayLighter;
+				.transition(background-color linear 0.2s);
+			}
+		}
+	}
+
+	&.center {
+		text-align: center;
+	}
+	&.right {
+		text-align: right;
+	}
+
+	// Alternative Colors
+	&.red ul > li > span,
+	&.red ul > li > a {
+		color: @redText;
+	}
+	&.purple ul > li > span,
+	&.purple ul > li > a {
+		color: @purpleText;
+	}
+	&.yellow ul > li > span,
+	&.yellow ul > li > a {
+		color: @yellowText;
+	}
+	&.green ul > li > span,
+	&.green ul > li > a {
+		color: @greenText;
+	}
+	&.black ul > li > span,
+	&.black ul > li > a {
+		color: @grayDark;
+	}
+}

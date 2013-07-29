@@ -1,0 +1,92 @@
+// =====================================================
+// 						Tables
+// =====================================================
+
+table {
+	max-width: 100%;
+	background-color: ;
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+caption {
+	font-size: @h4FontSize;
+	font-weight: bold;
+	text-align: center;
+	margin: 0 0 @halfLineHeight 0;
+}
+
+.table {
+	width: 100%;
+	margin-bottom: @baseLineHeight;
+	background-color: @tableBackground;
+
+	th, td {
+		padding: 8px;
+		line-height: @baseLineHeight;
+		text-align: left;
+		vertical-align: top;
+		border-top: 1px solid @tableBorderColor;
+	}
+	th {
+		font-weight: bold;
+	}
+	thead th {
+		vertical-align: bottom;
+		background-color: @tableBackgroundHover;
+	}
+	
+	// Remove top border
+	caption + thead tr:first-child th,
+	caption + thead tr:first-child td,
+	thead:first-child tr:first-child th,
+	thead:first-child tr:first-child td {
+	    border-top: 0;
+	}
+
+	tbody tr {
+		&.red > td 			{ background-color: @redBackground;}
+		&.blue > td 		{ background-color: @blueBackground;}
+		&.purple > td 		{ background-color: @purpleBackground;}
+		&.yellow > td 		{ background-color: @yellowBackground;}
+		&.green > td 		{ background-color: @greenBackground;}
+	}
+
+	&.bordered {
+		border-collapse: separate; // Done so we can round those corners!
+  		*border-collapse: collapse; // IE7 can't round corners anyway
+  		border: 1px solid @tableBorderColor;
+  		border-left: 0;
+  		.border-radius(@baseBorderRadius);
+
+  		th,td {
+  			border-left: 1px solid @tableBorderColor;
+  		}
+	}
+
+	&.striped {
+		tbody tr:nth-child(even) {
+			background-color: @tableBackgroundAccent;
+		}
+	}
+
+	&.hover {
+		tbody tr:hover {
+			th, td {
+				background-color: @tableBackgroundHover;
+			}
+
+			&.red:hover > td 		{ background-color: darken(@redBackground, 5%);}
+			&.blue:hover > td 		{ background-color: darken(@blueBackground, 5%);}
+			&.purple:hover > td 	{ background-color: darken(@purpleBackground, 5%);}
+			&.yellow:hover > td 	{ background-color: darken(@yellowBackground, 15%);}
+			&.green:hover > td 		{ background-color: darken(@greenBackground, 10%);}
+		}
+	}
+	
+	&.compact {
+		th,td {
+			padding: 2px;
+		}
+	}
+}

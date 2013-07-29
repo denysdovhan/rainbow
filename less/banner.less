@@ -1,0 +1,29 @@
+// =============================================================
+//    						Banner
+// =============================================================
+
+.banner {
+	font-size: @fontSizeLarge;
+	font-weight: 400;
+	line-height: @baseLineHeight * 1.5;
+	margin-bottom: 30px;
+	padding: 50px;
+	color: inherit;
+	background-color: @bannerBackground;
+
+	> h1 {
+		font-size: @bannerFontSize;
+		line-height: 1;
+		letter-spacing: -2px;
+		margin-bottom: 0;
+		color: inherit;
+	}
+
+	li {
+		line-height: @baseLineHeight * 1.5;
+	}
+
+	&.rounded {
+		.border-radius(@largeBorderRadius);
+	}
+}

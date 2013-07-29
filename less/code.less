@@ -1,0 +1,79 @@
+// =====================================
+//				  Code
+// =====================================
+
+code, pre, var, samp, kbd {
+	font-family: @monoFontFamily;
+	font-size: @codeFontSize;
+	padding: 0;	
+	color: @codeLightColor;
+	background-color: @codeLightBackgroundColor;
+	border: 1px solid @codeBorderColor;
+	.border-radius(@smallBorderRadius);
+}
+
+code {
+	padding: 3px;
+	white-space: nowrap;
+}
+
+pre {
+	display: block;
+	line-height: @baseLineHeight;
+	padding: @halfLineHeight;
+	margin: 0 0 @halfLineHeight;
+	word-break: break-all;
+	word-wrap: break-word;
+	white-space: pre;
+	white-space: pre-wrap;
+	.border-radius(@baseBorderRadius);
+	.box-shadow(inset 0 1px 2px rgba(0, 0, 0, 0.3));
+
+	code {
+		color: inherit;
+		white-space: pre;
+		white-space: pre-wrap;
+		background-color: transparent;
+
+	}
+
+	&.scrollable {
+		max-height: 400px;
+		overflow-y: scroll;
+	}
+}
+
+samp {
+	display: block;
+	line-height: @baseLineHeight;
+	padding: @halfLineHeight;
+	margin: 0 0 @halfLineHeight;
+	color: @codeDarkColor;
+	background-color: @codeDarkBackgroundColor;
+	word-break: break-all;
+	word-wrap: break-word;
+	white-space: pre;
+	white-space: pre-wrap;
+	.border-radius(@baseBorderRadius);
+
+	code {
+		color: inherit;
+		white-space: pre;
+		white-space: pre-wrap;
+		background-color: transparent;
+
+	}
+
+	&.scrollable {
+		max-height: 400px;
+		overflow-y: scroll;
+	}
+}
+
+ins {
+	color: @green;
+}
+
+del {
+	color: @red;
+}

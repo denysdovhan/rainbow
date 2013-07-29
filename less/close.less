@@ -1,0 +1,27 @@
+// ===========================================================
+// 							CLOSE
+// ===========================================================
+
+.close {
+	font-size: @baseLineHeight;
+	font-weight: bold;
+	text-shadow: 0 1px 0 fadeout(@white, 90%);
+	line-height: @baseLineHeight;
+	color: @black;
+	.opacity(0.2);
+	.user-select(none);
+
+	&:hover,
+	&:focus {
+		text-decoration: none;
+		cursor: pointer;
+		.opacity(0.5);
+	}
+}
+
+button.close {
+	padding: 0;
+	border: 0;
+	cursor: pointer;
+	background-color: transparent;
+}

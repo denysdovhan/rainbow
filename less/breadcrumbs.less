@@ -1,0 +1,58 @@
+// ===========================================================
+// 						BREADCRUMBS
+// ===========================================================
+
+.breadcrumbs {
+	margin: 0 0 @baseLineHeight;
+	padding: 8px 15px;
+	list-style: none;
+	background-color: fadeout(@grayLighter, 30%);
+	.border-radius(@baseBorderRadius);
+
+	> li {
+		.inline-block();
+		text-shadow: 0 1px 0 @white;
+
+		&:before {
+			content: "/";
+			margin: 5px;
+			color: @grayLight;
+		}
+		&:first-child {
+			margin-left: 0;
+
+			&:before {
+				display: none;
+			}
+		}
+
+		&.active {
+			cursor: default;
+			color: @grayLight;
+		}
+
+		a {
+			text-decoration: none;
+
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+
+	&.red > li > a {
+		color: @redText;
+	}
+	&.purple > li > a {
+		color: @purpleText;
+	}	
+	&.yellow > li > a {
+		color: @yellowText;
+	}
+	&.green > li > a {
+		color: @greenText;
+	}
+	&.black > li > a {
+		color: @grayDark;
+	}	
+}

@@ -1,0 +1,48 @@
+// ============================================================
+// 							Alerts
+// ============================================================
+
+.alert {
+	position: relative;
+	padding: 8px 30px 8px 15px;
+	margin-bottom: @baseLineHeight;
+	color: @yellowText;
+	background-color: @yellowBackground;
+	border: 1px solid @yellowBorder;
+	.border-radius(@baseBorderRadius);
+	.opacity(0.8);
+	
+	h1,h2,h3,h4,h5,h6 {
+		margin: @halfLineHeight 0 0;
+	}
+	p {
+		margin-bottom: 0;
+		+ p {
+			margin-top: 5px;
+		}
+	}
+
+	.close {
+		position: absolute;
+		top: 5px;
+		right: 10px;
+		color: inherit;
+	}
+
+	// Alternative colors
+	&.red {
+		background-color: @redBackground;
+		border-color: @redBorder;
+		color: @redText;
+	}
+	&.blue {
+		background-color: @blueBackground;
+		border-color: @blueBorder;
+		color: @blueText;
+	}
+	&.green {
+		background-color: @greenBackground;
+		border-color: @greenBorder;
+		color: @greenText;
+	}	
+}
