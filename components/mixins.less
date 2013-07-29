@@ -78,6 +78,16 @@
       background-color: mix(@innerColor, @outerColor, 60%);
       background-repeat: no-repeat;
   }
+
+  // Striped
+  .striped (@color: #aaa, @deg: 45deg) {
+    // background-color: @color;
+    background-image: -webkit-gradient(linear, 0 100%, 100% 0, color-stop(.25, @color), color-stop(.25, transparent), color-stop(.5, transparent), color-stop(.5, @color), color-stop(.75, @color), color-stop(.75, transparent), to(transparent));
+    background-image: -webkit-linear-gradient(@deg, @color 25%, transparent 25%, transparent 50%, @color 50%, @color 75%, transparent 75%, transparent);
+    background-image: -moz-linear-gradient(@deg, @color 25%, transparent 25%, transparent 50%, @color 50%, @color 75%, transparent 75%, transparent);
+    background-image: -o-linear-gradient(@deg, @color 25%, transparent 25%, transparent 50%, @color 50%, @color 75%, transparent 75%, transparent);
+    background-image: linear-gradient(@deg, @color 25%, transparent 25%, transparent 50%, @color 50%, @color 75%, transparent 75%, transparent);
+  }
 }
 
 //        Border Radius Tools
@@ -112,14 +122,13 @@
             transition: @transition;
 }
 
-// Transition all
-.transition-all(@duration: 0.2s, @delay: ease) {
-    -webkit-transition: all @duration @delay;
-       -moz-transition: all @duration @delay;
-         -o-transition: all @duration @delay;
-            transition: all @duration @delay;
+.animation(@arguments) {
+  -webkit-animation: @arguments;
+     -moz-animation: @arguments;
+      -ms-animation: @arguments;
+       -o-animation: @arguments;
+          animation: @arguments;
 }
-
 
 //          Transform Tools
 // ==============================================
@@ -392,4 +401,8 @@
     border-color: @color;
     .box-shadow(0 1px 5px fadeout(@color, 30%));
   }
+}
+
+.progressBackground(@color) {
+  
 }
