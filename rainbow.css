@@ -2160,7 +2160,7 @@ form.horizontal .help {
   text-shadow: 0 1px 1px rgba(255, 255, 255, 0.5);
   background-color: #f2f2f2;
   *background-color: #f2f2f2;
-  border-color: #bfbfbf;
+  border-color: #b3b3b3;
   border-color: rgba(0, 0, 0, 0.19999999999999996);
   color: #333333;
   -webkit-border-radius: 4px;
@@ -2174,17 +2174,18 @@ form.horizontal .help {
 }
 .btn:hover,
 .btn:focus {
-  -webkit-box-shadow: 0 1px 3px #b3b3b3;
-  -moz-box-shadow: 0 1px 3px #b3b3b3;
-  box-shadow: 0 1px 3px #b3b3b3;
-  background-color: #ebebeb;
+  color: #333333;
+  -webkit-box-shadow: 0 1px 3px #a6a6a6;
+  -moz-box-shadow: 0 1px 3px #a6a6a6;
+  box-shadow: 0 1px 3px #a6a6a6;
+  background-color: #dedede;
 }
 .btn:active,
 .btn.active {
-  -webkit-box-shadow: inset 0 2px 2px #b3b3b3;
-  -moz-box-shadow: inset 0 2px 2px #b3b3b3;
-  box-shadow: inset 0 2px 2px #b3b3b3;
-  background-color: #d9d9d9;
+  -webkit-box-shadow: inset 0 2px 2px #a6a6a6;
+  -moz-box-shadow: inset 0 2px 2px #a6a6a6;
+  box-shadow: inset 0 2px 2px #a6a6a6;
+  background-color: #cccccc;
 }
 .btn.disabled,
 .btn[disabled] {
@@ -2194,17 +2195,17 @@ form.horizontal .help {
   box-shadow: none;
 }
 .btn.volume {
-  background-color: #e6e6e6;
-  background-image: -moz-linear-gradient(top, #f2f2f2 0%, #d9d9d9 100%);
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f2f2f2), color-stop(100%, #d9d9d9));
-  background-image: -webkit-linear-gradient(top, #f2f2f2 0%, #d9d9d9 100%);
-  background-image: -o-linear-gradient(top, #f2f2f2 0%, #d9d9d9 100%);
-  background-image: -ms-linear-gradient(top, #f2f2f2 0%, #d9d9d9 100%);
-  background-image: linear-gradient(to bottom, #f2f2f2 0%, #d9d9d9 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f2f2f2', endColorstr='#d9d9d9', GradientType=0);
-  background-color: #d9d9d9;
-  *background-color: #d9d9d9;
-  border-color: #d9d9d9 #d9d9d9 #bfbfbf;
+  background-color: #dfdfdf;
+  background-image: -moz-linear-gradient(top, #f2f2f2 0%, #cccccc 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f2f2f2), color-stop(100%, #cccccc));
+  background-image: -webkit-linear-gradient(top, #f2f2f2 0%, #cccccc 100%);
+  background-image: -o-linear-gradient(top, #f2f2f2 0%, #cccccc 100%);
+  background-image: -ms-linear-gradient(top, #f2f2f2 0%, #cccccc 100%);
+  background-image: linear-gradient(to bottom, #f2f2f2 0%, #cccccc 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f2f2f2', endColorstr='#cccccc', GradientType=0);
+  background-color: #cccccc;
+  *background-color: #cccccc;
+  border-color: #cccccc #cccccc #b3b3b3;
   -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3), 0 1px 2px rgba(0, 0, 0, 0.3);
   -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3), 0 1px 2px rgba(0, 0, 0, 0.3);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.3), 0 1px 2px rgba(0, 0, 0, 0.3);
@@ -2214,7 +2215,7 @@ form.horizontal .help {
 .btn.volume:focus {
   text-decoration: none;
   background-position: 0 -15px;
-  background-color: #d9d9d9;
+  background-color: #cccccc;
   -webkit-transition: background-position linear 0.2s;
   -moz-transition: background-position linear 0.2s;
   -o-transition: background-position linear 0.2s;
@@ -2222,9 +2223,9 @@ form.horizontal .help {
 }
 .btn.volume:active,
 .btn.volume.active {
-  -webkit-box-shadow: inset 0 2px 2px #b3b3b3;
-  -moz-box-shadow: inset 0 2px 2px #b3b3b3;
-  box-shadow: inset 0 2px 2px #b3b3b3;
+  -webkit-box-shadow: inset 0 2px 2px #a6a6a6;
+  -moz-box-shadow: inset 0 2px 2px #a6a6a6;
+  box-shadow: inset 0 2px 2px #a6a6a6;
   background-image: none;
   -webkit-transition: box-shadow linear 0.1s;
   -moz-transition: box-shadow linear 0.1s;
@@ -2394,6 +2395,7 @@ form.horizontal .help {
 }
 .btn.red:hover,
 .btn.red:focus {
+  color: #ffffff;
   -webkit-box-shadow: 0 1px 3px #631010;
   -moz-box-shadow: 0 1px 3px #631010;
   box-shadow: 0 1px 3px #631010;
@@ -2468,6 +2470,7 @@ form.horizontal .help {
 }
 .btn.cyan:hover,
 .btn.cyan:focus {
+  color: #ffffff;
   -webkit-box-shadow: 0 1px 3px #004444;
   -moz-box-shadow: 0 1px 3px #004444;
   box-shadow: 0 1px 3px #004444;
@@ -2542,6 +2545,7 @@ form.horizontal .help {
 }
 .btn.blue:hover,
 .btn.blue:focus {
+  color: #ffffff;
   -webkit-box-shadow: 0 1px 3px #00336e;
   -moz-box-shadow: 0 1px 3px #00336e;
   box-shadow: 0 1px 3px #00336e;
@@ -2616,6 +2620,7 @@ form.horizontal .help {
 }
 .btn.darkblue:hover,
 .btn.darkblue:focus {
+  color: #ffffff;
   -webkit-box-shadow: 0 1px 3px #00172b;
   -moz-box-shadow: 0 1px 3px #00172b;
   box-shadow: 0 1px 3px #00172b;
@@ -2690,6 +2695,7 @@ form.horizontal .help {
 }
 .btn.lightblue:hover,
 .btn.lightblue:focus {
+  color: #ffffff;
   -webkit-box-shadow: 0 1px 3px #0f4953;
   -moz-box-shadow: 0 1px 3px #0f4953;
   box-shadow: 0 1px 3px #0f4953;
@@ -2764,6 +2770,7 @@ form.horizontal .help {
 }
 .btn.purple:hover,
 .btn.purple:focus {
+  color: #ffffff;
   -webkit-box-shadow: 0 1px 3px #330033;
   -moz-box-shadow: 0 1px 3px #330033;
   box-shadow: 0 1px 3px #330033;
@@ -2838,6 +2845,7 @@ form.horizontal .help {
 }
 .btn.yellow:hover,
 .btn.yellow:focus {
+  color: #ffffff;
   -webkit-box-shadow: 0 1px 3px #665200;
   -moz-box-shadow: 0 1px 3px #665200;
   box-shadow: 0 1px 3px #665200;
@@ -2912,6 +2920,7 @@ form.horizontal .help {
 }
 .btn.lime:hover,
 .btn.lime:focus {
+  color: #ffffff;
   -webkit-box-shadow: 0 1px 3px #0a621c;
   -moz-box-shadow: 0 1px 3px #0a621c;
   box-shadow: 0 1px 3px #0a621c;
@@ -2986,6 +2995,7 @@ form.horizontal .help {
 }
 .btn.pink:hover,
 .btn.pink:focus {
+  color: #ffffff;
   -webkit-box-shadow: 0 1px 3px #910091;
   -moz-box-shadow: 0 1px 3px #910091;
   box-shadow: 0 1px 3px #910091;
@@ -3060,6 +3070,7 @@ form.horizontal .help {
 }
 .btn.green:hover,
 .btn.green:focus {
+  color: #ffffff;
   -webkit-box-shadow: 0 1px 3px #204f20;
   -moz-box-shadow: 0 1px 3px #204f20;
   box-shadow: 0 1px 3px #204f20;
@@ -3134,6 +3145,7 @@ form.horizontal .help {
 }
 .btn.olive:hover,
 .btn.olive:focus {
+  color: #ffffff;
   -webkit-box-shadow: 0 1px 3px #221f00;
   -moz-box-shadow: 0 1px 3px #221f00;
   box-shadow: 0 1px 3px #221f00;
@@ -3208,6 +3220,7 @@ form.horizontal .help {
 }
 .btn.orange:hover,
 .btn.orange:focus {
+  color: #ffffff;
   -webkit-box-shadow: 0 1px 3px #7f4a00;
   -moz-box-shadow: 0 1px 3px #7f4a00;
   box-shadow: 0 1px 3px #7f4a00;
@@ -3282,6 +3295,7 @@ form.horizontal .help {
 }
 .btn.brown:hover,
 .btn.brown:focus {
+  color: #ffffff;
   -webkit-box-shadow: 0 1px 3px #3a1a0a;
   -moz-box-shadow: 0 1px 3px #3a1a0a;
   box-shadow: 0 1px 3px #3a1a0a;
@@ -3356,6 +3370,7 @@ form.horizontal .help {
 }
 .btn.maroon:hover,
 .btn.maroon:focus {
+  color: #ffffff;
   -webkit-box-shadow: 0 1px 3px #330000;
   -moz-box-shadow: 0 1px 3px #330000;
   box-shadow: 0 1px 3px #330000;
@@ -3430,6 +3445,7 @@ form.horizontal .help {
 }
 .btn.black:hover,
 .btn.black:focus {
+  color: #ffffff;
   -webkit-box-shadow: 0 1px 3px #000000;
   -moz-box-shadow: 0 1px 3px #000000;
   box-shadow: 0 1px 3px #000000;
@@ -4099,43 +4115,43 @@ form.horizontal .help {
   height: 40px;
   margin-bottom: 20px;
   color: #777777;
-  background-color: #e6e6e6;
-  background-image: -moz-linear-gradient(top, #f2f2f2 0%, #d9d9d9 100%);
-  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f2f2f2), color-stop(100%, #d9d9d9));
-  background-image: -webkit-linear-gradient(top, #f2f2f2 0%, #d9d9d9 100%);
-  background-image: -o-linear-gradient(top, #f2f2f2 0%, #d9d9d9 100%);
-  background-image: -ms-linear-gradient(top, #f2f2f2 0%, #d9d9d9 100%);
-  background-image: linear-gradient(to bottom, #f2f2f2 0%, #d9d9d9 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f2f2f2', endColorstr='#d9d9d9', GradientType=0);
-  background-color: #d9d9d9;
-  *background-color: #d9d9d9;
-  border: 1px solid #bfbfbf;
-  -webkit-box-shadow: 0 2px 2px #b3b3b3;
-  -moz-box-shadow: 0 2px 2px #b3b3b3;
-  box-shadow: 0 2px 2px #b3b3b3;
+  background-color: #dfdfdf;
+  background-image: -moz-linear-gradient(top, #f2f2f2 0%, #cccccc 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f2f2f2), color-stop(100%, #cccccc));
+  background-image: -webkit-linear-gradient(top, #f2f2f2 0%, #cccccc 100%);
+  background-image: -o-linear-gradient(top, #f2f2f2 0%, #cccccc 100%);
+  background-image: -ms-linear-gradient(top, #f2f2f2 0%, #cccccc 100%);
+  background-image: linear-gradient(to bottom, #f2f2f2 0%, #cccccc 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f2f2f2', endColorstr='#cccccc', GradientType=0);
+  background-color: #cccccc;
+  *background-color: #cccccc;
+  border: 1px solid #b3b3b3;
+  -webkit-box-shadow: 0 2px 2px #a6a6a6;
+  -moz-box-shadow: 0 2px 2px #a6a6a6;
+  box-shadow: 0 2px 2px #a6a6a6;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
   border-radius: 4px;
 }
 .navbar .brand {
-  text-shadow: 0 1.5px #f2f2f2, 0 -1.5px 0 #d9d9d9;
+  text-shadow: 0 1.5px #f2f2f2, 0 -1.5px 0 #cccccc;
   color: #5e5e5e;
 }
 .navbar .divider {
   border-left: 1px solid #f2f2f2;
-  border-right: 1px solid #d9d9d9;
+  border-right: 1px solid #cccccc;
 }
 .navbar .nav > li > a {
-  text-shadow: 0 1.5px #f2f2f2, 0 -1.5px 0 #d9d9d9;
+  text-shadow: 0 1.5px #f2f2f2, 0 -1.5px 0 #cccccc;
   color: #5e5e5e;
   background-color: transparent;
 }
 .navbar .nav > li > a:hover,
 .navbar .nav > li > a:focus {
   color: #777777;
-  -webkit-box-shadow: inset 0 0 10px #d9d9d9;
-  -moz-box-shadow: inset 0 0 10px #d9d9d9;
-  box-shadow: inset 0 0 10px #d9d9d9;
+  -webkit-box-shadow: inset 0 0 10px #cccccc;
+  -moz-box-shadow: inset 0 0 10px #cccccc;
+  box-shadow: inset 0 0 10px #cccccc;
   -webkit-transition: box-shadow linear 0.2s;
   -moz-transition: box-shadow linear 0.2s;
   -o-transition: box-shadow linear 0.2s;
@@ -4146,7 +4162,7 @@ form.horizontal .help {
 .navbar .nav > li.active > a:focus {
   text-decoration: none;
   color: #777777;
-  background-color: #d9d9d9;
+  background-color: #cccccc;
   -webkit-box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
   -moz-box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
   box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
@@ -4195,7 +4211,7 @@ form.horizontal .help {
   float: left;
 }
 .navbar .nav > li > a {
-  font-weight: bold;
+  font-weight: 200;
   line-height: 40px;
   text-decoration: none;
   float: none;
@@ -4249,11 +4265,11 @@ form.horizontal .help {
 }
 .navbar.fixed-top {
   top: 0;
-  border-width: 0 0 1px;
+  border-width: 0 0 1px !important;
 }
 .navbar.fixed-bottom {
   bottom: 0;
-  border-width: 1px 0 0;
+  border-width: 1px 0 0 !important;
 }
 .navbar.fixed-bottom,
 .navbar.fixed-top,
@@ -5323,6 +5339,134 @@ form.horizontal .help {
   -webkit-border-radius: 6px;
   -moz-border-radius: 6px;
   border-radius: 6px;
+}
+.progress {
+  overflow: hidden;
+  height: 20px;
+  margin-bottom: 20px;
+  background-color: #eeeeee;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.09999999999999998);
+  -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.09999999999999998);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.09999999999999998);
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+.progress .bar {
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.19999999999999996);
+  float: left;
+  width: 0%;
+  height: 100%;
+  cursor: default;
+  color: #ffffff;
+  background-color: #117bf7;
+  background-image: -moz-linear-gradient(top, #2288ff 0%, #006eee 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #2288ff), color-stop(100%, #006eee));
+  background-image: -webkit-linear-gradient(top, #2288ff 0%, #006eee 100%);
+  background-image: -o-linear-gradient(top, #2288ff 0%, #006eee 100%);
+  background-image: -ms-linear-gradient(top, #2288ff 0%, #006eee 100%);
+  background-image: linear-gradient(to bottom, #2288ff 0%, #006eee 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#2288ff', endColorstr='#006eee', GradientType=0);
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-box-shadow: inset 0 -1px 2px rgba(0, 0, 0, 0.19999999999999996);
+  -moz-box-shadow: inset 0 -1px 2px rgba(0, 0, 0, 0.19999999999999996);
+  box-shadow: inset 0 -1px 2px rgba(0, 0, 0, 0.19999999999999996);
+  -webkit-transition: width 1s ease;
+  -moz-transition: width 1s ease;
+  -o-transition: width 1s ease;
+  transition: width 1s ease;
+}
+.progress .bar.red {
+  background-color: #cf3a3a;
+  background-image: -moz-linear-gradient(top, #f95959 0%, #a51b1b 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #f95959), color-stop(100%, #a51b1b));
+  background-image: -webkit-linear-gradient(top, #f95959 0%, #a51b1b 100%);
+  background-image: -o-linear-gradient(top, #f95959 0%, #a51b1b 100%);
+  background-image: -ms-linear-gradient(top, #f95959 0%, #a51b1b 100%);
+  background-image: linear-gradient(to bottom, #f95959 0%, #a51b1b 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f95959', endColorstr='#a51b1b', GradientType=0);
+}
+.progress .bar.purple {
+  background-color: #a600a6;
+  background-image: -moz-linear-gradient(top, #cc00cc 0%, #80007f 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #cc00cc), color-stop(100%, #80007f));
+  background-image: -webkit-linear-gradient(top, #cc00cc 0%, #80007f 100%);
+  background-image: -o-linear-gradient(top, #cc00cc 0%, #80007f 100%);
+  background-image: -ms-linear-gradient(top, #cc00cc 0%, #80007f 100%);
+  background-image: linear-gradient(to bottom, #cc00cc 0%, #80007f 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#cc00cc', endColorstr='#80007f', GradientType=0);
+}
+.progress .bar.yellow {
+  background-color: #d9ad00;
+  background-image: -moz-linear-gradient(top, #ffcc00 0%, #b38f00 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ffcc00), color-stop(100%, #b38f00));
+  background-image: -webkit-linear-gradient(top, #ffcc00 0%, #b38f00 100%);
+  background-image: -o-linear-gradient(top, #ffcc00 0%, #b38f00 100%);
+  background-image: -ms-linear-gradient(top, #ffcc00 0%, #b38f00 100%);
+  background-image: linear-gradient(to bottom, #ffcc00 0%, #b38f00 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffcc00', endColorstr='#b38f00', GradientType=0);
+}
+.progress .bar.green {
+  background-color: #429f42;
+  background-image: -moz-linear-gradient(top, #4fb94f 0%, #358635 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #4fb94f), color-stop(100%, #358635));
+  background-image: -webkit-linear-gradient(top, #4fb94f 0%, #358635 100%);
+  background-image: -o-linear-gradient(top, #4fb94f 0%, #358635 100%);
+  background-image: -ms-linear-gradient(top, #4fb94f 0%, #358635 100%);
+  background-image: linear-gradient(to bottom, #4fb94f 0%, #358635 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#4fb94f', endColorstr='#358635', GradientType=0);
+}
+.progress .bar.black {
+  background-color: #2d2d2d;
+  background-image: -moz-linear-gradient(top, #404040 0%, #1a1a1a 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #404040), color-stop(100%, #1a1a1a));
+  background-image: -webkit-linear-gradient(top, #404040 0%, #1a1a1a 100%);
+  background-image: -o-linear-gradient(top, #404040 0%, #1a1a1a 100%);
+  background-image: -ms-linear-gradient(top, #404040 0%, #1a1a1a 100%);
+  background-image: linear-gradient(to bottom, #404040 0%, #1a1a1a 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#404040', endColorstr='#1a1a1a', GradientType=0);
+}
+.progress.striped .bar {
+  background-image: -webkit-gradient(linear, 0 100%, 100% 0, color-stop(0.25, rgba(255, 255, 255, 0.19999999999999996)), color-stop(0.25, transparent), color-stop(0.5, transparent), color-stop(0.5, rgba(255, 255, 255, 0.19999999999999996)), color-stop(0.75, rgba(255, 255, 255, 0.19999999999999996)), color-stop(0.75, transparent), to(transparent));
+  background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.19999999999999996) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.19999999999999996) 50%, rgba(255, 255, 255, 0.19999999999999996) 75%, transparent 75%, transparent);
+  background-image: -moz-linear-gradient(45deg, rgba(255, 255, 255, 0.19999999999999996) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.19999999999999996) 50%, rgba(255, 255, 255, 0.19999999999999996) 75%, transparent 75%, transparent);
+  background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, 0.19999999999999996) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.19999999999999996) 50%, rgba(255, 255, 255, 0.19999999999999996) 75%, transparent 75%, transparent);
+  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.19999999999999996) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.19999999999999996) 50%, rgba(255, 255, 255, 0.19999999999999996) 75%, transparent 75%, transparent);
+  background-size: 40px 40px;
+}
+.progress.striped.active .bar {
+  -webkit-animation: progress-active 1s linear infinite;
+  -moz-animation: progress-active 1s linear infinite;
+  -ms-animation: progress-active 1s linear infinite;
+  -o-animation: progress-active 1s linear infinite;
+  animation: progress-active 1s linear infinite;
+}
+.progress.mini {
+  height: 15px;
+}
+.progress.mini > .bar {
+  line-height: 15px;
+  font-size: 10.5px;
+}
+.progress.small {
+  height: 17px;
+}
+.progress.small > .bar {
+  line-height: 17px;
+  font-size: 11.9px;
+}
+.progress.large {
+  height: 25px;
+}
+.progress.large > .bar {
+  line-height: 25px;
+  font-size: 17.5px;
 }
 .close {
   font-size: 20px;
