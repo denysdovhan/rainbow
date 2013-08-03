@@ -1,0 +1,218 @@
+// =============================================
+// 					Typography
+// =============================================
+
+p {
+	margin-bottom: @halfLineHeight;
+}
+
+small 	{ font-size: 85%;}
+strong 	{ font-weight: bold;}
+em 		{ font-style: italic;}
+cite 	{ font-style: normal;}
+
+.lead {
+	font-size: @baseFontSize * 1.5;
+	font-weight: 200;
+	line-height: @baseLineHeight * 1.5;
+	margin-bottom: @baseLineHeight;
+}
+
+.headline {
+	margin: @baseLineHeight 0 @halfLineHeight;
+	padding-bottom: @halfLineHeight;
+	border-bottom: 2px solid @grayLighter;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: @headingsFontFamily;
+	font-weight: @headingsFontWeight;
+	line-height: @baseLineHeight;
+	margin: (@halfLineHeight) 0;
+	color: @headingsColor;
+
+	small {
+		font-weight: normal;
+		line-height: 1;
+		color: @grayLight;
+	}
+}
+
+h1 { font-size: @h1FontSize; }
+h2 { font-size: @h2FontSize; }
+h3 { font-size: @h3FontSize; }
+h4 { font-size: @h4FontSize; }
+h5 { font-size: @h5FontSize; }
+h6 { font-size: @h6FontSize; }
+
+h1, h2, h3 {
+	line-height: @baseLineHeight * 2;
+}
+
+h1 small { font-size: @baseFontSize * 1.75;}
+h2 small { font-size: @baseFontSize * 1.25;}
+h3 small { font-size: @baseFontSize; }
+h4 small { font-size: @baseFontSize; }
+
+h1, h2, h3, h4, h5, h6,
+p, div, address, pre, em, 
+small, strong, cite, abbr {
+	&.red 			{ color: @red;}
+	&.cyan 			{ color: @cyan;}
+	&.blue 			{ color: @blue;}
+	&.darkblue 		{ color: @darkblue;}
+	&.lightblue 	{ color: @lightblue;}
+	&.purple 		{ color: @purple;}
+	&.yellow 		{ color: @yellow;}
+	&.lime 			{ color: @lime;}
+	&.pink 			{ color: @pink;}
+	&.green 		{ color: @green;}
+	&.olive 		{ color: @olive;}
+	&.orange 		{ color: @orange;}
+	&.brown 		{ color: @brown;}
+	&.maroon 		{ color: @maroon;}
+}
+
+
+// 	Lists
+ul, ol {
+  padding: 0;
+  margin-bottom: @halfLineHeight;
+  margin-left: 28px;
+}
+ul ul,
+ul ol,
+ol ol,
+ol ul {
+  margin-bottom: 0;
+}
+li {
+  line-height: @baseLineHeight;
+}
+
+ul.unstyled,
+ol.unstyled {
+  margin-left: 0;
+  list-style: none;
+}
+
+dl {
+  margin-bottom: @baseLineHeight;
+}
+dt,
+dd {
+  line-height: @baseLineHeight;
+}
+dt {
+  font-weight: bold;
+}
+dd {
+  margin-left: @halfLineHeight;
+
+  &:before {
+		color: @grayLight;
+		content: '\2014';
+		padding-right: 0.5em;
+	}
+}
+
+// Horizontal roles
+hr {
+	border: 0;
+	margin: @baseLineHeight @halfLineHeight;
+	border-top: 1px solid @grayDark;
+	border-bottom: 1px solid @grayLighter;
+}
+
+// Abbreviations
+abbr[title] {
+	border-bottom: 1px dashed @gray;
+	cursor: help;
+}
+
+// Addresses
+address {
+	font-style: normal;
+	line-height: @baseLineHeight;
+	display: block;
+	margin-bottom: @baseLineHeight;
+}
+
+//  Quotes
+q {
+	font-style: italic;
+}
+
+blockquote {
+	font-style: italic;
+	position: relative;
+	padding: 0 0 0 @halfLineHeight;
+	margin: 0 0 @baseLineHeight 40px;
+	border-left: 5px solid @grayLight;
+
+	p {
+		margin: @halfLineHeight 0 0 0;
+		line-height: @baseLineHeight;
+
+		&:first-child {
+			margin: 0;
+		}	
+	}
+
+	small {
+		font-style: normal;
+		display: block;
+		line-height: @baseLineHeight;
+		color: @grayLight;
+		&:before {
+			content: '\2014 \00A0';			
+		}
+	}
+
+	&:before {
+		position: absolute;
+		top: -30px;
+		left: -45px;
+		content: '\201E';
+		color: @grayLight;
+		font-size: 90px;
+		font-family: serif;
+	}
+
+	// Float right
+	&.right {
+		float: right;
+		border-left: 0;
+		border-right: 5px solid @grayLight;
+		padding-left: 0;
+		padding-right: @halfLineHeight;
+		margin-left: 0;
+		margin-right: 40px;
+
+		p,small {
+			text-align: right;
+		}
+		small {
+      		&:before {
+        		content: '';
+     		}
+      		&:after {
+        		content: '\00A0 \2014';
+      		}
+		}
+
+		&:before {
+			content: '';	
+		}
+		&:after {
+			position: absolute;
+			top: -30px;
+			right: -55px;
+			content: '\201E';
+			color: @grayLight;
+			font-size: 90px;
+			font-family: serif;
+		}		
+	}
+}

@@ -1,0 +1,199 @@
+// =============================================
+//					Variables
+// =============================================
+
+// 					Colors
+// ----------------------------------------
+
+// 		Grays
+@black:             #000;
+@grayDarker:        #222;
+@grayDark:          #333;
+@gray:              #555;
+@grayLight:         #999;
+@grayLighter:       #eee;
+@white:            	#fff;
+
+// 	   Accent colors
+@red:				#F22;
+@cyan:				#0DD;
+@blue:				#28F;
+@darkblue:			#07D;
+@lightblue:			#8DE;
+@purple:			#C0C;
+@yellow:			#fC0;
+@lime:				#4F6;
+@pink:				#F7F;
+@orange:			#FA3;
+@brown:				#B52;
+@maroon:			#C00;
+@green:				#4a4;
+@olive:				#BA0;
+
+// Backgrounds color
+@redLighter:				lighten(@red, 35%);
+@blueLighter:				lighten(@blue, 35%);
+@purpleLighter:				lighten(@purple, 50%);
+@yellowLighter:				lighten(@yellow, 40%);
+@greenLighter:				lighten(@green, 40%);
+
+// Border colors
+@redBorder: 				darken(@redLighter, 10%);
+@blueBorder: 				darken(@blueLighter, 10%);
+@purpleBorder: 				darken(@purpleLighter, 10%);
+@yellowBorder: 				darken(@yellowLighter, 10%);
+@greenBorder: 				darken(@greenLighter, 10%);
+
+// Text colors
+@redText: 					darken(spin(@red, -15), 5%);
+@blueText: 					darken(spin(@blue, -15), 15%);
+@purpleText: 				darken(spin(@purple, -15), 5%);
+@yellowText: 				darken(spin(@yellow, -15), 5%);
+@greenText: 				darken(spin(@green, -15), 5%);
+
+
+// Tables colors
+@tableBackground: 			transparent;
+@tableBackgroundAccent: 	#F9F9F9;
+@tableBackgroundHover: 		#F4F4F4;
+@tableBorderColor: 			#CECECE;
+
+// 			Base
+@bodyBackgroundColor: 			@white;
+@textColor:						@grayDark;
+@linkColor:						#28F;
+@linkColorHover: 				darken(@linkColor, 10%);
+
+@codeLightBackgroundColor: 		darken(@bodyBackgroundColor, 5%);
+@codeLightColor: 				lighten(@textColor, 10%);
+@codeDarkBackgroundColor: 		@grayDarker;
+@codeDarkColor: 				@grayLighter;
+@codeBorderColor: 				lighten(@grayLight, 20%);
+
+
+
+
+@baseFontFamily:  		Arial, "Helvetica Neue", Helvetica, sans-serif;
+@monoFontFamily: 		Monaco, "Courier New", Menlo, Consolas, monospace;
+
+@baseFontSize: 			14px;
+
+@fontSizeLarge: 		@baseFontSize * 1.25; // 17.5
+@fontSizeSmall: 		@baseFontSize * 0.85; // 11.9
+@fontSizeMini: 			@baseFontSize * 0.75; // 10.5
+@codeFontSize: 			@baseFontSize - 2px;  // 12
+
+@paddingLarge: 				11px 19px;
+@paddingSmall: 				2px 10px;
+@paddingMini: 				0 6px;
+
+@paddingInputLarge: 		11px 10px;
+@paddingInputSmall: 		@paddingSmall;
+@paddingInputMini: 			@paddingMini;
+
+@baseLineHeight: 		20px;
+@halfLineHeight: 		@baseLineHeight/2;
+
+@headingsFontFamily: 	inherit;
+@headingsFontWeight: 	bold;
+@headingsColor: 		inherit;
+
+@h1FontSize: 			@baseFontSize * 2.75;
+@h2FontSize: 			@baseFontSize * 2.25;
+@h3FontSize: 			@baseFontSize * 1.75;
+@h4FontSize: 			@baseFontSize * 1.25;
+@h5FontSize: 			@baseFontSize;
+@h6FontSize: 			@baseFontSize * 0.85;
+
+@baseBorderRadius:		4px;
+@largeBorderRadius:		6px;
+@smallBorderRadius: 	3px;
+@miniBorderRadius:		@smallBorderRadius;
+
+// 				Banner
+// ------------------------------
+@bannerBackground: 				@grayLighter;
+@bannerFontSize: 				60px;
+
+// 				Forms
+// ------------------------------
+
+// Inputs
+@inputBackground: 				darken(@white, 5%);
+@inputDisabledBackground: 		#DFDFDF;
+@formActionBackground: 			#F8F8F8;
+@inputBorder: 					#D9D9D9;
+@placeholderText: 				@grayLight;
+
+@inputHeight: 					@baseLineHeight + 14px;
+@inputBorderRadius: 			@baseBorderRadius;
+
+@horizontalComponentOffset: 	150px;
+
+@btnBorder: 					#CCC;
+
+// Interface Colors
+@whiteBackground: 					darken(@white, 5%);
+@whiteBackgroundHighlight: 			darken(@whiteBackground, 10%);
+
+@redBackground: 					#F95959;
+@redBackgroundHighlight: 			#A51B1B;
+
+@cyanBackground: 					@cyan;
+@cyanBackgroundHighlight: 			darken(@cyanBackground, 15%);
+
+@blueBackground: 					@blue;
+@blueBackgroundHighlight: 			darken(@blueBackground, 20%);
+
+@darkblueBackground: 				@darkblue;
+@darkblueBackgroundHighlight: 		darken(@darkblueBackground, 20%);
+
+@lightblueBackground: 				#38C4DC;
+@lightblueBackgroundHighlight: 		darken(@lightblueBackground, 20%);
+
+@purpleBackground: 					@purple;
+@purpleBackgroundHighlight: 		darken(@purpleBackground, 15%);
+
+@yellowBackground: 					@yellow;
+@yellowBackgroundHighlight: 		darken(@yellowBackground, 15%);
+
+@limeBackground: 					#35EA59;
+@limeBackgroundHighlight: 			darken(@limeBackground, 20%);
+
+@pinkBackground: 					@pink;
+@pinkBackgroundHighlight: 			darken(@pinkBackground, 30%);
+
+@orangeBackground: 					@orange;
+@orangeBackgroundHighlight: 		darken(@orangeBackground, 20%);
+
+@brownBackground: 					@brown;
+@brownBackgroundHighlight: 			darken(@brownBackground, 15%);
+
+@maroonBackground: 					@maroon;
+@maroonBackgroundHighlight: 		darken(@maroonBackground, 15%);
+
+@greenBackground: 					lighten(@green, 5%);
+@greenBackgroundHighlight: 			darken(@greenBackground, 15%);
+
+@oliveBackground: 					@olive;
+@oliveBackgroundHighlight: 		darken(@oliveBackground, 15%);
+
+@blackBackground: 					lighten(@black, 25%);
+@blackBackgroundHighlight: 			darken(@blackBackground, 15%);
+
+
+// 					Navbar 
+// ---------------------------------------------
+@navbarHeight: 			40px;
+@zIndexNavbar: 			1000;
+
+// 					  Grid
+// ---------------------------------------------
+
+@gridColumns: 			12;
+@gridColumnWidth:		60px;
+@gridGutterWidth:		20px;
+@gridWidth: 			(@gridColumns * @gridColumnWidth) + (@gridGutterWidth * (@gridColumns - 1));
+
+@fluidGridColumnWidth:    percentage(@gridColumnWidth/@gridWidth);
+@fluidGridGutterWidth:    percentage(@gridGutterWidth/@gridWidth);

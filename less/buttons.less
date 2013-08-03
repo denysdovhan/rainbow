@@ -1,0 +1,279 @@
+// ==========================================================
+// 				     		Buttons
+// ==========================================================
+
+// Base Style
+.btn {
+	.inline-block();
+	font-size: @baseFontSize;
+	line-height: @baseLineHeight;
+	text-align: center;
+	vertical-align: middle;
+	cursor: pointer;
+	padding: 5px 12px;
+	margin-bottom: 0;
+	border: 1px solid;
+	*border: 0;
+	.buttonBackground(@whiteBackground, @whiteBackgroundHighlight, @grayDark, 0 1px 1px fadeout(@white, 50%));
+	.border-radius(@baseBorderRadius);
+	.user-select(none);
+	.volumeButton(@whiteBackground, @whiteBackgroundHighlight);
+	
+	&:hover,
+	&:focus {
+		text-decoration: none;
+		background-repeat: repeat-x;
+		.transition(~"box-shadow linear 0.2s, background-color linear 0.5s");
+	}
+
+	&:active,
+	&.active {
+		outline: 0;
+		.transition(~"box-shadow linear 0.2s, background-image linear 0.5s");
+	}
+
+	&.disabled,
+	&[disabled] {
+		.opacity(0.75);
+		cursor: default;
+	}
+}
+
+// Button Sizes 
+.btn {
+	// Mini
+	&.mini {
+		font-size: @fontSizeMini;
+		padding: @paddingMini;
+		.border-radius(@miniBorderRadius);
+	}
+
+	// Small
+	&.small {
+		font-size: @fontSizeSmall;
+		padding: @paddingSmall;
+		.border-radius(@smallBorderRadius);
+	}
+
+	// Large
+	&.large {
+		font-size: @fontSizeLarge;
+		padding: @paddingLarge;
+		.border-radius(@largeBorderRadius);
+	}
+
+	// Block Button
+	&.block {
+		display: block;
+		width: 100%;
+		padding-left: 0;
+		padding-right: 0;
+		.box-sizing(border-box);
+		+ .block {
+			margin-top: 5px;
+		}
+	}
+	input[type="submit"],
+	input[type="reset"],
+	input[type="button"] {
+		&.block {
+			width: 100%;
+		}
+	}
+	
+	// Grid System
+	.spanX (@index: @gridColumns) when (@index > 0) {
+    	&.span@{index} {
+			width: ((@gridColumnWidth) * @index) + (@gridGutterWidth * (@index - 1) + 16);
+			.box-sizing(border-box);
+    	}
+    	.spanX(@index - 1);
+    }
+	.spanX();
+}
+
+.btn {
+	&.red {
+		.buttonBackground(@redBackground, @redBackgroundHighlight);
+		.volumeButton(@redBackground, @redBackgroundHighlight);
+	}
+	&.cyan {
+		.buttonBackground(@cyanBackground, @cyanBackgroundHighlight);
+		.volumeButton(@cyanBackground, @cyanBackgroundHighlight);
+	}
+	&.blue {
+		.buttonBackground(@blueBackground, @blueBackgroundHighlight);
+		.volumeButton(@blueBackground, @blueBackgroundHighlight);
+	}
+	&.darkblue {
+		.buttonBackground(@darkblueBackground, @darkblueBackgroundHighlight);
+		.volumeButton(@darkblueBackground, @darkblueBackgroundHighlight);
+	}
+	&.lightblue {
+		.buttonBackground(@lightblueBackground, @lightblueBackgroundHighlight);
+		.volumeButton(@lightblueBackground, @lightblueBackgroundHighlight);
+	}
+	&.purple {
+		.buttonBackground(@purpleBackground, @purpleBackgroundHighlight);
+		.volumeButton(@purpleBackground, @purpleBackgroundHighlight);
+	}
+	&.yellow {
+		.buttonBackground(@yellowBackground, @yellowBackgroundHighlight);
+		.volumeButton(@yellowBackground, @yellowBackgroundHighlight);
+	}
+	&.lime {
+		.buttonBackground(@limeBackground, @limeBackgroundHighlight);
+		.volumeButton(@limeBackground, @limeBackgroundHighlight);
+	}
+	&.pink {
+		.buttonBackground(@pinkBackground, @pinkBackgroundHighlight);
+		.volumeButton(@pinkBackground, @pinkBackgroundHighlight);
+	}
+	&.green {
+		.buttonBackground(@greenBackground, @greenBackgroundHighlight);
+		.volumeButton(@greenBackground, @greenBackgroundHighlight);
+	}
+	&.olive {
+		.buttonBackground(@oliveBackground, @oliveBackgroundHighlight);
+		.volumeButton(@oliveBackground, @oliveBackgroundHighlight);
+	}
+	&.orange {
+		.buttonBackground(@orangeBackground, @orangeBackgroundHighlight);
+		.volumeButton(@orangeBackground, @orangeBackgroundHighlight);
+	}
+	&.brown {
+		.buttonBackground(@brownBackground, @brownBackgroundHighlight);
+		.volumeButton(@brownBackground, @brownBackgroundHighlight);
+	}
+	&.maroon {
+		.buttonBackground(@maroonBackground, @maroonBackgroundHighlight);
+		.volumeButton(@maroonBackground, @maroonBackgroundHighlight);
+	}
+	&.black {
+		.buttonBackground(@blackBackground, @blackBackgroundHighlight);
+		.volumeButton(@blackBackground, @blackBackgroundHighlight);
+	}
+
+	&.link { 
+		border-color: transparent;
+		color: @linkColor;
+		background-color: transparent;
+		cursor: pointer;
+		.border-radius(0);
+
+		&:hover,
+		&:focus {
+			text-decoration: underline;
+			color: @linkColorHover;
+			.box-shadow(none);
+		}
+		&:active,
+		&[disabled] {
+			background-color: transparent;
+			background-image: none;
+			.box-shadow(none);	
+		}
+		&[disabled]:hover,
+		&[disabled]:focus {
+			text-decoration: none;
+			color: @grayDark;
+		}
+	}
+}
+
+// Buttons Groups
+.btn-group {
+	position: relative;
+	.inline-block();
+	font-size: 0;
+	vertical-align: middle;
+	white-space: nowrap;
+
+	.btn {
+		position: relative;
+		font-size: @baseFontSize;
+		.border-radius(0);
+
+		+ .btn {
+			margin-left: -1px;
+		}
+
+		&.mini 		{ font-size: @fontSizeMini; }
+		&.small 	{ font-size: @fontSizeSmall;}
+		&.large 	{ font-size: @fontSizeLarge;}
+
+		&:first-child {
+			margin-left: 0;
+			.border-radius(@baseBorderRadius 0 0 @baseBorderRadius);
+		}
+		&:last-child {
+			.border-radius(0 @baseBorderRadius @baseBorderRadius 0);
+		}
+		&.mini:first-child {
+			margin-left: 0;
+			.border-radius(@miniBorderRadius 0 0 @miniBorderRadius);
+		}
+		&.mini:last-child {
+			.border-radius(0 @miniBorderRadius @miniBorderRadius 0);
+		}
+		&.small:first-child {
+			margin-left: 0;
+			.border-radius(@smallBorderRadius 0 0 @smallBorderRadius);
+		}
+		&.small:last-child {
+			.border-radius(0 @smallBorderRadius @smallBorderRadius 0);
+		}
+		&.large:first-child {
+			margin-left: 0;
+			.border-radius(@largeBorderRadius 0 0 @largeBorderRadius);
+		}
+		&.large:last-child {
+			.border-radius(0 @largeBorderRadius @largeBorderRadius 0);
+		}
+	}
+	
+	&.vertical {
+		.inline-block();
+
+		.btn {
+			display: block;
+			float: none;
+			max-width: 100%;
+			.border-radius(0);
+
+			+ .btn {
+				margin-left: 0;
+				margin-top: -1px;
+			}
+
+			&:first-child {
+				.border-radius(@baseBorderRadius @baseBorderRadius 0 0);
+			}
+			&:last-child {
+				.border-radius(0 0 @baseBorderRadius @baseBorderRadius);
+			}
+			&.mini:first-child {
+				.border-radius(@miniBorderRadius @miniBorderRadius 0 0);
+			}
+			&.mini:last-child {
+				.border-radius(0 0 @miniBorderRadius @miniBorderRadius);
+			}
+			&.small:first-child {
+				.border-radius(@smallBorderRadius @smallBorderRadius 0 0);
+			}
+			&.small:last-child {
+				.border-radius(0 0 @smallBorderRadius @smallBorderRadius);
+			}
+			&.large:first-child {
+				.border-radius(@largeBorderRadius @largeBorderRadius 0 0);
+			}
+			&.large:last-child {
+				.border-radius(0 0 @largeBorderRadius @largeBorderRadius);
+			}
+		}
+	}
+
+	+ .btn-group {
+		margin-left: 5px;
+	}
+}

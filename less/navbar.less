@@ -1,0 +1,164 @@
+// =============================================================
+// 						NAVIGATION BAR
+// =============================================================
+
+.navbar {
+	position: relative;
+	z-index: 2;
+	overflow: visible;
+	line-height: @navbarHeight;
+	height: @navbarHeight;
+	margin-bottom: @baseLineHeight;
+	.navbarBackground(@whiteBackground, @whiteBackgroundHighlight, #777, #777);
+	.border-radius(@baseBorderRadius);
+	
+	> .container {
+		.clearfix();
+		.center();
+     	width: (@gridColumnWidth * @gridColumns) + (@gridGutterWidth * (@gridColumns - 1));
+		line-height: @navbarHeight;
+		height: @navbarHeight;
+	}
+
+	.brand {
+		font-size: @fontSizeLarge;
+		font-weight: 400;
+		line-height: @navbarHeight;
+		display: block;
+		float: left;
+		padding: 0 20px;
+		cursor: pointer;
+
+		&:hover,
+		&:focus {
+			text-decoration: none;
+		}
+	}
+
+	.divider {
+		height: @navbarHeight;
+		margin: 0 10px;
+	}
+
+	// Navigation
+	.nav {
+		position: relative;
+		left: 0;
+		display: block;
+		float: left;
+
+		> li {
+			margin: 0 3px; 
+			float: left;
+			> a {
+				font-weight: bold;
+				line-height: @navbarHeight;
+				text-decoration: none;
+				float: none;
+				padding: 0 10px;
+			}
+
+			&.active > a,
+			&.active > a:hover,
+			&.active > a:focus {
+				text-decoration: none;
+			}
+		}
+	}
+
+	form {
+		.clearfix();
+		.inline-block();
+		margin-bottom: 0;
+
+		input,
+		select,
+		.btn {
+			.inline-block();
+			margin-bottom: 0;
+		}
+
+		input[type="checkbox"],
+		input[type="image"],
+		input[type="radio"] {
+			margin-top: 3px;
+		}
+
+		.prepend input,
+		.append input {
+			margin-top: 0;
+		}
+	}
+
+	&.fixed-bottom,
+	&.fixed-top {
+		position: fixed;
+		right: 0;
+		left: 0;
+		z-index: @zIndexNavbar;
+		margin-bottom: 0;
+		padding-left: 0;
+		padding-right: 0;
+	}
+	
+	&.fixed-top {
+		top: 0;
+		border-width: 0 0 1px;
+	}
+	&.fixed-bottom {
+		bottom: 0;
+		border-width: 1px 0 0;
+	}
+	&.fixed-bottom,
+	&.fixed-top,
+	&.static {
+		.border-radius(0);
+	}
+
+	// Alternative Colors
+	&.red {
+		.navbarBackground(@redBackground, @redBackgroundHighlight);
+	}
+	&.cyan {
+		.navbarBackground(@cyanBackground, @cyanBackgroundHighlight);
+	}
+	&.blue {
+		.navbarBackground(@blueBackground, @blueBackgroundHighlight);
+	}
+	&.darkblue {
+		.navbarBackground(@darkblueBackground, @darkblueBackgroundHighlight);
+	}
+	&.lightblue {
+		.navbarBackground(@lightblueBackground, @lightblueBackgroundHighlight);
+	}
+	&.purple {
+		.navbarBackground(@purpleBackground, @purpleBackgroundHighlight);
+	}
+	&.yellow {
+		.navbarBackground(@yellowBackground, @yellowBackgroundHighlight);
+	}
+	&.lime {
+		.navbarBackground(@limeBackground, @limeBackgroundHighlight);
+	}
+	&.pink {
+		.navbarBackground(@pinkBackground, @pinkBackgroundHighlight);
+	}
+	&.green {
+		.navbarBackground(@greenBackground, @greenBackgroundHighlight);
+	}
+	&.olive {
+		.navbarBackground(@oliveBackground, @oliveBackgroundHighlight);
+	}
+	&.orange {
+		.navbarBackground(@orangeBackground, @orangeBackgroundHighlight);
+	}
+	&.brown {
+		.navbarBackground(@brownBackground, @brownBackgroundHighlight);
+	}
+	&.maroon {
+		.navbarBackground(@maroonBackground, @maroonBackgroundHighlight);
+	}
+	&.black {
+		.navbarBackground(@blackBackground, @blackBackgroundHighlight);
+	}
+}

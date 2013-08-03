@@ -1,0 +1,112 @@
+// ================================================================
+//  						  MEDIA
+// ================================================================
+
+// Mediagrid
+.media-grid {
+	.clearfix();
+	list-style: none;
+	margin-left: -@gridGutterWidth;
+
+	> li {
+		float: left;
+		margin-left: @baseLineHeight;
+		margin-bottom: @gridGutterWidth;
+
+		.thumbnail {
+			overflow: hidden;
+			line-height: @baseLineHeight;
+			display: block;
+			padding: 4px;
+			border: 1px solid @grayLighter;
+			.border-radius(@baseBorderRadius);
+			.box-shadow(0 1px 3px fadeout(@black, 80%));
+			.transition(all linear 0.5s);
+
+			img {
+				display: block;
+				max-width: 100%;
+				margin-right: auto;
+				margin-left: auto;
+			}
+
+			.caption {
+				margin: @halfLineHeight 0;
+				padding: 0 8px;
+				color: @gray;
+			}
+
+			p {
+				padding: 0 8px;
+			}
+
+			&.horizontal {
+				img {
+					float: left;
+				}
+
+				.caption,
+				p {
+					overflow: hidden;
+					padding: 0 10px;
+				}
+			}
+		}
+
+		a.thumbnail:hover,
+		a.thumbnail:focus {
+			border-color: @linkColor;
+			.box-shadow(0 1px 5px fadeout(@linkColor, 30%));
+			.transition(all linear 0.5s);
+		}
+	}
+
+	&.red 		{ .thumbnailColor(@red);}
+	&.purple 	{ .thumbnailColor(@purple);}
+	&.yellow 	{ .thumbnailColor(@yellow);}
+	&.green 	{ .thumbnailColor(@green);}
+	&.black 	{ .thumbnailColor(@grayDark);}
+}
+
+.row.fluid .thumbnails {
+	margin-left: 0;	
+}
+
+// Media
+.media,
+.media-body {
+	overflow: hidden;
+	*overflow: visible;
+	zoom: 1;
+}
+
+.media {
+	margin-top: 15px;
+
+	.media {
+		margin-top: 15px	
+	}
+
+	.caption {
+		margin: 0 0 5px;
+		color: @gray;
+	}
+
+	&-object {
+		display: block;
+		float: left;
+	}
+
+	&-body {
+		padding: 0 10px;
+	}
+
+	&-list {
+		list-style: none;
+		margin-left: 0;
+	}
+
+	&:first-child {
+		margin-top: 0;
+	}
+}

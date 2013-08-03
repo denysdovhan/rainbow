@@ -1,0 +1,266 @@
+// ===========================================================
+// 						Navigaion
+// ===========================================================
+
+.nav {
+	margin: 0 0 @baseLineHeight;
+	list-style: none;
+
+	li > a {
+		display: block;
+		cursor: pointer;
+		color: @linkColor;
+		.user-select(none);
+
+		&:hover,
+		&:focus {
+			text-decoration: none;
+			color: @linkColor;
+			background-color: @grayLighter;
+			.transition(background-color linear 0.2s);
+		}		
+		
+		img { max-width: none;}
+	}
+
+	// Disabled State
+	.disabled > a {
+		color: @grayLight !important;
+
+		&:hover,
+		&:focus {
+			text-decoration: none ;
+			cursor: default;
+			background-color: transparent;
+		}
+	}
+
+
+	.right {
+		float: right;
+	}
+	
+	// NAVIGATION SIDEBAR
+	&.sidebar,
+	&.list {
+		padding-left: 15px;
+		padding-right: 15px;
+		margin-bottom: 0;
+		
+		// Navigations Header
+		.header {
+			font-size: @baseFontSize;
+			font-weight: bold;
+			text-shadow: 0 1px 0 fadeout(@white, 50%);
+			text-transform: uppercase;
+			line-height: @baseLineHeight;
+			display: block;
+			padding: 5px 15px;
+			color: @grayLight;
+		}
+		li + .header {
+			margin-top: @halfLineHeight;
+		}
+
+		.header,
+		li > a {
+			margin-left: -15px;
+			margin-right: -15px;
+			padding: 5px 15px;
+		}
+
+		.active a,
+		.active a:hover,
+		.active a:focus {
+			color: @white;
+			background-color: @linkColor;
+		}
+
+		.divider {
+			overflow: hidden;
+			*width: 100%;
+			height: 1px;
+			margin: @halfLineHeight - 1px 1px;
+			*margin: -5px 0 5px;
+			background-color: darken(@grayLighter, 15%);
+			border-bottom: 1px solid @grayLighter;
+		}
+
+		// Alternative Colors
+		&.red {
+			.navSidebarColor(@red);
+		}
+		&.purple {
+			.navSidebarColor(@purple);
+		}
+		&.yellow {
+			.navSidebarColor(@yellow);
+		}
+		&.green {
+			.navSidebarColor(@green);
+		}
+		&.black {
+			.navSidebarColor(@black);
+		}
+	}
+	
+	// NAVIGATIONS TABS & TABLETS
+	// ==========================
+	
+	// Base Style
+	&.pills,
+	&.tabs {
+		.clearfix();
+
+		li {
+			float: left;
+
+			a {
+				padding: 10px 15px;
+				margin-right: 2px;
+				line-height: 14px;
+			}
+
+			&.active > a, 
+			&.active > a:hover, 
+			&.active > a:focus {
+				cursor: default;
+				color: @white;
+				background-color: @linkColor;
+				.box-shadow(inset 0 1px 2px darken(@linkColor, 20%));	
+			} 
+		}
+
+		// Alternative Colors
+		&.red {
+			.navPillsTabsColor(@red);
+		}
+		&.purple {
+			.navPillsTabsColor(@purple);
+		}
+		&.yellow {
+			.navPillsTabsColor(@yellow);
+		}
+		&.green {
+			.navPillsTabsColor(@green);
+		}
+		&.black {
+			.navPillsTabsColor(@grayDark);
+		}
+	}
+
+	// Pills
+	&.pills > li {
+		a {
+			margin-top: 2px;
+			margin-bottom: 2px;
+			.border-radius(@baseBorderRadius);
+		}
+	}
+
+	// Tabs
+	&.tabs {
+		border-bottom: 1px solid @linkColor;
+
+		li > a {
+			.border-radius(@baseBorderRadius @baseBorderRadius 0 0);			
+		}
+
+		// Alternative Position
+		
+		// Bottom
+		&.below {
+			border-top: 1px solid @linkColor;
+			border-bottom: 0;
+
+			li {
+				margin-bottom: 0;
+
+				a {
+					.border-radius(0 0 @baseBorderRadius @baseBorderRadius);
+				}
+			}
+		}
+
+		// Left
+		&.left {
+			float: left;
+			margin-right: 19px;
+			border-bottom: 0;
+			border-right: 1px solid @linkColor;
+
+			> li {
+				float: none;
+				> a {
+					min-width: 100px;
+					margin-right: 0;
+					margin-bottom: 3px;
+					.border-radius(@baseBorderRadius 0 0 @baseBorderRadius);
+				}
+			}
+		}
+
+		// Right
+		&.right {
+			float: right;
+			margin-left: 19px; 
+			border-bottom: 0;
+			border-left: 1px solid @linkColor;
+
+			> li {
+				float: none;
+				> a {
+					min-width: 100px;
+					margin-left: 0;
+					margin-bottom: 3px; 
+					.border-radius(0 @baseBorderRadius @baseBorderRadius 0);
+				}
+			}
+		}
+	}
+
+	// NAVIGATION STACKED
+	// ==================
+	&.stacked {
+		li {
+			float: none;
+
+			a {
+				margin-right: 0;
+			}
+		}
+		
+		&.pills > li {
+			a {
+				margin-bottom: 3px;
+			}
+			&:first-child > a {
+				margin-bottom: 1px;
+			}
+		}
+
+		&.tabs{
+			border: 0;
+
+			li {
+				a {
+					margin-bottom: -1px;
+					border: 1px solid @grayLighter;
+					.border-radius(0);
+
+					&:hover,
+					&:focus {
+						z-index: 2;
+					}
+				}
+
+				&:first-child > a {
+					.border-radius(@baseBorderRadius @baseBorderRadius 0 0);
+				}
+				&:last-child > a {
+					.border-radius(0 0 @baseBorderRadius @baseBorderRadius);					
+				}
+			}
+		}
+	}
+}

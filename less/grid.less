@@ -1,0 +1,61 @@
+// =============================================
+// 					  Grid
+// =============================================
+
+.grid {
+	.clearfix();
+	margin: 0 auto;
+	width: @gridWidth;
+}
+
+.row {
+	.clearfix();
+	margin-top: @gridGutterWidth;
+
+	&:first-child {
+		margin-top: 0;
+	}
+
+	> [class^='span'] {
+		float: left;
+		margin-left: @gridGutterWidth;
+
+		&:first-child {
+			margin-left: 0;
+		}
+	}
+}
+
+.span (@columns: 1) {
+	width: (@gridColumnWidth * @columns) + (@gridGutterWidth * (@columns - 1));
+}
+
+.spanX (@index: @gridColumns) when (@index > 0) {
+   	.span@{index} {.span(@index);}
+   	.spanX(@index - 1);
+}
+.spanX();
+
+.row.fluid {
+   	.clearfix();
+   	width: 100%;
+	float: left;
+	[class^='span'] {
+		margin-left: @fluidGridGutterWidth;
+      	*margin-left: @fluidGridGutterWidth - (.5 / @gridWidth * 100 * 1%);
+        	&:first-child {
+       		margin-left: 0;
+       	}
+	}
+	
+	.span (@columns: 1) {
+		width: (@fluidGridColumnWidth * @columns) + (@fluidGridGutterWidth * (@columns - 1));
+    	*width: (@fluidGridColumnWidth * @columns) + (@fluidGridGutterWidth * (@columns - 1)) - (.5 / @gridWidth * 100 * 1%);
+	}
+
+	.spanX (@index: @gridColumns) when (@index > 0) {
+   		.span@{index} {.span(@index);}
+   		.spanX(@index - 1);
+  		 }
+	.spanX();	
+}

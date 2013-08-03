@@ -1,0 +1,338 @@
+//   ---------------------------------------------------
+//   |  LESS Mix 1.1                                   |
+//   ---------------------------------------------------
+//   | Cross browser, comfortable and easy LESS mixins |
+//   | Copyright 2013 Denys Dovhan                     |
+//   ---------------------------------------------------
+
+// Center align
+.center() {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+//          Gradient Tools
+// -----------------------------
+#gradient {
+  // Vertical
+  .vertical(@startColor: #aaa, @stopColor: #000) {
+    background-color: mix(@startColor, @stopColor, 50%);
+    background-image: -moz-linear-gradient(top, @startColor 0%, @stopColor 100%);
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%,@startColor), color-stop(100%,@stopColor));
+    background-image: -webkit-linear-gradient(top,  @startColor 0%,@stopColor 100%);
+    background-image: -o-linear-gradient(top, @startColor 0%, @stopColor 100%);
+    background-image: -ms-linear-gradient(top, @startColor 0%, @stopColor 100%); 
+    background-image: linear-gradient(to bottom, @startColor 0%, @stopColor 100%);
+    filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=0)",@startColor,@stopColor));
+  }
+
+  // Horizontal
+  .horizontal(@startColor: #aaa, @stopColor: #000) {
+    background-color: mix(@startColor, @stopColor, 50%);
+    background-image: -moz-linear-gradient(left, @startColor 0%, @stopColor 100%);
+    background-image: -webkit-gradient(linear, left top, right top, color-stop(0%,@startColor), color-stop(100%,@stopColor));
+    background-image: -webkit-linear-gradient(left,  @startColor 0%,@stopColor 100%);
+    background-image: -o-linear-gradient(left, @startColor 0%, @stopColor 100%);
+    background-image: -ms-linear-gradient(top, @startColor 0%, @stopColor 100%);
+    background-image: linear-gradient(to right, @startColor 0%, @stopColor 100%);
+    filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=1)",@startColor,@stopColor));
+  }
+
+  // Directional gradient
+  .direction(@startColor: #aaa, @stopColor: #000, @deg: 45deg) {
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(@deg), color-stop(0.5, @startColor), to(@stopColor));
+    background-image: -webkit-linear-gradient(@deg, @startColor, @stopColor);
+    background-image: -moz-linear-gradient(@deg, @startColor, @stopColor);
+    background-image: -o-linear-gradient(@deg, @startColor, @stopColor);
+    background-image: linear-gradient(@deg, @startColor, @stopColor); 
+
+    background-color: mix(@startColor, @stopColor, 60%);
+    background-repeat: repeat-x;
+  }
+
+  // Radial gradient
+  .radial(@innerColor: #aaa, @outerColor: #000) {
+      background-image: -webkit-gradient(radial, center center, 0, center center, 460, from(@innerColor), to(@outerColor));
+      background-image: -webkit-radial-gradient(circle, @innerColor, @outerColor);
+      background-image: -moz-radial-gradient(circle, @innerColor, @outerColor);
+      background-image: -o-radial-gradient(circle, @innerColor, @outerColor);
+
+      background-color: mix(@innerColor, @outerColor, 60%);
+      background-repeat: no-repeat;
+  }
+
+  // Striped
+  .striped(@color: #aaa, @deg: 45deg) {
+    background-image: -webkit-gradient(linear, 0 100%, 100% 0, color-stop(.25, @color), color-stop(.25, transparent), color-stop(.5, transparent), color-stop(.5, @color), color-stop(.75, @color), color-stop(.75, transparent), to(transparent));
+    background-image: -webkit-linear-gradient(@deg, @color 25%, transparent 25%, transparent 50%, @color 50%, @color 75%, transparent 75%, transparent);
+    background-image: -moz-linear-gradient(@deg, @color 25%, transparent 25%, transparent 50%, @color 50%, @color 75%, transparent 75%, transparent);
+    background-image: -o-linear-gradient(@deg, @color 25%, transparent 25%, transparent 50%, @color 50%, @color 75%, transparent 75%, transparent);
+    background-image: linear-gradient(@deg, @color 25%, transparent 25%, transparent 50%, @color 50%, @color 75%, transparent 75%, transparent);
+  }
+}
+
+//          Border Radius
+// ---------------------------------
+.border-radius(@radius) {
+    -webkit-border-radius: @radius;
+       -moz-border-radius: @radius;
+            border-radius: @radius;
+}
+
+
+//        Shadow Tools
+// ----------------------------------
+.box-shadow(@shadow) {
+    -webkit-box-shadow: @shadow;
+       -moz-box-shadow: @shadow;
+            box-shadow: @shadow;
+}
+
+//          Transition
+// ----------------------------------
+.transition(@transition) {
+    -webkit-transition: @transition;
+       -moz-transition: @transition;
+         -o-transition: @transition;
+            transition: @transition;
+}
+
+//          Animation
+// ----------------------------------
+.animation(@arguments) {
+  -webkit-animation: @arguments;
+     -moz-animation: @arguments;
+      -ms-animation: @arguments;
+       -o-animation: @arguments;
+          animation: @arguments;
+}
+
+//          Transform
+// ----------------------------------
+.transform(@transform) {
+    -webkit-transform: @transform;
+       -moz-transform: @transform;
+        -ms-transform: @transform;
+         -o-transform: @transform;
+            transform: @transform;
+}
+
+//        More Tools
+// ====================================
+
+// Clearfix
+.clearfix() {
+  *zoom: 1;
+
+  &:before,
+  &:after {
+    display: table;
+    content: '';
+  }
+  &:after {
+    clear: both; 
+  }
+}
+
+// Link color
+.linkColor(@color) {
+  a {
+    color: @color;
+
+    &:hover,
+    &:focus {
+      color: darken(@color, 5%); 
+    }
+  }
+}
+
+// Box sizing
+.box-sizing(@sizing: border-box) {
+  -webkit-box-sizing: @sizing;
+     -moz-box-sizing: @sizing;
+      -ms-box-sizing: @sizing;
+          box-sizing: @sizing;
+}
+
+// User select
+.user-select(@select: none) {
+  -webkit-user-select: @select;
+     -moz-user-select: @select;
+      -ms-user-select: @select;
+       -o-user-select: @select;
+          user-select: @select;
+}
+
+// Opacity
+.opacity(@opacity: 0.5) {
+  opacity: @opacity;
+  @opperc: @opacity * 100;
+  filter: ~"alpha(opacity=@{opperc})";
+}
+
+// Display: inline-block
+.inline-block() {
+  display: inline-block;
+  *zoom: 1;
+  *display: inline;
+}
+
+// Reset filers for IE
+.reset-filter() {
+  filter: e(%("progid:DXImageTransform.Microsoft.gradient(enabled = false)"));
+}
+
+// Inputs Volume Style
+.volumeInput(@color: @lightblue) {
+    &.volume {
+    background-color: @inputBackground;
+    border: 1px solid darken(@inputBorder, 5%);
+    .box-shadow(inset 0 1px 3px darken(@inputBorder, 5%));
+
+    &:focus {
+      background-color: @white;
+      border: 1px solid @color;
+      .box-shadow(~"0 0 3px @{color}, 0 0 3px @{color}");
+    }
+  }
+}
+
+//  Buttons Background
+.buttonBackground(@primaryColor, @secondaryColor, @textColor: @white, @textShadow: 0 -1px 0 fadeout(@white, 75%)) {
+    text-shadow: @textShadow;
+    background-color: @primaryColor;
+    *background-color: @primaryColor;
+    border-color: darken(@secondaryColor, 10%);
+    border-color: fadeout(@black, 80%);
+    color: @textColor;
+
+    &:hover,
+    &:focus {
+      .box-shadow(0 1px 3px darken(@secondaryColor, 15%));
+      background-color: lighten(@secondaryColor, 7%);
+    }
+    &:active,
+    &.active {
+      .box-shadow(inset 0 2px 2px darken(@secondaryColor, 15%));
+      background-color: @secondaryColor;
+    }
+    &.disabled,
+    &[disabled] {
+      background-color: @primaryColor;
+      .box-shadow(none);
+    } 
+}
+
+// Buttons Volume Style
+.volumeButton(@primaryColor, @secondaryColor) {
+  &.volume {
+    #gradient > .vertical(@primaryColor, @secondaryColor);
+    background-color: @secondaryColor;
+    *background-color: @secondaryColor;
+    border-color: @secondaryColor @secondaryColor darken(@secondaryColor, 10%);
+    .box-shadow(~"inset 0 1px 0 rgba(255, 255, 255, 0.3), 0 1px 2px rgba(0, 0, 0, 0.3)");
+    .reset-filter();
+
+    &:hover,
+    &:focus {
+      text-decoration: none;
+      background-position: 0 -15px;
+      background-color: @secondaryColor;
+      .transition(background-position linear 0.2s);
+    }
+
+    &:active,
+    &.active {
+      .box-shadow(inset 0 2px 2px darken(@secondaryColor, 15%));
+      background-image: none; 
+      .transition(box-shadow linear 0.1s);
+    }
+
+    &.disabled,
+    &[disabled] {
+      background-image: none;
+      .box-shadow(none);
+    }
+  }
+}
+
+// Sidebar Items Color
+.navSidebarColor(@color) {
+  li {
+    a { color: @color;}
+    &.active > a, 
+    &.active > a:hover, 
+    &.active > a:focus {
+      color: @white;
+      background-color: @color;
+    } 
+  }
+}
+
+// Pills & Tabs Color
+.navPillsTabsColor(@color) {
+  li {
+    a { color: @color;}
+    &.active > a, 
+    &.active > a:hover, 
+    &.active > a:focus {
+      color: @white;
+      background-color: @color;
+      .box-shadow(inset 0 1px 2px darken(@color, 20%));   
+    } 
+  }
+
+  &.tabs {
+    border-color: @color;
+  }
+}
+
+// Navigations Bar Background
+.navbarBackground(@primaryColor, @secondaryColor, @linkColor: @white, @textColor: @white) {
+  color: @textColor;
+  #gradient > .vertical(@primaryColor, @secondaryColor);
+  background-color: @secondaryColor;
+  *background-color: @secondaryColor;
+  border: 1px solid darken(@secondaryColor, 10%);
+  .box-shadow(0 2px 2px darken(@secondaryColor, 15%));
+
+  .brand {
+    text-shadow: 0 1.5px  @primaryColor, 0 -1.5px 0 @secondaryColor;
+    color: darken(@textColor, 10%);
+  }
+  .divider {
+    border-left: 1px solid @primaryColor;
+    border-right: 1px solid @secondaryColor;
+  }
+
+  .nav > li {
+    > a {
+      text-shadow: 0 1.5px  @primaryColor, 0 -1.5px 0 @secondaryColor;
+      color: darken(@linkColor, 10%);
+      background-color: transparent;
+      &:hover,
+      &:focus {
+        color: @linkColor;
+        .box-shadow(inset 0 0 10px @secondaryColor);
+        .transition(box-shadow linear 0.2s);
+      }
+    }
+    &.active > a,
+    &.active > a:hover,
+    &.active > a:focus {
+      text-decoration: none;
+      color: @linkColor;
+      background-color: @secondaryColor;
+      .box-shadow(inset 0 0 10px fadeout(@black, 50%));
+    }
+  }
+}
+
+// Thumbnails Border Colors
+.thumbnailColor(@color: @linkColor) {
+  > li > a.thumbnail:hover,
+  > li > a.thumbnail:focus {
+    border-color: @color;
+    .box-shadow(0 1px 5px fadeout(@color, 30%));
+  }
+}
