@@ -5,32 +5,14 @@
 //   | Copyright 2013 Denys Dovhan                     |
 //   ---------------------------------------------------
 
-
-//      Size and Position
-// ====================================
-
-// Size
-.size(@width, @height) {
-  width: @width;
-  height: @height;
-}
-
-// Square
-.square(@size) {
-  width: @size;
-  height: @size;
-}
-
 // Center align
 .center() {
   margin-left: auto;
   margin-right: auto;
 }
 
-
 //          Gradient Tools
-// =================================================
-
+// -----------------------------
 #gradient {
   // Vertical
   .vertical(@startColor: #aaa, @stopColor: #000) {
@@ -80,8 +62,7 @@
   }
 
   // Striped
-  .striped (@color: #aaa, @deg: 45deg) {
-    // background-color: @color;
+  .striped(@color: #aaa, @deg: 45deg) {
     background-image: -webkit-gradient(linear, 0 100%, 100% 0, color-stop(.25, @color), color-stop(.25, transparent), color-stop(.5, transparent), color-stop(.5, @color), color-stop(.75, @color), color-stop(.75, transparent), to(transparent));
     background-image: -webkit-linear-gradient(@deg, @color 25%, transparent 25%, transparent 50%, @color 50%, @color 75%, transparent 75%, transparent);
     background-image: -moz-linear-gradient(@deg, @color 25%, transparent 25%, transparent 50%, @color 50%, @color 75%, transparent 75%, transparent);
@@ -90,10 +71,8 @@
   }
 }
 
-//        Border Radius Tools
-// ==============================================
-
-// Borner radius
+//          Border Radius
+// ---------------------------------
 .border-radius(@radius) {
     -webkit-border-radius: @radius;
        -moz-border-radius: @radius;
@@ -102,19 +81,15 @@
 
 
 //        Shadow Tools
-// =======================================
-
-// Basic box shadow
+// ----------------------------------
 .box-shadow(@shadow) {
     -webkit-box-shadow: @shadow;
        -moz-box-shadow: @shadow;
             box-shadow: @shadow;
 }
 
-//      Transition Tools
-// ====================================
-
-// Transition
+//          Transition
+// ----------------------------------
 .transition(@transition) {
     -webkit-transition: @transition;
        -moz-transition: @transition;
@@ -122,6 +97,8 @@
             transition: @transition;
 }
 
+//          Animation
+// ----------------------------------
 .animation(@arguments) {
   -webkit-animation: @arguments;
      -moz-animation: @arguments;
@@ -130,10 +107,8 @@
           animation: @arguments;
 }
 
-//          Transform Tools
-// ==============================================
-
-// Basic transform
+//          Transform
+// ----------------------------------
 .transform(@transform) {
     -webkit-transform: @transform;
        -moz-transform: @transform;
@@ -141,22 +116,6 @@
          -o-transform: @transform;
             transform: @transform;
 }
-
-// Rotate
-.rotate(@deg) {
-  .transform(rotate(@deg));
-}
-
-// Scale
-.scale(@ratio) {
-  .transform(scale(@ratio));
-}
-
-// Translate
-.translate(@x, @y) {
-  .transform(translate(@x, @y));
-}
-
 
 //        More Tools
 // ====================================
@@ -185,13 +144,6 @@
       color: darken(@color, 5%); 
     }
   }
-}
-
-// Background clip
-.background-clip(@argument: padding-box) {
-  -webkit-background-clip: @argument;
-     -moz-background-clip: @argument;
-        background-clip: @argument;
 }
 
 // Box sizing
@@ -225,35 +177,12 @@
   *display: inline;
 }
 
-
-//      Develop and Testing Tools
-// ============================================
-
-// Hide block
-.hide() {
-  display: none;
-}
-
-// Hide conntent
-.hide-text() {
-  font: 0/0 a;
-  border: 0;
-  color: transparent;
-  background-color: transparent;
-  text-shadow: none;
-  .box-shadow(none);  
-}
-
-// 1px solid border
-.test-border() {
-  border: 1px solid #000;
-}
-
 // Reset filers for IE
 .reset-filter() {
   filter: e(%("progid:DXImageTransform.Microsoft.gradient(enabled = false)"));
 }
 
+// Inputs Volume Style
 .volumeInput(@color: @lightblue) {
     &.volume {
     background-color: @inputBackground;
@@ -268,6 +197,7 @@
   }
 }
 
+//  Buttons Background
 .buttonBackground(@primaryColor, @secondaryColor, @textColor: @white, @textShadow: 0 -1px 0 fadeout(@white, 75%)) {
     text-shadow: @textShadow;
     background-color: @primaryColor;
@@ -293,7 +223,7 @@
     } 
 }
 
-
+// Buttons Volume Style
 .volumeButton(@primaryColor, @secondaryColor) {
   &.volume {
     #gradient > .vertical(@primaryColor, @secondaryColor);
@@ -326,6 +256,7 @@
   }
 }
 
+// Sidebar Items Color
 .navSidebarColor(@color) {
   li {
     a { color: @color;}
@@ -338,6 +269,7 @@
   }
 }
 
+// Pills & Tabs Color
 .navPillsTabsColor(@color) {
   li {
     a { color: @color;}
@@ -355,6 +287,7 @@
   }
 }
 
+// Navigations Bar Background
 .navbarBackground(@primaryColor, @secondaryColor, @linkColor: @white, @textColor: @white) {
   color: @textColor;
   #gradient > .vertical(@primaryColor, @secondaryColor);
@@ -395,14 +328,11 @@
   }
 }
 
+// Thumbnails Border Colors
 .thumbnailColor(@color: @linkColor) {
   > li > a.thumbnail:hover,
   > li > a.thumbnail:focus {
     border-color: @color;
     .box-shadow(0 1px 5px fadeout(@color, 30%));
   }
-}
-
-.progressBackground(@color) {
-  
 }
