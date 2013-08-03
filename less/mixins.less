@@ -208,11 +208,13 @@
 
     &:hover,
     &:focus {
+      color: @textColor;
       .box-shadow(0 1px 3px darken(@secondaryColor, 15%));
       background-color: lighten(@secondaryColor, 7%);
     }
     &:active,
     &.active {
+      color: @textColor;
       .box-shadow(inset 0 2px 2px darken(@secondaryColor, 15%));
       background-color: @secondaryColor;
     }
