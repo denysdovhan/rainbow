@@ -216,3 +216,30 @@ blockquote {
 		}		
 	}
 }
+
+// 	Background Type Text
+[class^="bg-type"] {
+	.inline-block();
+	padding: 3px 5px;
+	margin: 0;
+	color: @white;
+	background-color: fadeout(@black, 30%);
+}
+
+// Altenative Colors
+.bg-type {
+	&-red 			{ background-color: fadeout(@red, 30%);}
+	&-cyan 			{ background-color: fadeout(@cyan, 30%);}
+	&-blue 			{ background-color: fadeout(@blue, 30%);}
+	&-darkblue 		{ background-color: fadeout(@darkblue, 30%);}
+	&-lightblue 	{ background-color: fadeout(@lightblue, 30%);}
+	&-purple 		{ background-color: fadeout(@purple, 30%);}
+	&-yellow 		{ background-color: fadeout(@yellow, 30%);}
+	&-lime 			{ background-color: fadeout(@lime, 30%);}
+	&-pink 			{ background-color: fadeout(@pink, 30%);}
+	&-green 		{ background-color: fadeout(@green, 30%);}
+	&-olive 		{ background-color: fadeout(@olive, 30%);}
+	&-orange 		{ background-color: fadeout(@orange, 30%);}
+	&-brown 		{ background-color: fadeout(@brown, 30%);}
+	&-maroon 		{ background-color: fadeout(@maroon, 30%);}	
+}
