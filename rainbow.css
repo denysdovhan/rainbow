@@ -1,6 +1,29 @@
 /**
  * Rainbow v1.0.0
  */
+.center {
+  margin-left: auto;
+  margin-right: auto;
+}
+.clearfix {
+  *zoom: 1;
+}
+.clearfix:before,
+.clearfix:after {
+  display: table;
+  content: '';
+}
+.clearfix:after {
+  clear: both;
+}
+.inline-block {
+  display: inline-block;
+  *zoom: 1;
+  *display: inline;
+}
+.reset-filter {
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+}
 @-webkit-keyframes progress-active {
   from {
     background-position: 0 40px;
@@ -362,6 +385,9 @@ body.maroon a:focus {
 }
 .span1 {
   width: 60px;
+}
+.container {
+  width: 940px;
 }
 .row.fluid {
   *zoom: 1;
@@ -793,7 +819,7 @@ dd:before {
 hr {
   border: 0;
   margin: 20px 10px;
-  border-top: 1px solid #333333;
+  border-top: 1px solid #c8c8c8;
   border-bottom: 1px solid #eeeeee;
 }
 abbr[title] {
@@ -871,6 +897,57 @@ blockquote.right:after {
   color: #999999;
   font-size: 90px;
   font-family: serif;
+}
+[class^="bg-type"] {
+  display: inline-block;
+  *zoom: 1;
+  *display: inline;
+  padding: 3px 5px;
+  margin: 0;
+  color: #ffffff;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.bg-type-red {
+  background-color: rgba(255, 34, 34, 0.7);
+}
+.bg-type-cyan {
+  background-color: rgba(0, 221, 221, 0.7);
+}
+.bg-type-blue {
+  background-color: rgba(34, 136, 255, 0.7);
+}
+.bg-type-darkblue {
+  background-color: rgba(0, 119, 221, 0.7);
+}
+.bg-type-lightblue {
+  background-color: rgba(136, 221, 238, 0.7);
+}
+.bg-type-purple {
+  background-color: rgba(204, 0, 204, 0.7);
+}
+.bg-type-yellow {
+  background-color: rgba(255, 204, 0, 0.7);
+}
+.bg-type-lime {
+  background-color: rgba(68, 255, 102, 0.7);
+}
+.bg-type-pink {
+  background-color: rgba(255, 119, 255, 0.7);
+}
+.bg-type-green {
+  background-color: rgba(68, 170, 68, 0.7);
+}
+.bg-type-olive {
+  background-color: rgba(187, 170, 0, 0.7);
+}
+.bg-type-orange {
+  background-color: rgba(255, 170, 51, 0.7);
+}
+.bg-type-brown {
+  background-color: rgba(187, 85, 34, 0.7);
+}
+.bg-type-maroon {
+  background-color: rgba(204, 0, 0, 0.7);
 }
 img.bordered {
   padding: 4px;

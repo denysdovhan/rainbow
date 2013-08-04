@@ -4,5 +4,65 @@
 */
 
 body {
-	padding-top: 40px; 
+	padding-top: 40px; /* For navbar*/
+}
+
+.masthead {
+	padding: 50px 0;
+	margin-bottom: 0;
+	color: #FFF;
+	background: -moz-linear-gradient(45deg,  #6C000E 0%, #F3012C 100%);
+	background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,#6C000E), color-stop(100%,#F3012C));
+    background: -webkit-linear-gradient(45deg,  #6C000E 0%,#F3012C 100%);
+    background: -o-linear-gradient(45deg,  #6C000E 0%,#F3012C 100%);
+    background: -ms-linear-gradient(45deg,  #6C000E 0%,#F3012C 100%);
+    background: linear-gradient(45deg,  #6C000E 0%,#F3012C 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6C000E', endColorstr='#F3012C',GradientType=1 );
+}
+
+.masthead h1 {
+	font-size: 100px;
+	line-height: 1;
+}
+
+.masthead a.btn {
+	font-size: 24px;
+	padding: 20px 25px;
+}
+
+.masthead a {
+	padding: 0 10px;
+	color: #FFF;
+	color: rgba(255, 255, 255, 0.5);
+}
+
+.masthead a:hover {
+	color: #FFF;
+}
+
+.masthead span {
+	cursor: default;
+	color: rgba(255,255,255, 0.3);
+}
+
+/* Marketing Element */
+.marketing {
+	text-align: center;
+	color: #444;
+}
+
+.marketing .headline {
+	font-size: 50px;
+	font-weight: 200;
+	line-height: 1;
+	margin-top: 40px;
+}
+
+.marketing .headline .bg-type {
+	font-weight: bold;
+}
+
+/* Footer Element */
+.footer {
+
 }
