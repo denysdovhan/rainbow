@@ -10,7 +10,9 @@ body {
 .masthead {
 	padding: 50px 0;
 	margin-bottom: 0;
+	border-bottom: 1px solid ##E4E4E4;
 	color: #FFF;
+	/* Background Gradient*/
 	background: -moz-linear-gradient(45deg,  #6C000E 0%, #F3012C 100%);
 	background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,#6C000E), color-stop(100%,#F3012C));
     background: -webkit-linear-gradient(45deg,  #6C000E 0%,#F3012C 100%);
@@ -18,6 +20,10 @@ body {
     background: -ms-linear-gradient(45deg,  #6C000E 0%,#F3012C 100%);
     background: linear-gradient(45deg,  #6C000E 0%,#F3012C 100%);
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6C000E', endColorstr='#F3012C',GradientType=1 );
+    /* Box Shadow*/
+	-webkit-box-shadow: inset 0 -3px 10px rgba(0,0,0,.5);
+	   -moz-box-shadow: inset 0 -3px 10px rgba(0,0,0,.5);
+    		box-shadow: inset 0 -3px 10px rgba(0,0,0,.5);
 }
 
 .masthead h1 {
@@ -32,12 +38,12 @@ body {
 
 .masthead a {
 	padding: 0 10px;
-	color: #FFF;
+	color: #CD7F8C;
 	color: rgba(255, 255, 255, 0.5);
 }
 
 .masthead a:hover {
-	color: #FFF;
+	color: #fff;
 }
 
 .masthead span {
@@ -64,5 +70,14 @@ body {
 
 /* Footer Element */
 .footer {
+	text-align: center;
+	padding: 20px 0;
+	margin: 50px 0 0;
+	border-top: 1px solid #E4E4E4;
+	color: #888;
+	background-color: #F5F5F5;
+}
 
+.footer p {
+	margin: 2px;
 }

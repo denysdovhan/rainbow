@@ -47,7 +47,7 @@
     <!-- Marketing -->
     <section class="container marketing">
         <h1 class="headline">Ми презентуємо <span class="bg-type">Rainbow</span></h1>
-        <div class="row fluid">
+        <div class="row">
             <div class="span4">
                 <img class="circle" data-src="holder.js/150x150">
                 <h3>Кросбраузерний</h3>
@@ -68,10 +68,21 @@
     <!-- Marketing -->
 
     <footer class="footer">
-        
+        <div class="container">
+            <a href="http://denysdovhan.info" target="blank">
+                <img class="center" src="img/blog-logo.png">
+            </a>
+            <p>Made with love in Ukraine...</p>
+            <p id="year"></p>
+        </div>
     </footer>
     <!-- Scripts -->
     <script type="text/javascript" src="js/holder.js"></script>
+    <script type="text/javascript">
+        var year = document.getElementById('year');
+        var date = new Date();
+        year.innerHTML = date.getFullYear();
+    </script>
     <!-- Scripts -->
 </body>
 </html>

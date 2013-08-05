@@ -1925,6 +1925,17 @@ textarea.span1 {
   width: 64px;
   margin-left: 0;
 }
+input.block,
+select.block,
+textarea.block {
+  display: block;
+  width: 100%;
+  min-height: 30px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+}
 select {
   width: 200px;
   border: 1px solid #d9d9d9;
