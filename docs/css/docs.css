@@ -7,10 +7,11 @@ body {
 	padding-top: 40px; /* For navbar*/
 }
 
+/* Masthead Element */
 .masthead {
 	padding: 50px 0;
 	margin-bottom: 0;
-	border-bottom: 1px solid ##E4E4E4;
+	border-bottom: 1px solid #E4E4E4;
 	color: #FFF;
 	/* Background Gradient*/
 	background: -moz-linear-gradient(45deg,  #6C000E 0%, #F3012C 100%);
@@ -49,6 +50,31 @@ body {
 .masthead span {
 	cursor: default;
 	color: rgba(255,255,255, 0.3);
+}
+
+/* Subhead Element */
+.subhead {
+	padding: 30px 0;
+	margin-bottom: 0;
+	border-bottom: 1px solid #E4E4E4;
+	color: #FFF;
+	/* Background Gradient*/
+	background: -moz-linear-gradient(45deg,  #6C000E 0%, #F3012C 100%);
+	background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,#6C000E), color-stop(100%,#F3012C));
+    background: -webkit-linear-gradient(45deg,  #6C000E 0%,#F3012C 100%);
+    background: -o-linear-gradient(45deg,  #6C000E 0%,#F3012C 100%);
+    background: -ms-linear-gradient(45deg,  #6C000E 0%,#F3012C 100%);
+    background: linear-gradient(45deg,  #6C000E 0%,#F3012C 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6C000E', endColorstr='#F3012C',GradientType=1 );
+    /* Box Shadow*/
+	-webkit-box-shadow: inset 0 -3px 10px rgba(0,0,0,.5);
+	   -moz-box-shadow: inset 0 -3px 10px rgba(0,0,0,.5);
+    		box-shadow: inset 0 -3px 10px rgba(0,0,0,.5);	
+}
+
+.subhead h1 {
+	font-size: 50px;
+	line-height: 1;
 }
 
 /* Marketing Element */
