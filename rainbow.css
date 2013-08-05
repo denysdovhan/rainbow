@@ -193,11 +193,11 @@ body a:focus {
   text-decoration: underline;
 }
 body.red a {
-  color: #ff2222;
+  color: #ff1133;
 }
 body.red a:hover,
 body.red a:focus {
-  color: #ff0808;
+  color: #f70023;
 }
 body.cyan a {
   color: #00dddd;
@@ -482,6 +482,7 @@ cite {
   margin: 20px 0 10px;
   padding-bottom: 10px;
   border-bottom: 2px solid #eeeeee;
+  color: #555555;
 }
 h1,
 h2,
@@ -555,7 +556,7 @@ small.red,
 strong.red,
 cite.red,
 abbr.red {
-  color: #ff2222;
+  color: #ff1133;
 }
 h1.cyan,
 h2.cyan,
@@ -908,7 +909,7 @@ blockquote.right:after {
   background-color: rgba(0, 0, 0, 0.7);
 }
 .bg-type-red {
-  background-color: rgba(255, 34, 34, 0.7);
+  background-color: rgba(255, 17, 51, 0.7);
 }
 .bg-type-cyan {
   background-color: rgba(0, 221, 221, 0.7);
@@ -1041,7 +1042,7 @@ ins {
   color: #44aa44;
 }
 del {
-  color: #ff2222;
+  color: #ff1133;
 }
 .label,
 .bange {
@@ -1066,7 +1067,7 @@ del {
 }
 .label.red,
 .bange.red {
-  background-color: #ff2222;
+  background-color: #ff1133;
 }
 .label.cyan,
 .bange.cyan {
@@ -1194,7 +1195,7 @@ caption {
   border-top: 0;
 }
 .table tbody tr.red > td {
-  background-color: #ffd5d5;
+  background-color: #ffc3cc;
 }
 .table tbody tr.blue > td {
   background-color: #d5e8ff;
@@ -1229,7 +1230,7 @@ caption {
   background-color: #f4f4f4;
 }
 .table.hover tbody tr:hover.red:hover > td {
-  background-color: #ffbbbb;
+  background-color: #ffaab6;
 }
 .table.hover tbody tr:hover.blue:hover > td {
   background-color: #bbdaff;
@@ -1508,10 +1509,10 @@ input[type="color"].red.volume:focus,
 textarea.red.volume:focus,
 select.red.volume:focus {
   background-color: #ffffff;
-  border: 1px solid #ff2222;
-  -webkit-box-shadow: 0 0 3px #ff2222, 0 0 3px #ff2222;
-  -moz-box-shadow: 0 0 3px #ff2222, 0 0 3px #ff2222;
-  box-shadow: 0 0 3px #ff2222, 0 0 3px #ff2222;
+  border: 1px solid #ff1133;
+  -webkit-box-shadow: 0 0 3px #ff1133, 0 0 3px #ff1133;
+  -moz-box-shadow: 0 0 3px #ff1133, 0 0 3px #ff1133;
+  box-shadow: 0 0 3px #ff1133, 0 0 3px #ff1133;
 }
 input[type="text"].red:focus,
 input[type="password"].red:focus,
@@ -1529,9 +1530,9 @@ input[type="tel"].red:focus,
 input[type="color"].red:focus,
 textarea.red:focus,
 select.red:focus {
-  -webkit-box-shadow: 0 3px 0 #ff2222;
-  -moz-box-shadow: 0 3px 0 #ff2222;
-  box-shadow: 0 3px 0 #ff2222;
+  -webkit-box-shadow: 0 3px 0 #ff1133;
+  -moz-box-shadow: 0 3px 0 #ff1133;
+  box-shadow: 0 3px 0 #ff1133;
 }
 input[type="text"].blue.volume,
 input[type="password"].blue.volume,
@@ -3794,9 +3795,9 @@ form.horizontal .help {
   color: inherit;
 }
 .alert.red {
-  background-color: #ffd5d5;
-  border-color: #ffa2a2;
-  color: #ff0846;
+  background-color: #ffc3cc;
+  border-color: #ff91a0;
+  color: #f70061;
 }
 .alert.blue {
   background-color: #d5e8ff;
@@ -3897,7 +3898,7 @@ form.horizontal .help {
 }
 .nav.sidebar.red li a,
 .nav.list.red li a {
-  color: #ff2222;
+  color: #ff1133;
 }
 .nav.sidebar.red li.active > a,
 .nav.list.red li.active > a,
@@ -3906,7 +3907,7 @@ form.horizontal .help {
 .nav.sidebar.red li.active > a:focus,
 .nav.list.red li.active > a:focus {
   color: #ffffff;
-  background-color: #ff2222;
+  background-color: #ff1133;
 }
 .nav.sidebar.purple li a,
 .nav.list.purple li a {
@@ -3994,13 +3995,13 @@ form.horizontal .help {
   cursor: default;
   color: #ffffff;
   background-color: #2288ff;
-  -webkit-box-shadow: inset 0 1px 2px #0056bb;
-  -moz-box-shadow: inset 0 1px 2px #0056bb;
-  box-shadow: inset 0 1px 2px #0056bb;
+  -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.5);
 }
 .nav.pills.red li a,
 .nav.tabs.red li a {
-  color: #ff2222;
+  color: #ff1133;
 }
 .nav.pills.red li.active > a,
 .nav.tabs.red li.active > a,
@@ -4009,14 +4010,11 @@ form.horizontal .help {
 .nav.pills.red li.active > a:focus,
 .nav.tabs.red li.active > a:focus {
   color: #ffffff;
-  background-color: #ff2222;
-  -webkit-box-shadow: inset 0 1px 2px #bb0000;
-  -moz-box-shadow: inset 0 1px 2px #bb0000;
-  box-shadow: inset 0 1px 2px #bb0000;
+  background-color: #ff1133;
 }
 .nav.pills.red.tabs,
 .nav.tabs.red.tabs {
-  border-color: #ff2222;
+  border-color: #ff1133;
 }
 .nav.pills.purple li a,
 .nav.tabs.purple li a {
@@ -4030,9 +4028,6 @@ form.horizontal .help {
 .nav.tabs.purple li.active > a:focus {
   color: #ffffff;
   background-color: #cc00cc;
-  -webkit-box-shadow: inset 0 1px 2px #660066;
-  -moz-box-shadow: inset 0 1px 2px #660066;
-  box-shadow: inset 0 1px 2px #660066;
 }
 .nav.pills.purple.tabs,
 .nav.tabs.purple.tabs {
@@ -4050,9 +4045,6 @@ form.horizontal .help {
 .nav.tabs.yellow li.active > a:focus {
   color: #ffffff;
   background-color: #ffcc00;
-  -webkit-box-shadow: inset 0 1px 2px #997a00;
-  -moz-box-shadow: inset 0 1px 2px #997a00;
-  box-shadow: inset 0 1px 2px #997a00;
 }
 .nav.pills.yellow.tabs,
 .nav.tabs.yellow.tabs {
@@ -4070,9 +4062,6 @@ form.horizontal .help {
 .nav.tabs.green li.active > a:focus {
   color: #ffffff;
   background-color: #44aa44;
-  -webkit-box-shadow: inset 0 1px 2px #276127;
-  -moz-box-shadow: inset 0 1px 2px #276127;
-  box-shadow: inset 0 1px 2px #276127;
 }
 .nav.pills.green.tabs,
 .nav.tabs.green.tabs {
@@ -4090,9 +4079,6 @@ form.horizontal .help {
 .nav.tabs.black li.active > a:focus {
   color: #ffffff;
   background-color: #333333;
-  -webkit-box-shadow: inset 0 1px 2px #000000;
-  -moz-box-shadow: inset 0 1px 2px #000000;
-  box-shadow: inset 0 1px 2px #000000;
 }
 .nav.pills.black.tabs,
 .nav.tabs.black.tabs {
@@ -5168,7 +5154,7 @@ form.horizontal .help {
   text-decoration: underline;
 }
 .breadcrumbs.red > li > a {
-  color: #ff0846;
+  color: #f70061;
 }
 .breadcrumbs.purple > li > a {
   color: #8600b3;
@@ -5250,7 +5236,7 @@ form.horizontal .help {
 }
 .pagination.red ul > li > span,
 .pagination.red ul > li > a {
-  color: #ff0846;
+  color: #f70061;
 }
 .pagination.purple ul > li > span,
 .pagination.purple ul > li > a {
@@ -5338,10 +5324,10 @@ form.horizontal .help {
 }
 .media-grid.red > li > a.thumbnail:hover,
 .media-grid.red > li > a.thumbnail:focus {
-  border-color: #ff2222;
-  -webkit-box-shadow: 0 1px 5px rgba(255, 34, 34, 0.7);
-  -moz-box-shadow: 0 1px 5px rgba(255, 34, 34, 0.7);
-  box-shadow: 0 1px 5px rgba(255, 34, 34, 0.7);
+  border-color: #ff1133;
+  -webkit-box-shadow: 0 1px 5px rgba(255, 17, 51, 0.7);
+  -moz-box-shadow: 0 1px 5px rgba(255, 17, 51, 0.7);
+  box-shadow: 0 1px 5px rgba(255, 17, 51, 0.7);
 }
 .media-grid.purple > li > a.thumbnail:hover,
 .media-grid.purple > li > a.thumbnail:focus {
