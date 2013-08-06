@@ -83,6 +83,14 @@ body {
 	color: #444;
 }
 
+.marketing h3 a {
+	color: #F13;
+}
+
+.marketing h3 a:hover {
+	color: #F02;
+}
+
 .marketing .headline {
 	font-size: 50px;
 	font-weight: 200;
