@@ -39,12 +39,12 @@ body {
 
 .masthead a {
 	padding: 0 10px;
-	color: #CD7F8C;
-	color: rgba(255, 255, 255, 0.5);
+	color: #CD7F8C !important;
+	color: rgba(255, 255, 255, 0.5) !important;
 }
 
 .masthead a:hover {
-	color: #fff;
+	color: #fff !important;
 }
 
 .masthead span {
@@ -81,14 +81,6 @@ body {
 .marketing {
 	text-align: center;
 	color: #444;
-}
-
-.marketing h3 a {
-	color: #F13;
-}
-
-.marketing h3 a:hover {
-	color: #F02;
 }
 
 .marketing .headline {
