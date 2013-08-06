@@ -227,6 +227,7 @@
 .volumeButton(@primaryColor, @secondaryColor) {
   &.volume {
     #gradient > .vertical(@primaryColor, @secondaryColor);
+    text-shadow: 0 -1px 0 @secondaryColor;
     background-color: @secondaryColor;
     *background-color: @secondaryColor;
     border-color: @secondaryColor @secondaryColor darken(@secondaryColor, 10%);

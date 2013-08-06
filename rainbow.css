@@ -2292,6 +2292,7 @@ form.horizontal .help {
   background-image: -ms-linear-gradient(top, #f2f2f2 0%, #cccccc 100%);
   background-image: linear-gradient(to bottom, #f2f2f2 0%, #cccccc 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f2f2f2', endColorstr='#cccccc', GradientType=0);
+  text-shadow: 0 -1px 0 #cccccc;
   background-color: #cccccc;
   *background-color: #cccccc;
   border-color: #cccccc #cccccc #b3b3b3;
@@ -2513,6 +2514,7 @@ form.horizontal .help {
   background-image: -ms-linear-gradient(top, #f95959 0%, #a51b1b 100%);
   background-image: linear-gradient(to bottom, #f95959 0%, #a51b1b 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f95959', endColorstr='#a51b1b', GradientType=0);
+  text-shadow: 0 -1px 0 #a51b1b;
   background-color: #a51b1b;
   *background-color: #a51b1b;
   border-color: #a51b1b #a51b1b #791414;
@@ -2588,6 +2590,7 @@ form.horizontal .help {
   background-image: -ms-linear-gradient(top, #00dddd 0%, #009091 100%);
   background-image: linear-gradient(to bottom, #00dddd 0%, #009091 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00dddd', endColorstr='#009091', GradientType=0);
+  text-shadow: 0 -1px 0 #009091;
   background-color: #009091;
   *background-color: #009091;
   border-color: #009091 #009091 #005d5e;
@@ -2663,6 +2666,7 @@ form.horizontal .help {
   background-image: -ms-linear-gradient(top, #2288ff 0%, #0056bb 100%);
   background-image: linear-gradient(to bottom, #2288ff 0%, #0056bb 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#2288ff', endColorstr='#0056bb', GradientType=0);
+  text-shadow: 0 -1px 0 #0056bb;
   background-color: #0056bb;
   *background-color: #0056bb;
   border-color: #0056bb #0056bb #003f88;
@@ -2738,6 +2742,7 @@ form.horizontal .help {
   background-image: -ms-linear-gradient(top, #0077dd 0%, #004077 100%);
   background-image: linear-gradient(to bottom, #0077dd 0%, #004077 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0077dd', endColorstr='#004077', GradientType=0);
+  text-shadow: 0 -1px 0 #004077;
   background-color: #004077;
   *background-color: #004077;
   border-color: #004077 #004077 #002544;
@@ -2813,6 +2818,7 @@ form.horizontal .help {
   background-image: -ms-linear-gradient(top, #38c4dc 0%, #1a8294 100%);
   background-image: linear-gradient(to bottom, #38c4dc 0%, #1a8294 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#38c4dc', endColorstr='#1a8294', GradientType=0);
+  text-shadow: 0 -1px 0 #1a8294;
   background-color: #1a8294;
   *background-color: #1a8294;
   border-color: #1a8294 #1a8294 #125c69;
@@ -2888,6 +2894,7 @@ form.horizontal .help {
   background-image: -ms-linear-gradient(top, #cc00cc 0%, #80007f 100%);
   background-image: linear-gradient(to bottom, #cc00cc 0%, #80007f 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#cc00cc', endColorstr='#80007f', GradientType=0);
+  text-shadow: 0 -1px 0 #80007f;
   background-color: #80007f;
   *background-color: #80007f;
   border-color: #80007f #80007f #4d004c;
@@ -2963,6 +2970,7 @@ form.horizontal .help {
   background-image: -ms-linear-gradient(top, #ffcc00 0%, #b38f00 100%);
   background-image: linear-gradient(to bottom, #ffcc00 0%, #b38f00 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffcc00', endColorstr='#b38f00', GradientType=0);
+  text-shadow: 0 -1px 0 #b38f00;
   background-color: #b38f00;
   *background-color: #b38f00;
   border-color: #b38f00 #b38f00 #7f6600;
@@ -3038,6 +3046,7 @@ form.horizontal .help {
   background-image: -ms-linear-gradient(top, #35ea59 0%, #11a82f 100%);
   background-image: linear-gradient(to bottom, #35ea59 0%, #11a82f 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#35ea59', endColorstr='#11a82f', GradientType=0);
+  text-shadow: 0 -1px 0 #11a82f;
   background-color: #11a82f;
   *background-color: #11a82f;
   border-color: #11a82f #11a82f #0d7922;
@@ -3113,6 +3122,7 @@ form.horizontal .help {
   background-image: -ms-linear-gradient(top, #ff77ff 0%, #dd00dd 100%);
   background-image: linear-gradient(to bottom, #ff77ff 0%, #dd00dd 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff77ff', endColorstr='#dd00dd', GradientType=0);
+  text-shadow: 0 -1px 0 #dd00dd;
   background-color: #dd00dd;
   *background-color: #dd00dd;
   border-color: #dd00dd #dd00dd #aa00aa;
@@ -3188,6 +3198,7 @@ form.horizontal .help {
   background-image: -ms-linear-gradient(top, #4fb94f 0%, #358635 100%);
   background-image: linear-gradient(to bottom, #4fb94f 0%, #358635 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#4fb94f', endColorstr='#358635', GradientType=0);
+  text-shadow: 0 -1px 0 #358635;
   background-color: #358635;
   *background-color: #358635;
   border-color: #358635 #358635 #276127;
@@ -3263,6 +3274,7 @@ form.horizontal .help {
   background-image: -ms-linear-gradient(top, #bbaa00 0%, #6e6400 100%);
   background-image: linear-gradient(to bottom, #bbaa00 0%, #6e6400 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#bbaa00', endColorstr='#6e6400', GradientType=0);
+  text-shadow: 0 -1px 0 #6e6400;
   background-color: #6e6400;
   *background-color: #6e6400;
   border-color: #6e6400 #6e6400 #3b3600;
@@ -3338,6 +3350,7 @@ form.horizontal .help {
   background-image: -ms-linear-gradient(top, #ffaa33 0%, #cc7700 100%);
   background-image: linear-gradient(to bottom, #ffaa33 0%, #cc7700 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffaa33', endColorstr='#cc7700', GradientType=0);
+  text-shadow: 0 -1px 0 #cc7700;
   background-color: #cc7700;
   *background-color: #cc7700;
   border-color: #cc7700 #cc7700 #995900;
@@ -3413,6 +3426,7 @@ form.horizontal .help {
   background-image: -ms-linear-gradient(top, #bb5522 0%, #7a3816 100%);
   background-image: linear-gradient(to bottom, #bb5522 0%, #7a3816 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#bb5522', endColorstr='#7a3816', GradientType=0);
+  text-shadow: 0 -1px 0 #7a3816;
   background-color: #7a3816;
   *background-color: #7a3816;
   border-color: #7a3816 #7a3816 #4f240e;
@@ -3488,6 +3502,7 @@ form.horizontal .help {
   background-image: -ms-linear-gradient(top, #cc0000 0%, #800000 100%);
   background-image: linear-gradient(to bottom, #cc0000 0%, #800000 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#cc0000', endColorstr='#800000', GradientType=0);
+  text-shadow: 0 -1px 0 #800000;
   background-color: #800000;
   *background-color: #800000;
   border-color: #800000 #800000 #4d0000;
@@ -3563,6 +3578,7 @@ form.horizontal .help {
   background-image: -ms-linear-gradient(top, #404040 0%, #1a1a1a 100%);
   background-image: linear-gradient(to bottom, #404040 0%, #1a1a1a 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#404040', endColorstr='#1a1a1a', GradientType=0);
+  text-shadow: 0 -1px 0 #1a1a1a;
   background-color: #1a1a1a;
   *background-color: #1a1a1a;
   border-color: #1a1a1a #1a1a1a #000000;
@@ -3760,54 +3776,6 @@ form.horizontal .help {
 }
 .btn-group + .btn-group {
   margin-left: 5px;
-}
-.alert {
-  position: relative;
-  padding: 8px 30px 8px 15px;
-  margin-bottom: 20px;
-  color: #e67e00;
-  background-color: #fff5cc;
-  border: 1px solid #ffeb99;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  border-radius: 4px;
-  opacity: 0.8;
-  filter: alpha(opacity=80);
-}
-.alert h1,
-.alert h2,
-.alert h3,
-.alert h4,
-.alert h5,
-.alert h6 {
-  margin: 10px 0 0;
-}
-.alert p {
-  margin-bottom: 0;
-}
-.alert p + p {
-  margin-top: 5px;
-}
-.alert .close {
-  position: absolute;
-  top: 5px;
-  right: 10px;
-  color: inherit;
-}
-.alert.red {
-  background-color: #ffc3cc;
-  border-color: #ff91a0;
-  color: #f70061;
-}
-.alert.blue {
-  background-color: #d5e8ff;
-  border-color: #a2cdff;
-  color: #0097d4;
-}
-.alert.green {
-  background-color: #ceecce;
-  border-color: #aaddaa;
-  color: #53983d;
 }
 .nav {
   margin: 0 0 20px;
@@ -5253,6 +5221,54 @@ form.horizontal .help {
 .pagination.black ul > li > span,
 .pagination.black ul > li > a {
   color: #333333;
+}
+.alert {
+  position: relative;
+  padding: 8px 30px 8px 15px;
+  margin-bottom: 20px;
+  color: #e67e00;
+  background-color: #fff5cc;
+  border: 1px solid #ffeb99;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  opacity: 0.8;
+  filter: alpha(opacity=80);
+}
+.alert h1,
+.alert h2,
+.alert h3,
+.alert h4,
+.alert h5,
+.alert h6 {
+  margin: 10px 0 0;
+}
+.alert p {
+  margin-bottom: 0;
+}
+.alert p + p {
+  margin-top: 5px;
+}
+.alert .close {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+  color: inherit;
+}
+.alert.red {
+  background-color: #ffc3cc;
+  border-color: #ff91a0;
+  color: #f70061;
+}
+.alert.blue {
+  background-color: #d5e8ff;
+  border-color: #a2cdff;
+  color: #0097d4;
+}
+.alert.green {
+  background-color: #ceecce;
+  border-color: #aaddaa;
+  color: #53983d;
 }
 .media-grid {
   *zoom: 1;
