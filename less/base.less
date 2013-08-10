@@ -10,7 +10,6 @@ body {
 	margin: 0;
 	background-color: @bodyBackgroundColor;
 
-	a.default,
 	a {
 		cursor: pointer;
 		color: @linkColor;
@@ -20,6 +19,15 @@ body {
 		&:focus {
 			color: @linkColorHover;	
 			text-decoration: underline;
+		}
+
+		&.default {
+			color: @linkColor !important;
+
+			&:hover,
+			&:focus {
+				color: @linkColorHover !important;
+			}
 		}
 	}
 
@@ -37,6 +45,7 @@ body {
 	&.orange 		{ .linkColor(@orange);}
 	&.brown 		{ .linkColor(@brown);}
 	&.maroon 		{ .linkColor(@maroon);}
+	&.black 		{ .linkColor(@grayDark);}
 }
 
 .container {
