@@ -29,16 +29,16 @@
     <!-- Masthead -->
     <section class="masthead">
         <div class="container">
-            <h1 class="bg-type">Rainbow</h1>
+            <h1 class="bg-type">Rainbow<small>for Lana</small></h1>
             <div>
                 <h3 class="bg-type">
-                    Потужний, різнобарвний, інтуїтивний css-фреймворк для вашого проекту.
+                    Powerful, colorful, intuitive css-framework for your project.
                 </h3>
             </div>
             <p>
-                <a href="#" class="btn red volume large">Скачати</a>
-                <a href="#">GitHub</a>
-                <a href="#">Issues</a>
+                <a href="#" class="btn red volume large">Download</a>
+                <a href="https://github.com/denysdovhan/rainbow">GitHub</a>
+                <a href="https://github.com/denysdovhan/rainbow/issues">Issues</a>
                 <span>v1.0.0</span>
             </p>
         </div>
@@ -51,65 +51,77 @@
         <h1 class="headline">We presents <span class="bg-type">Rainbow</span></h1>
         <div class="row">
             <div class="span4">
-                <img class="circle" data-src="holder.js/150x150">
-                <h3>Кросбраузерний</h3>
-                <p>Ви можете не хвилюватися за підтримку стилів в застарілих браузерах - про це вже подбав Rainbow.</p>
+                <img class="circle" src="img/browsers-suports.png">
+                <h3>Cross-browser</h3>
+                <p>You can not worry for support of styles in outdated browsers - Rainbow looked after already about it.</p>
             </div>
             <div class="span4">
-                <img class="circle" data-src="holder.js/150x150">
-                <h3>Яскравий</h3>
-                <p>Rainbow створено для того, щоб легко створювати яскравий дизайн. Він підтримує 16 кольорів та 2 типи дизайну (flat & volume)</p>
+                <img class="circle" src="img/colorful.png">
+                <h3>Colorful</h3>
+                <p>Rainbow was created to make it easy to create a bright design. It supports 16 colors and 2 types of design (flat & volume)</p>
             </div>
             <div class="span4">
-                <img class="circle" data-src="holder.js/150x150">
-                <h3>Сучасний</h3>
-                <p>В Rainbow використані найсучасніші технології. Він підтримує сучасні стандарти веб-розробки HTML5 та CSS3. Написаний на LESS та розміщений на GitHub.</p>
+                <img class="circle" src="img/modern.png">
+                <h3>Modern</h3>
+                <p>In Rainbow utilized the latest technologies. It supports the modern standards of web development HTML5 and CSS3. Written in LESS and based on GitHub.</p>
             </div>
         </div>
         <!-- We presents Rainbow -->
         <!-- Download -->
         <h1 class="headline">Download</h1>
-        <p class="lead">Щоб почати працювати з Rainbow скачайте архів з фреймворком, або підключіть фреймворк через HTTP. Якщо ви хочете швидко почати роботу, ми радимо скачати вам готову скомпільовану та мініфіковану версію.</p>
+        <p class="lead">For start working with Rainbow you have to download the archive with framework or connect framework via HTTP. If you want to get started quickly, we advise you to download compiled and ready minified version.</p>
         <div class="row">
             <div class="span6">
                 <h3>Compiled</h3>
-                <p>Скомпільована та мініфікована версія без файлів документації and source.</p>
-                <a class="btn volume red block large" href="#">Download</a>
+                <p>Compiled and minified version without documentation and source.</p>
             </div>
             <div class="span6">
                 <h3>Source</h3>
-                <p>Оригінальні вихідні коди останньої версії з GitHub в комплекті з документацією. </p>
+                <p>The original source for the latest version from GitHub complete with documentation.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="span6">
+                <a class="btn volume red block large" href="#">Download</a>
+            </div>
+            <div class="span6">
                 <a class="btn volume block large" href="">Download Source</a>
             </div>
         </div>
         <div class="row">
             <div class="span6">
-                <h3>Отримайте по HTTP</h3>
-                <p>Ви можете динамічно підключити скомпільований та мініфікований файл стилів протоколом HTTP. Вставте цю строку в тег <code>&lt;head&gt;</code></p>
+                <h3>Get via HTTP</h3>
+                <p>You can connect dynamically compiled and minified file of styles HTTP protocol. Paste this period in the tag <code>&lt;head&gt;</code></p>
+            </div>
+            <div class="span6">
+                <h3>Import into LESS</h3>
+                <p>Remote import Rainbow in your LESS-file and expand the opportunities of framework using the command <code>@import</code></p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="span6">
                 <input type="text" class="volume red block" value='&lt;link rel="stylesheet" type="text/css" href="http://denysdovhan.github.com/rainbow/rainbow.min.css"&gt;'>
             </div>
             <div class="span6">
-                <h3>Імпортуйте в LESS</h3>
-                <p>Віддалено імпортуйте Rainbow в свій LESS-файл та розширюйте можливості фреймворка використовуючи команду <code>@import</code></p>
                 <input type="text" class="volume red block" value='@import "http://denysdovhan.github.com/rainbow/less/rainbow.less";'>
             </div>
         </div>
         <!-- Download -->
         <!-- What`s included -->
         <h1 class="headline">What`s included?</h1>
-        <p class="lead">Rainbow ввібрав найсучасніші ідеї та тенденції з дизайну та веб-розробки.</p>
+        <p class="lead">Rainbow incorporates the latest ideas and trends in design and web development.</p>
         <div class="row">
             <div class="span3">
                 <h3><a href="#">Structure</a></h3>
-                <p>Базові стилі для body, обнулення стандартної типографії, grid system, базові кольорові теми для посилань</p>
+                <p>Basic styles for the body, reset styles, grid system, basic color themes for links.</p>
             </div>
             <div class="span3">
                 <h3><a href="#">Typography</a></h3>
-                <p>Стилы для основних типографічних елементів, таблиць, блоків коду, форм та кнопок.</p>
+                <p>Styles for basic typographic elements, tables, code blocks, forms and buttons.</p>
             </div>
             <div class="span3">
                 <h3><a href="#">Navigations</a></h3>
-                <p>Стилі для навігації, табів, пілсів, сайдбару, навігаційного бару, хлібних крошок та пагінації.</p>
+                <p>Styles for navigation tabs, pills, sidebar, navigation bar, pagination and breadcrumbs.</p>
             </div>
             <div class="span3">
                 <h3><a href="#">Media</a></h3>
@@ -117,24 +129,37 @@
             </div>
         </div>
         <!-- What`s included -->
+        <!-- What Next? -->
         <h1 class="headline">What Next?</h1>
-        <p class="lead">Скачали Rainbow? Дізнайтеся що робити далі!</p>
+        <p class="lead">Did you download the Rainbow? Find out what to do next!</p>
         <div class="row">
             <div class="span4">
                 <h3>Read Documentation</h3>
-                <p>Прочитайте документацію, щоб дізнатися про всі можливості Rainbow.</p>
+                <p>Read the documentation to learn about all the possibilities of Rainbow.</p>
                 <a class="btn red volume large block" href="structure.html">Read Documentation</a>
             </div>
             <div class="span4">
                 <h3>Fork on GitHub</h3>
-                <p>Долучіться до розробки та вдосконалення проекту на GitHub.</p>
+                <p>Join to the development and improvement project on GitHub.</p>
                 <a class="btn volume large block" href="#">Fork on GitHub</a>
             </div>
             <div class="span4">
                 <h3>Share to your freinds</h3>
-                <p>Поділіться Rainbow зі своїми друзями та колегами!</p>
+                <p>Share Rainbow with your friends and colleagues!</p>
+<!-- AddThis Button BEGIN -->
+<div class="addthis_toolbox addthis_default_style addthis_32x32_style">
+<a class="addthis_button_preferred_1"></a>
+<a class="addthis_button_preferred_2"></a>
+<a class="addthis_button_preferred_3"></a>
+<a class="addthis_button_preferred_4"></a>
+<a class="addthis_button_compact"></a>
+<a class="addthis_counter addthis_bubble_style"></a>
+</div>
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=xa-523718111238a58b"></script>
+<!-- AddThis Button END -->
             </div>
         </div>
+        <!-- What Next? -->
     </section>
     <!-- Marketing -->
 

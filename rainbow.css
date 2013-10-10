@@ -182,25 +182,29 @@ body {
   margin: 0;
   background-color: #ffffff;
 }
-body a.default,
 body a {
   cursor: pointer;
   color: #2288ff;
   text-decoration: none;
 }
-body a.default:hover,
 body a:hover,
-body a.default:focus,
 body a:focus {
   color: #006eee;
   text-decoration: underline;
 }
+body a.default {
+  color: #2288ff !important;
+}
+body a.default:hover,
+body a.default:focus {
+  color: #006eee !important;
+}
 body.red a {
-  color: #ff1133;
+  color: #ff0011;
 }
 body.red a:hover,
 body.red a:focus {
-  color: #f70023;
+  color: #e6000f;
 }
 body.cyan a {
   color: #00dddd;
@@ -292,6 +296,13 @@ body.maroon a {
 body.maroon a:hover,
 body.maroon a:focus {
   color: #b30000;
+}
+body.black a {
+  color: #333333;
+}
+body.black a:hover,
+body.black a:focus {
+  color: #262626;
 }
 .container {
   *zoom: 1;
@@ -550,9 +561,7 @@ h3.red,
 h4.red,
 h5.red,
 h6.red,
-a.red,
 code.red,
-samp.red,
 abbr.red,
 p.red,
 div.red,
@@ -562,7 +571,7 @@ em.red,
 small.red,
 strong.red,
 cite.red {
-  color: #ff1133;
+  color: #ff0011;
 }
 h1.cyan,
 h2.cyan,
@@ -570,9 +579,7 @@ h3.cyan,
 h4.cyan,
 h5.cyan,
 h6.cyan,
-a.cyan,
 code.cyan,
-samp.cyan,
 abbr.cyan,
 p.cyan,
 div.cyan,
@@ -590,9 +597,7 @@ h3.blue,
 h4.blue,
 h5.blue,
 h6.blue,
-a.blue,
 code.blue,
-samp.blue,
 abbr.blue,
 p.blue,
 div.blue,
@@ -610,9 +615,7 @@ h3.darkblue,
 h4.darkblue,
 h5.darkblue,
 h6.darkblue,
-a.darkblue,
 code.darkblue,
-samp.darkblue,
 abbr.darkblue,
 p.darkblue,
 div.darkblue,
@@ -630,9 +633,7 @@ h3.lightblue,
 h4.lightblue,
 h5.lightblue,
 h6.lightblue,
-a.lightblue,
 code.lightblue,
-samp.lightblue,
 abbr.lightblue,
 p.lightblue,
 div.lightblue,
@@ -650,9 +651,7 @@ h3.purple,
 h4.purple,
 h5.purple,
 h6.purple,
-a.purple,
 code.purple,
-samp.purple,
 abbr.purple,
 p.purple,
 div.purple,
@@ -670,9 +669,7 @@ h3.yellow,
 h4.yellow,
 h5.yellow,
 h6.yellow,
-a.yellow,
 code.yellow,
-samp.yellow,
 abbr.yellow,
 p.yellow,
 div.yellow,
@@ -690,9 +687,7 @@ h3.lime,
 h4.lime,
 h5.lime,
 h6.lime,
-a.lime,
 code.lime,
-samp.lime,
 abbr.lime,
 p.lime,
 div.lime,
@@ -710,9 +705,7 @@ h3.pink,
 h4.pink,
 h5.pink,
 h6.pink,
-a.pink,
 code.pink,
-samp.pink,
 abbr.pink,
 p.pink,
 div.pink,
@@ -730,9 +723,7 @@ h3.green,
 h4.green,
 h5.green,
 h6.green,
-a.green,
 code.green,
-samp.green,
 abbr.green,
 p.green,
 div.green,
@@ -750,9 +741,7 @@ h3.olive,
 h4.olive,
 h5.olive,
 h6.olive,
-a.olive,
 code.olive,
-samp.olive,
 abbr.olive,
 p.olive,
 div.olive,
@@ -770,9 +759,7 @@ h3.orange,
 h4.orange,
 h5.orange,
 h6.orange,
-a.orange,
 code.orange,
-samp.orange,
 abbr.orange,
 p.orange,
 div.orange,
@@ -790,9 +777,7 @@ h3.brown,
 h4.brown,
 h5.brown,
 h6.brown,
-a.brown,
 code.brown,
-samp.brown,
 abbr.brown,
 p.brown,
 div.brown,
@@ -810,9 +795,7 @@ h3.maroon,
 h4.maroon,
 h5.maroon,
 h6.maroon,
-a.maroon,
 code.maroon,
-samp.maroon,
 abbr.maroon,
 p.maroon,
 div.maroon,
@@ -954,7 +937,7 @@ blockquote.right:after {
   background-color: rgba(0, 0, 0, 0.7);
 }
 .bg-type-red {
-  background-color: rgba(255, 17, 51, 0.7);
+  background-color: rgba(255, 0, 17, 0.7);
 }
 .bg-type-cyan {
   background-color: rgba(0, 221, 221, 0.7);
@@ -1029,7 +1012,7 @@ kbd {
   border-radius: 3px;
 }
 code {
-  padding: 3px;
+  padding: 2px;
   white-space: nowrap;
 }
 pre {
@@ -1087,7 +1070,7 @@ ins {
   color: #44aa44;
 }
 del {
-  color: #ff1133;
+  color: #ff0011;
 }
 .label,
 .bange {
@@ -1099,12 +1082,12 @@ del {
   line-height: 15px;
   vertical-align: baseline;
   white-space: nowrap;
-  text-shadow: 0 1px 0 #333333;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.3);
   color: #ffffff;
   background-color: #999999;
-  -webkit-box-shadow: inset 0 1px 0 #333333;
-  -moz-box-shadow: inset 0 1px 0 #333333;
-  box-shadow: inset 0 1px 0 #333333;
+  -webkit-box-shadow: inset 0 1px 0 rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: inset 0 1px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 1px 0 rgba(0, 0, 0, 0.3);
 }
 .label:empty,
 .bange:empty {
@@ -1112,7 +1095,7 @@ del {
 }
 .label.red,
 .bange.red {
-  background-color: #ff1133;
+  background-color: #ff0011;
 }
 .label.cyan,
 .bange.cyan {
@@ -1240,7 +1223,7 @@ caption {
   border-top: 0;
 }
 .table tbody tr.red > td {
-  background-color: #ffc3cc;
+  background-color: #ffb3b8;
 }
 .table tbody tr.blue > td {
   background-color: #d5e8ff;
@@ -1275,7 +1258,7 @@ caption {
   background-color: #f4f4f4;
 }
 .table.hover tbody tr:hover.red:hover > td {
-  background-color: #ffaab6;
+  background-color: #ff99a0;
 }
 .table.hover tbody tr:hover.blue:hover > td {
   background-color: #bbdaff;
@@ -1554,10 +1537,10 @@ input[type="color"].red.volume:focus,
 textarea.red.volume:focus,
 select.red.volume:focus {
   background-color: #ffffff;
-  border: 1px solid #ff1133;
-  -webkit-box-shadow: 0 0 3px #ff1133, 0 0 3px #ff1133;
-  -moz-box-shadow: 0 0 3px #ff1133, 0 0 3px #ff1133;
-  box-shadow: 0 0 3px #ff1133, 0 0 3px #ff1133;
+  border: 1px solid #ff0011;
+  -webkit-box-shadow: 0 0 3px #ff0011, 0 0 3px #ff0011;
+  -moz-box-shadow: 0 0 3px #ff0011, 0 0 3px #ff0011;
+  box-shadow: 0 0 3px #ff0011, 0 0 3px #ff0011;
 }
 input[type="text"].red:focus,
 input[type="password"].red:focus,
@@ -1575,9 +1558,9 @@ input[type="tel"].red:focus,
 input[type="color"].red:focus,
 textarea.red:focus,
 select.red:focus {
-  -webkit-box-shadow: 0 3px 0 #ff1133;
-  -moz-box-shadow: 0 3px 0 #ff1133;
-  box-shadow: 0 3px 0 #ff1133;
+  -webkit-box-shadow: 0 3px 0 #ff0011;
+  -moz-box-shadow: 0 3px 0 #ff0011;
+  box-shadow: 0 3px 0 #ff0011;
 }
 input[type="text"].blue.volume,
 input[type="password"].blue.volume,
@@ -3840,7 +3823,7 @@ form.horizontal .help {
 .nav li > a:focus {
   text-decoration: none;
   color: #2288ff;
-  background-color: #eeeeee;
+  background-color: rgba(0, 0, 0, 0.05);
   -webkit-transition: background-color linear 0.2s;
   -moz-transition: background-color linear 0.2s;
   -o-transition: background-color linear 0.2s;
@@ -3911,7 +3894,7 @@ form.horizontal .help {
 }
 .nav.sidebar.red li a,
 .nav.list.red li a {
-  color: #ff1133;
+  color: #ff0011;
 }
 .nav.sidebar.red li.active > a,
 .nav.list.red li.active > a,
@@ -3920,7 +3903,7 @@ form.horizontal .help {
 .nav.sidebar.red li.active > a:focus,
 .nav.list.red li.active > a:focus {
   color: #ffffff;
-  background-color: #ff1133;
+  background-color: #ff0011;
 }
 .nav.sidebar.purple li a,
 .nav.list.purple li a {
@@ -4014,7 +3997,7 @@ form.horizontal .help {
 }
 .nav.pills.red li a,
 .nav.tabs.red li a {
-  color: #ff1133;
+  color: #ff0011;
 }
 .nav.pills.red li.active > a,
 .nav.tabs.red li.active > a,
@@ -4023,11 +4006,11 @@ form.horizontal .help {
 .nav.pills.red li.active > a:focus,
 .nav.tabs.red li.active > a:focus {
   color: #ffffff;
-  background-color: #ff1133;
+  background-color: #ff0011;
 }
 .nav.pills.red.tabs,
 .nav.tabs.red.tabs {
-  border-color: #ff1133;
+  border-color: #ff0011;
 }
 .nav.pills.purple li a,
 .nav.tabs.purple li a {
@@ -5167,7 +5150,7 @@ form.horizontal .help {
   text-decoration: underline;
 }
 .breadcrumbs.red > li > a {
-  color: #f70061;
+  color: #e60049;
 }
 .breadcrumbs.purple > li > a {
   color: #8600b3;
@@ -5249,7 +5232,7 @@ form.horizontal .help {
 }
 .pagination.red ul > li > span,
 .pagination.red ul > li > a {
-  color: #f70061;
+  color: #e60049;
 }
 .pagination.purple ul > li > span,
 .pagination.purple ul > li > a {
@@ -5301,9 +5284,9 @@ form.horizontal .help {
   color: inherit;
 }
 .alert.red {
-  background-color: #ffc3cc;
-  border-color: #ff91a0;
-  color: #f70061;
+  background-color: #ffb3b8;
+  border-color: #ff8088;
+  color: #e60049;
 }
 .alert.blue {
   background-color: #d5e8ff;
@@ -5385,10 +5368,10 @@ form.horizontal .help {
 }
 .media-grid.red > li > a.thumbnail:hover,
 .media-grid.red > li > a.thumbnail:focus {
-  border-color: #ff1133;
-  -webkit-box-shadow: 0 1px 5px rgba(255, 17, 51, 0.7);
-  -moz-box-shadow: 0 1px 5px rgba(255, 17, 51, 0.7);
-  box-shadow: 0 1px 5px rgba(255, 17, 51, 0.7);
+  border-color: #ff0011;
+  -webkit-box-shadow: 0 1px 5px rgba(255, 0, 17, 0.7);
+  -moz-box-shadow: 0 1px 5px rgba(255, 0, 17, 0.7);
+  box-shadow: 0 1px 5px rgba(255, 0, 17, 0.7);
 }
 .media-grid.purple > li > a.thumbnail:hover,
 .media-grid.purple > li > a.thumbnail:focus {
