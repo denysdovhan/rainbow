@@ -10,10 +10,10 @@
 	line-height: @baseLineHeight * 0.75;
 	vertical-align: baseline;
 	white-space: nowrap;
-	text-shadow: 0 1px 0 @grayDark;
+	text-shadow: 0 -1px 0 rgba(0,0,0, 0.3);
 	color: @white;
 	background-color: @grayLight;
-	.box-shadow(inset 0 1px 0 @grayDark);
+	.box-shadow(inset 0 1px 0 rgba(0,0,0, 0.3));
 
 	&:empty {
 		display: none;
