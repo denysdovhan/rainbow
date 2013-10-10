@@ -5,12 +5,12 @@
 	<title>Structure | Rainbow</title>
 	<link rel="stylesheet" type="text/css" href="../rainbow.css">
     <link rel="stylesheet" type="text/css" href="css/docs.css">
-    <link rel="stylesheet" type="text/css" href="js/prettify.css">
+    <link rel="stylesheet" type="text/css" href="css/prettify.css">
     <!--[if lt IE 9]>
       <script src="js/html5shiv.js"></script>
     <![endif]-->
 </head>
-<body class="red">
+<body class="red" onload="prettyPrint()">
     <!-- Navbar -->
 	<header class="navbar red fixed-top">
         <div class="container">
@@ -93,6 +93,7 @@
 
     <!-- Scripts -->
     <script src="js/holder.js"></script>
+    <script src="js/prettify.js"></script>
     <script type="text/javascript">
         var year = document.getElementById('year');
         var date = new Date();
