@@ -1,0 +1,109 @@
+/*
+	Rainbow Documentation Styles
+	Styles for examples and documentaions
+*/
+
+body {
+	padding-top: 40px; /* For navbar*/
+}
+
+/* Masthead Element */
+.masthead {
+	padding: 50px 0;
+	margin-bottom: 0;
+	border-bottom: 1px solid #E4E4E4;
+	color: #FFF;
+	/* Background Gradient*/
+	background: -moz-linear-gradient(45deg,  #6C000E 0%, #F3012C 100%);
+	background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,#6C000E), color-stop(100%,#F3012C));
+    background: -webkit-linear-gradient(45deg,  #6C000E 0%,#F3012C 100%);
+    background: -o-linear-gradient(45deg,  #6C000E 0%,#F3012C 100%);
+    background: -ms-linear-gradient(45deg,  #6C000E 0%,#F3012C 100%);
+    background: linear-gradient(45deg,  #6C000E 0%,#F3012C 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6C000E', endColorstr='#F3012C',GradientType=1 );
+    /* Box Shadow*/
+	-webkit-box-shadow: inset 0 -3px 10px rgba(0,0,0,.5);
+	   -moz-box-shadow: inset 0 -3px 10px rgba(0,0,0,.5);
+    		box-shadow: inset 0 -3px 10px rgba(0,0,0,.5);
+}
+
+.masthead h1 {
+	font-size: 100px;
+	line-height: 1;
+}
+
+.masthead a.btn {
+	font-size: 24px;
+	padding: 20px 25px;
+}
+
+.masthead a {
+	padding: 0 10px;
+	color: #CD7F8C !important;
+	color: rgba(255, 255, 255, 0.5) !important;
+}
+
+.masthead a:hover {
+	color: #fff !important;
+}
+
+.masthead span {
+	cursor: default;
+	color: rgba(255,255,255, 0.3);
+}
+
+/* Subhead Element */
+.subhead {
+	padding: 30px 0;
+	margin-bottom: 0;
+	border-bottom: 1px solid #E4E4E4;
+	color: #FFF;
+	/* Background Gradient*/
+	background: -moz-linear-gradient(45deg,  #6C000E 0%, #F3012C 100%);
+	background: -webkit-gradient(linear, left bottom, right top, color-stop(0%,#6C000E), color-stop(100%,#F3012C));
+    background: -webkit-linear-gradient(45deg,  #6C000E 0%,#F3012C 100%);
+    background: -o-linear-gradient(45deg,  #6C000E 0%,#F3012C 100%);
+    background: -ms-linear-gradient(45deg,  #6C000E 0%,#F3012C 100%);
+    background: linear-gradient(45deg,  #6C000E 0%,#F3012C 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6C000E', endColorstr='#F3012C',GradientType=1 );
+    /* Box Shadow*/
+	-webkit-box-shadow: inset 0 -3px 10px rgba(0,0,0,.5);
+	   -moz-box-shadow: inset 0 -3px 10px rgba(0,0,0,.5);
+    		box-shadow: inset 0 -3px 10px rgba(0,0,0,.5);	
+}
+
+.subhead h1 {
+	font-size: 50px;
+	line-height: 1;
+}
+
+/* Marketing Element */
+.marketing {
+	text-align: center;
+	color: #444;
+}
+
+.marketing .headline {
+	font-size: 50px;
+	font-weight: 200;
+	line-height: 1;
+	margin-top: 40px;
+}
+
+.marketing .headline .bg-type {
+	font-weight: bold;
+}
+
+/* Footer Element */
+.footer {
+	text-align: center;
+	padding: 20px 0;
+	margin: 50px 0 0;
+	border-top: 1px solid #E4E4E4;
+	color: #888;
+	background-color: #F5F5F5;
+}
+
+.footer p {
+	margin: 2px;
+}

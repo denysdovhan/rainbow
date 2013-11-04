@@ -20,6 +20,15 @@ body {
 			color: @linkColorHover;	
 			text-decoration: underline;
 		}
+
+		&.default {
+			color: @linkColor !important;
+
+			&:hover,
+			&:focus {
+				color: @linkColorHover !important;
+			}
+		}
 	}
 
 	&.red 			{ .linkColor(@red);}
@@ -36,6 +45,7 @@ body {
 	&.orange 		{ .linkColor(@orange);}
 	&.brown 		{ .linkColor(@brown);}
 	&.maroon 		{ .linkColor(@maroon);}
+	&.black 		{ .linkColor(@grayDark);}
 }
 
 .container {

@@ -155,6 +155,13 @@ textarea {
     	.spanX(@index - 1);
     }
 	.spanX();
+
+	&.block {
+		display: block;
+		width: 100%;
+		min-height: 30px;
+		.box-sizing(border-box);
+	}
 }
 
 select {

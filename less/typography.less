@@ -22,6 +22,7 @@ cite 	{ font-style: normal;}
 	margin: @baseLineHeight 0 @halfLineHeight;
 	padding-bottom: @halfLineHeight;
 	border-bottom: 2px solid @grayLighter;
+	color: @gray;
 }
 
 
@@ -55,9 +56,9 @@ h2 small { font-size: @baseFontSize * 1.25;}
 h3 small { font-size: @baseFontSize; }
 h4 small { font-size: @baseFontSize; }
 
-h1, h2, h3, h4, h5, h6,
+h1, h2, h3, h4, h5, h6, code, abbr,
 p, div, address, pre, em, 
-small, strong, cite, abbr {
+small, strong, cite {
 	&.red 			{ color: @red;}
 	&.cyan 			{ color: @cyan;}
 	&.blue 			{ color: @blue;}
@@ -121,7 +122,7 @@ dd {
 hr {
 	border: 0;
 	margin: @baseLineHeight @halfLineHeight;
-	border-top: 1px solid @grayDark;
+	border-top: 1px solid darken(@grayLighter, 15%);
 	border-bottom: 1px solid @grayLighter;
 }
 
@@ -215,4 +216,31 @@ blockquote {
 			font-family: serif;
 		}		
 	}
+}
+
+// 	Background Type Text
+[class^="bg-type"] {
+	.inline-block();
+	padding: 3px 5px;
+	margin: 0;
+	color: @white;
+	background-color: fadeout(@black, 30%);
+}
+
+// Altenative Colors
+.bg-type {
+	&-red 			{ background-color: fadeout(@red, 30%);}
+	&-cyan 			{ background-color: fadeout(@cyan, 30%);}
+	&-blue 			{ background-color: fadeout(@blue, 30%);}
+	&-darkblue 		{ background-color: fadeout(@darkblue, 30%);}
+	&-lightblue 	{ background-color: fadeout(@lightblue, 30%);}
+	&-purple 		{ background-color: fadeout(@purple, 30%);}
+	&-yellow 		{ background-color: fadeout(@yellow, 30%);}
+	&-lime 			{ background-color: fadeout(@lime, 30%);}
+	&-pink 			{ background-color: fadeout(@pink, 30%);}
+	&-green 		{ background-color: fadeout(@green, 30%);}
+	&-olive 		{ background-color: fadeout(@olive, 30%);}
+	&-orange 		{ background-color: fadeout(@orange, 30%);}
+	&-brown 		{ background-color: fadeout(@brown, 30%);}
+	&-maroon 		{ background-color: fadeout(@maroon, 30%);}	
 }
